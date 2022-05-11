@@ -45,13 +45,19 @@ export default function Welcome() {
         }
         
         <Vision>
+            <div className='box-container'>
+
                 {Mission.map((mission, index) =>{
                     return(
-                        <div  key={index}>
-                            <h4>{mission.Heading}</h4>
-                        </div>
+                           <div   key={index}>
+                                <h4>{mission.Heading}</h4>
+                            </div>
+
+                        
                     )
                 } )}
+                       
+            </div>
 
         </Vision>
 
@@ -130,5 +136,9 @@ const Section = styled.section`
 
 const Vision = styled.div`
 
+
+    .box-container{
+        display:flex ;
+    }
 
 `
