@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
+import ExploreOne from '../Assets/ExploreOne.png'
+import ExploreTwo from '../Assets/ExplaoreTwo.png'
 
 export default function Welcome() {
     const Message = [
@@ -27,6 +29,23 @@ export default function Welcome() {
 
     ];
 
+
+    const Explore =[
+        {
+            Image:ExploreOne,
+            Section:'Primary Section',
+            Reciept:'Reception to Year 6'
+        },
+        {
+            Image:ExploreTwo,
+            Section:'Primary Section',
+            Reciept:'Reception to Year 6'
+        }
+    ]
+
+
+
+
   return (
     <Section>
         {Message.map((msg,index) =>{
@@ -46,22 +65,35 @@ export default function Welcome() {
         
         <Vision>
             <div className='box-container'>
-
                 {Mission.map((mission, index) =>{
                     return(
-                           <div   key={index}>
+                           <div className='box'  key={index}>
                                 <h4>{mission.Heading}</h4>
                                 <p>{mission.Paragraph1}</p>
                             </div>
-
-                        
                     )
-                } )}
-                       
+                } )}    
             </div>
-
         </Vision>
-
+        
+        <ExploreCov>
+                <div className='heading'>
+                    <h4>Explore more</h4>
+                </div>
+                <div className='expcov'>
+                    {Explore.map((exp, index)=>{
+                        return(
+                            <div key={index}>
+                                <img src={exp.Image} alt="" />
+                                    <h6>{exp.Section}</h6>
+                                    <p>{exp.Reciept}</p>
+                            </div>
+                        )
+                    })
+                        
+                    }
+                </div>
+        </ExploreCov>
     </Section>
   )
 }
@@ -140,6 +172,44 @@ const Vision = styled.div`
 
     .box-container{
         display:flex ;
+        justify-content:space-between;
+        width:80%;
+        margin:8rem auto;
+        .box{
+            border:2px solid #f63a32;
+            border-radius:5px;
+            width:30% ;
+            max-width:400px ;
+            text-align:center ;
+            padding:10px ;
+            h4{
+                font-size:clamp(1rem ,6vw, 1.9rem )
+            }
+
+            p{
+                text-align:center ;
+                font-size:clamp(1.5rem,6vw,1.7rem )
+            }
+        }
     }
 
+`
+
+const ExploreCov = styled.div`
+    width:80% ;
+    margin:0 auto ;
+    text-align:center ;
+
+.expcov{
+    color:red ;
+    display: flex ;
+   
+
+    div{
+        display:flex ;
+        flex-direction:column ;
+        text-align:center ;
+        justify-content:center ;
+    }
+}
 `
