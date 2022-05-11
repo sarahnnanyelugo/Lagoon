@@ -38,8 +38,8 @@ export default function Welcome() {
         },
         {
             Image:ExploreTwo,
-            Section:'Primary Section',
-            Reciept:'Reception to Year 6'
+            Section:'Senior School  ',
+            Reciept:'JS1 - SS3'
         }
     ]
 
@@ -85,8 +85,11 @@ export default function Welcome() {
                         return(
                             <div key={index}>
                                 <img src={exp.Image} alt="" />
+                                <div>
                                     <h6>{exp.Section}</h6>
                                     <p>{exp.Reciept}</p>
+                                </div>
+                                    
                             </div>
                         )
                     })
@@ -183,12 +186,12 @@ const Vision = styled.div`
             text-align:center ;
             padding:10px ;
             h4{
-                font-size:clamp(1rem ,6vw, 1.9rem )
+                font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
             }
 
             p{
                 text-align:center ;
-                font-size:clamp(1.5rem,6vw,1.7rem )
+                font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem)
             }
         }
     }
@@ -199,17 +202,48 @@ const ExploreCov = styled.div`
     width:80% ;
     margin:0 auto ;
     text-align:center ;
+    .heading{
+        h4{
+            font-size:clamp(2rem, 10vw, 2.5rem) ;
+                color:#f63a32 ;
+                margin: 10px auto;
+                width: 80%;
+                border-top:3px solid #f63a32;
+                padding-top:1rem ;
+                border-bottom:3px solid #f63a32;
+                padding-bottom:1rem ;
+        }
+    }
 
 .expcov{
-    color:red ;
-    display: flex ;
-   
+    display: flex;
+    justify-content:space-between ;
+    margin-top:60px;
 
     div{
         display:flex ;
         flex-direction:column ;
         text-align:center ;
         justify-content:center ;
+        img{
+            width:100% ;
+            height:auto ;
+            max-height:500px;
+        }
+        div{
+            margin-top:30px;
+
+            h6{
+                margin:0 ;
+                font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+                color:red ;
+            }
+            p{
+                font-size: clamp(.9rem, -0.875rem + 8.333vw, 1.9rem);
+                margin:10px 0 0 0  ;
+            }
+        }
+       
     }
 }
 `
