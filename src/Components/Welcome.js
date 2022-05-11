@@ -22,7 +22,7 @@ export default function Welcome() {
         },
         {
             Heading :'Core values',
-            Paragraph1:" ",
+            Paragraph1:"<ol> <li>hello</li></ol> ",
         }
 
     ];
@@ -51,6 +51,7 @@ export default function Welcome() {
                     return(
                            <div   key={index}>
                                 <h4>{mission.Heading}</h4>
+                                <p>{mission.Paragraph1}</p>
                             </div>
 
                         
