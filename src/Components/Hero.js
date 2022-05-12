@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Background from '../Assets/Background.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import Background from '../Assets/Background.png'
 import Video from '../Assets/video-1.mp4'
-
+import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -20,9 +21,13 @@ export default function Hero() {
                     <label htmlFor="/">The Lagoon school</label>
                     <div className='comment'>Setting Standards For <br /> <Link to={'/'}>Long Term</Link> Student Success</div>
                 </div>
-                <div className='Play'>
-                    <div className="playButton"></div>
-                    <label htmlFor="/">WATCH VIDEO TOUR</label>
+                <div className='play'>
+                    <div className='cover'>
+                        <Button>
+                            <FontAwesomeIcon icon={faPlayCircle} />
+                        </Button>
+                        <label htmlFor="/">WATCH VIDEO <br /> TOUR</label>
+                    </div>
                 </div>
             </div>
        </BackgroundContent>
@@ -102,4 +107,42 @@ const BackgroundContent = styled.div`
                }
            }
        } 
+
+       .play{
+           display:flex ;
+           flex-direction:column ;
+           text-align:center ;
+           justify-content:center ;
+
+           .cover{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 2rem;
+            align-items: center;
+
+            label{
+                color:#fff ;
+                font-size:clamp(2rem, 8vw, 2rem);
+                text-align:left ;
+
+            }
+           }
+       }
+`
+
+const Button = styled.button`
+
+       height:10rem ;
+       width:10rem ;
+       border-radius:100px;
+       background-color:transparent ;
+       border:2px solid #fff ;
+
+       svg{
+           height:5rem ;
+           color:#fff ;
+           cursor: pointer;
+       }
+
 `
