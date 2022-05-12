@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Background from '../Assets/Background.png'
-
+import Video from '../Assets/video-1.mp4'
 
 
 
@@ -11,8 +11,8 @@ export default function Hero() {
   return (
    <Section>
        <BackgroundCover>
-           <img src={Background} alt="" />
-            <video src='../Assets/video-1.mp4' autoPlay loop muted />
+           {/* <img src={Background} alt="" /> */}
+            <video src={Video} autoPlay loop muted />
        </BackgroundCover>
        <BackgroundContent>
             <div className='ContentCover'>
@@ -40,6 +40,13 @@ const BackgroundCover = styled.div`
     z-index:1;
 
     img{
+        width: 100%;
+        filter: brightness(60%);
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    video{
         width: 100%;
         filter: brightness(60%);
         height: 100vh;
