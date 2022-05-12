@@ -191,7 +191,7 @@ const Vision = styled.div`
 
             p{
                 text-align:center ;
-                font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem)
+                font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
             }
         }
     }

@@ -5,6 +5,7 @@ import { BrowserRouter as Router,
 
 import Nabar from './Components/Nabar';
 import Container from './Components/Container';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       {/* <Switch>
           <Route />
       </Switch> */}
+      <Footer/>
     </Router>
       
     </>
