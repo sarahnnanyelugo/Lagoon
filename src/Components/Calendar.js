@@ -39,13 +39,16 @@ export default function Calendar() {
   return (
     <CalendarSection>
         <Events>
+            <div className='upcoming'>
+                <h4>Recent Posts</h4>
+            </div>
             {EventContent.map((ent, index)=>{
                 return(
                     <div className='content' key={index}>
                         <div className='holder-img'>
                             <img src={ent.holder} alt="holder" />
                         </div>
-                        <div>
+                        <div className='pesp'>
                             <h4>{ent.header}</h4>
                             <label >{ent.date}</label>
                             <p>{ent.ceremony}</p>
@@ -55,7 +58,7 @@ export default function Calendar() {
             })}
         </Events>
         <Dates>
-            <div>
+            <div className='upcoming'>
                 <h4>UPCOMING EVENTS</h4>
             </div>
                 {EventDates.map((duty, index)=>{
@@ -66,9 +69,7 @@ export default function Calendar() {
                        </div>
                     )
                 })}
-            <div>
                 <button>View Calendar</button>
-            </div>
         </Dates>
     </CalendarSection>
   )
@@ -78,14 +79,32 @@ export default function Calendar() {
 const CalendarSection = styled.section`
     display:grid ;
     grid-template-columns:1fr 500px ;
-    width:80% ;
-    margin:0 auto ;
+    width:85% ;
+    margin:7rem auto ;
 
 `
 
 const Events = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .upcoming{
 
+h4{
+    color: #ff000070;
+    font-size: clamp(1.3rem,6vw,1.5rem);
+    position: relative;
 
+    &::before{
+        content: '';
+        border-bottom: 5px solid red;
+        width: 9rem;
+        position: absolute;
+        bottom: 0;
+        top: 30px;
+    }
+}
+}
     .content{
         display:grid ;
         grid-template-columns: 400px 1fr ;
@@ -103,18 +122,66 @@ const Events = styled.div`
             }
 
         }
+
+        .pesp{
+
+            h4{
+                color:red ;
+                font-size:1.3vw;
+                margin:0 0 10px 0 ;
+            }
+
+            label{
+                color:rgba(0, 0, 0,0.5) ;
+            }
+
+            p{
+                font-size:clamp(1.3rem, 6vw,1.3rem);
+            }
+        }
         
     }
 
 `
 
 const Dates = styled.div`
+    padding-left: 20%;
+    position:relative ;
+    .upcoming{
+
+        h4{
+            color: #ff000070;
+            font-size: clamp(1.3rem,6vw,1.5rem);
+            position: relative;
+
+            &::before{
+                content: '';
+                border-bottom: 5px solid red;
+                width: 9rem;
+                position: absolute;
+                bottom: 0;
+                top: 30px;
+            }
+        }
+    }
 
     .arrange{
         display:grid;
         grid-template-columns: 80px 1fr;
         grid-gap: 40px;
         margin-top:40px;
+        padding-left: 30px;
+        z-index:10 ;
+        &::before{
+            content: '';
+            height: 27%;
+            border-left: 2px solid #000;
+            position: absolute;
+            margin-top: -31px;
+            left: 11rem;
+            z-index: -10;
+        }
+
         .date{
             height:100px ;
             display:flex ;
@@ -125,6 +192,7 @@ const Dates = styled.div`
             border:3px solid #000 ;
             font-size: 23px;
             text-align: center;
+            background-color:#fff ;
         }
 
         .comment{
@@ -134,6 +202,24 @@ const Dates = styled.div`
             flex-direction:column ;
             justify-content:center ;
             align-items:flex-start ;
+            font-size:clamp(1.3rem, 6vw,1.5rem);
+
+        }
+    }
+
+    button{
+        width:10rem ;
+        font-size:20px;
+        height:40px ;
+        background-color:red;
+        border:none ;
+        font-weight:900;
+        padding:10px ;
+        color:#fff ;
+        margin-top:5rem;
+
+        &:hover{
+            cursor: pointer;
         }
     }
 `

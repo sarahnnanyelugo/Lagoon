@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
 import Confrence from '../Assets/Confrence.png'
-
+import ExploreOne from '../Assets/ExploreOne.png'
+import ExploreTwo from '../Assets/ExplaoreTwo.png'
 
 function Carousel() {
     
@@ -13,41 +14,62 @@ function Carousel() {
         infinite: true,
         fade: true,
         arrows:true,
-        speed: 100, 
+        speed: 1000, 
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay:false,
         };
 
-        
+        const Slideing =[
+            {
+                label:'ONLY AT LAGOON SCHOOL',
+                paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
+                image:Confrence,
+                commentor:'sabella Nweze'
+            },
+            {
+                label:'ONLY AT LAGOON SCHOOL',
+                paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
+                image:ExploreOne,
+                commentor:'Amanda Eze'
+            },
+            {
+                label:'ONLY AT LAGOON SCHOOL',
+                paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
+                image:ExploreTwo,
+                commentor:'Bella Ugwu'
+            },
+        ]
 
   return (
     <>
-      <Slider {...settings}>
-            <SlickContent>
-                <div className='cont'>
-                    <div className='stories'>
-                        <label>ONLY AT LAGOON SCHOOL</label>
-                        <p>
-                            Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minimx
-                            veniam, quis nostrud e ercitation  x ea
-                            ullamco laboris nisi ut aliquip e
-                            commodo consequat.
-                        </p>
-                    </div>
-                    <div  className='imagen'>
-                        <img src={Confrence} alt="" />
-                        <h4>sabella Nweze</h4>
-                    </div>
-                </div>
-                
-            </SlickContent>
+        <Slider {...settings}>
+
+          {Slideing.map((slide, index) =>{
+              return(
+
+                    <SlickContent key={index}>
+                        <div className='cont'>
+                            <div className='stories'>
+                                <label>{slide.label}</label>
+                                <p>{slide.paragraph}   </p>
+                            </div>
+                            <div  className='imagen'>
+                                <img src={slide.image} alt="" />
+                                <h4>{slide.commentor}</h4>
+                            </div>
+                        </div>
+                    </SlickContent>
+
+              )
+
+          })
+
+          }
+            
            
-           
-      </Slider>
+            </Slider>
+
     </>
   )
 }
@@ -114,5 +136,7 @@ const SlickContent  = styled.div`
 
         }
     }
+
+
     
 `
