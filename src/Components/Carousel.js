@@ -26,7 +26,7 @@ function Carousel() {
       <Slider {...settings}>
             <SlickContent>
                 <div className='cont'>
-                    <div>
+                    <div className='stories'>
                         <label>ONLY AT LAGOON SCHOOL</label>
                         <p>
                             Lorem ipsum dolor sit amet,
@@ -38,17 +38,14 @@ function Carousel() {
                             commodo consequat.
                         </p>
                     </div>
-                    <div  className='image'>
+                    <div  className='imagen'>
                         <img src={Confrence} alt="" />
                         <h4>sabella Nweze</h4>
                     </div>
                 </div>
                 
             </SlickContent>
-            <SlickContent>
-            <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit!</h4>
-
-            </SlickContent>
+           
            
       </Slider>
     </>
@@ -59,27 +56,63 @@ export default Carousel
 
 
 const SlickContent  = styled.div`
+
+        height: 40rem;
+        display:flex !important ;
+        flex-direction:column ;
+        align-items:center ;
+        justify-content:center ;
+
     .cont{
         display:grid ;
         grid-template-columns: 1fr 800px;
         width:90% ;
         margin:0 auto ;
-    }
 
-    .image{
+        .stories{
+
+
+            label{
+                color:red;
+                font-size:clamp(1.3rem, 6vw, 1.5rem) ;
+                position: relative;
+                &::before{
+                    content: '';
+                    border-bottom: 5px solid red;
+                    width: 9rem;
+                    position: absolute;
+                    bottom: 0;
+                    top:30px ;
+                }
+            }
+
+            p{
+                font-size:clamp(1.3rem, 6vw, 1.7rem) ;
+            }
+        }
+
+       
+    }
+    .imagen{
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
-        align-items: end;
+        align-items: center;
 
 
-        image{
+        img{
             position: relative;
             object-fit: cover;
-            width: 500px;
-            height: 300px;
+            width: 500px !important;
+            height: 300px !important;
             border-radius: 20px;
         }
+
+        h4{
+            font-size:clamp(1.3rem, 6vw, 1.7rem) ;
+
+        }
     }
+    
 `
