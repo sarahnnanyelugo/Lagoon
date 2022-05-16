@@ -3,6 +3,46 @@ import styled from 'styled-components';
 import Logo from '../Assets/Logo.png'
 import { Link } from 'react-router-dom';
 
+
+
+
+export default function Nabar() {
+  return (
+    <NavbarContainer>
+        <ContactNavbar>
+            <ul className="navcont">
+                <li className='list1'>  (+234) 01 3426109 &nbsp; (+234) 704 442 7923</li>
+                <li className='list2'>info@lagoonschool.com.ng</li>
+            </ul>
+        </ContactNavbar>
+        <DetailsNavbar>
+            <Link to={'/'} className='home'>
+                <img src={Logo} alt="logo" />
+            </Link>
+            <div className='menu-item'></div>
+            <div className='list-container'>
+                <ul>
+                    <li> <Link to={'/'}> About </Link> </li>
+                    <li><Link to={'/'}>Academics </Link> </li>
+                    <li> <Link to={'/'}>Admission</Link> </li>
+                    <li> <Link to={'/'}>Faith </Link> </li>
+                    <li><Link to={'/'}>Student Life</Link></li> 
+                    <li><Link to={'/'}>Parents</Link></li> 
+                </ul>
+                <Button>
+                    PORTAL
+                </Button>
+            </div>
+            
+        </DetailsNavbar>
+    </NavbarContainer>
+  )
+}
+
+
+
+
+
 const NavbarContainer = styled.nav``
 
 const ContactNavbar = styled.div`
@@ -106,38 +146,3 @@ const Button = styled.button`
         cursor:pointer;
     }
 `
-
-
-
-export default function Nabar() {
-  return (
-    <NavbarContainer>
-        <ContactNavbar>
-            <ul className="navcont">
-                <li className='list1'>  (+234) 01 3426109 &nbsp; (+234) 704 442 7923</li>
-                <li className='list2'>info@lagoonschool.com.ng</li>
-            </ul>
-        </ContactNavbar>
-        <DetailsNavbar>
-            <Link to={'/'} className='home'>
-                <img src={Logo} alt="logo" />
-            </Link>
-            <div className='menu-item'></div>
-            <div className='list-container'>
-                <ul>
-                    <li> <Link to={'/'}> About </Link> </li>
-                    <li><Link to={'/'}>Academics </Link> </li>
-                    <li> <Link to={'/'}>Admission</Link> </li>
-                    <li> <Link to={'/'}>Faith </Link> </li>
-                    <li><Link to={'/'}>Student Life</Link></li> 
-                    <li><Link to={'/'}>Parents</Link></li> 
-                </ul>
-                <Button>
-                    PORTAL
-                </Button>
-            </div>
-            
-        </DetailsNavbar>
-    </NavbarContainer>
-  )
-}
