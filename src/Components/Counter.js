@@ -161,6 +161,10 @@ const CounterCov = styled.section`
     .photos{
         display:flex ;
         justify-content:center ;
+        position: relative;
+        right: 0;
+        left: 0;
+        bottom: 200px;
 
         .check{
             display:grid ;
@@ -169,7 +173,7 @@ const CounterCov = styled.section`
 
             .evenst{
                 width: 400px ;
-                height: 600px ;
+                height:370px ;
                 position:relative ;
 
                 img{
