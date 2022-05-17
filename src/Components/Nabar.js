@@ -2,14 +2,15 @@ import React,{useState} from 'react';
 import styled from 'styled-components';
 import Logo from '../Assets/Logo.png'
 import { Link } from 'react-router-dom';
-import {navMenus} from './MenuItems';
+import {navMenus,navLabels} from './MenuItems';
 import Dropdown from './Dropdown';
 
 
 
+
+
 export default function Nabar() {
-    const [click , setClick] = useState(false);
-    const [dropdown, setDropdown] = useState(false);
+    const [setClick] = useState(false);
   
   
     const [activeMenu, setActiveMenu] = useState({
@@ -22,28 +23,28 @@ export default function Nabar() {
     })
   
     const onMouseEnter = (e) => {
-        console.log(e.target.text)
-      const menuText = e.target.text.trim().toLowerCase() || 'about';
+        console.log('inner text is', e.target.text)
+      const menuText = e.target.text.trim().toLowerCase() || '';
   
       if (window.innerWidth < 960){
-        setDropdown(false);
+        setActiveMenu(false);
       }else{
         setActiveMenu({
           menu1: menuText === 'about',
           menu2: menuText === 'academics',
           menu3: menuText === 'admission',
           menu4: menuText === 'faith',
-          menu5: menuText === 'studentlife ',
-          menu6: menuText === 'parents '
+          menu5: menuText === 'student life',
+          menu6: menuText === 'parents'
           
         })
       }
-  
+      console.log('active menu is', setActiveMenu)
     }
   
     const onMouseLeave = () =>{
       if(window.innerWidth < 960){
-        setDropdown(false);
+        setActiveMenu(false);
       }else{
         setActiveMenu({
           menu1: false,
@@ -56,8 +57,10 @@ export default function Nabar() {
       }
     };
   
-    const handleClick = () => setClick(!click)
     const closeMobileMenu = () => setClick(false)
+
+
+
   return (
     <NavbarContainer>
         <ContactNavbar>
@@ -73,14 +76,20 @@ export default function Nabar() {
             <div className='menu-item'></div>
             <div className='list-container'>
                 <ul className='link-up'>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> About </Link>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Academics </Link>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Admission </Link>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Faith </Link>      {activeMenu.menu4 && <Dropdown menuArray={navMenus.faith}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.studentlife}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> About </Link>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Academics </Link>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Admission </Link>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Faith </Link>      {activeMenu.menu4 && <Dropdown menuArray={navMenus.faith} label={navLabels['faith']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.parents} label={navLabels['parents']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>
+                
+
+
+                {/* <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.studentlife}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li> */}
                 </ul>
                 <Button>
+                {/* {console.log(navMenus.faith)} */}
                     PORTAL
                 </Button>
             </div>
@@ -163,10 +172,11 @@ const DetailsNavbar = styled.div`
     padding-right: 4%;
 
   .link-up{
-      display:flex ;
-      gap:3rem;
-      list-style:none ;
-      padding-right: 2rem;
+        display:flex ;
+        gap:3rem;
+        list-style:none ;
+        margin: 0;
+        padding: 0 2rem;
     li{
         display: flex;
         flex-direction: column;
@@ -178,6 +188,9 @@ const DetailsNavbar = styled.div`
           text-decoration:none;
           font-size:clamp(1rem, 6vw, 1.3rem);
           color:#fff ;
+          height:100% ;
+        display:flex;
+        align-items:center;
       }}
   }}
 

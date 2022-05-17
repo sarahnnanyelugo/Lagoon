@@ -55,15 +55,18 @@ export default function Counter() {
                             //         </div>
                             // </div>
                             <table key={index}>
-                                    <tr> 
-                                        <td>   <img src= {rte.icon}alt="" />   </td>
-                                    </tr>
-                                    <tr> 
-                                        <td> <p>{rte.numbers}</p> </td>
-                                    </tr>
-                                    <tr> 
-                                        <td> <label htmlFor="">{rte.label} </label> </td>
-                                    </tr>
+                                    <tbody>
+                                        <tr> 
+                                            <td>   <img src= {rte.icon}alt="" />   </td>
+                                        </tr>
+                                        <tr> 
+                                            <td> <p>{rte.numbers}</p> </td>
+                                        </tr>
+                                        <tr> 
+                                            <td> <label htmlFor="">{rte.label} </label> </td>
+                                        </tr>
+                                    </tbody>
+                                    
                             </table>
                         )
                     })

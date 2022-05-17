@@ -24,7 +24,7 @@ export default function Welcome() {
         },
         {
             Heading :'Core values',
-            Paragraph1:"<ol> <li>hello</li></ol> ",
+            Paragraph1:"<ol> <li>Freedom and responsibility </li> <li>Dignity of work   </li><li>Responsible use of resources</li><li>Spirit of service   </li><li>Parents involvement as  primary educators</li></ol> ",
         }
 
     ];
@@ -69,7 +69,7 @@ export default function Welcome() {
                     return(
                            <div className='box'  key={index}>
                                 <h4>{mission.Heading}</h4>
-                                <p>{mission.Paragraph1}</p>
+                                <p dangerouslySetInnerHTML={{__html: mission.Paragraph1}}></p>
                             </div>
                     )
                 } )}    
@@ -148,6 +148,8 @@ const Section = styled.section`
             p{
                 font-size:clamp(1.5rem, 6vw, 1.7rem ) ;
                 line-height:40px;
+
+                
             }
 
             button{
@@ -192,6 +194,10 @@ const Vision = styled.div`
             p{
                 text-align:center ;
                 font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
+
+                ol{
+                    text-align:left  ;
+                }
             }
         }
     }

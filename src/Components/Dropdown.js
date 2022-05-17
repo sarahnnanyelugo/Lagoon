@@ -5,8 +5,11 @@ import ExploreTwo from '../Assets/ExplaoreTwo.png'
 
 
 function Dropdown(props) {
-    const [click, setClick] = useState(true);
+    
+    const [click, setClick] = useState(false);
     const {menuArray} = props;
+    let label = props?.label[0].label;
+    console.log('label',label)
 
     const handleClick = () => setClick(!click);
 
@@ -28,6 +31,7 @@ function Dropdown(props) {
                     {MenuImg.map((men,idx)=>{
                         return(
                             <div className='content' key={idx}>
+                                <div className='red-abel'>{label}</div>
                                 <div>
                                     <img src={men.placeHolder} alt="" />
                                 </div>
@@ -64,11 +68,11 @@ export default Dropdown;
 
 
 const Dropcover =styled.section`
-        width: 670px !important;
+        width: 50vw !important;
         position: absolute;
-        top: 90px !important;
+        top: 104px !important;
         /* left: 0 !important; */
-        right:0 !important ;
+        right:10rem !important ;
         padding: 20px;
         z-index: 999;
         background-color: #fff;
@@ -84,13 +88,29 @@ const Dropcover =styled.section`
         justify-content: center;
         text-align: left;
         display:grid ;
-        grid-template-columns:1fr  250px ;
+        grid-template-columns: 1fr 38%;
         .content{
             display:grid ;
-            grid-template-columns:200px 1fr ;
+            grid-template-columns: 36% 1fr;
             gap: 20px;
-            align-items: center;
-            align-self: flex-start;
+            align-items: flex-start;
+            align-self: flex-end;
+            position: relative;
+
+            .red-abel{
+                position:absolute ;
+                top:-10px ;
+                left:0 ;
+                right:20% ;
+                text-align:center ;
+                color:red ;
+                font-weight:900 ;
+
+            }
+
+            p{
+                padding-top:20px ;
+            }
 
             img{
                 width:100% ;

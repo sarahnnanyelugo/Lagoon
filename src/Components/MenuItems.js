@@ -23,13 +23,40 @@ export const navMenus = {
         {title: 'Academic Probation', path: '/school/academic-probation', cName: 'dropdown-link'},
     ],
     studentlife: [
-        {title: 'school news', path: '/news/school_news', cName: 'dropdown-link'},
-        {title: 'school activities', path: '/news/school_activities', cName: 'dropdown-link'},
+        {title: 'Apply', path: '/academics/how_to_apply', cName: 'dropdown-link', description: '', },
+        {title: 'Fees', path: '/academics/school-fees', cName: 'dropdown-link'},
+        {title: 'Transfer New', path: '/academics/result_&_scholarships', cName: 'dropdown-link'},
+   
     ],
     parents: [
-        {title: 'school news', path: '/news/school_news', cName: 'dropdown-link'},
+        {title: 'school', path: '/news/school_news', cName: 'dropdown-link'},
         {title: 'school activities', path: '/news/school_activities', cName: 'dropdown-link'},
     ],
 }
 
-export default navMenus;
+
+export const navLabels = {
+    about: [
+        {label: 'ABOUT'}
+
+    ],
+    academics: [
+       
+        {label: 'ACADEMICS'}
+    ],
+    admission: [
+       
+        {label: 'ADMISSION'}
+    ],
+    faith: [
+        {label: 'FAITH'}
+    ],
+    studentlife: [
+        {label: 'STUDENT LIFE'}
+    ],
+    parents: [
+        {label: 'PARENTS'}
+    ],
+}
+
+export default navMenus ;
