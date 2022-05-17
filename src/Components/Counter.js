@@ -96,6 +96,7 @@ export default function Counter() {
 
 const CounterCov = styled.section`
     position:relative ;
+    height: 55rem;
 
 
     .numbers{
@@ -195,6 +196,7 @@ const CounterCov = styled.section`
                         bottom:0 ;
                         left:20px ;
                         color:#fff ;
+                        font-size:20px ;
                     }
                 }
 

@@ -61,8 +61,9 @@ const Bacdrop = styled.div`
     background-repeat:no-repeat ;
     background-size:cover ;
     background-attachment: fixed;
+    background-color:rgba(0,0,0,0.7) ;
     /* filter: brightness(60%); */
-    -webkit-filter: brightness(70%);
+    /* -webkit-filter: brightness(70%); */
     .join-us{
         width: 60% ;
         margin: 0 auto ;
