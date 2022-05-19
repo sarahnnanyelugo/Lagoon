@@ -65,11 +65,11 @@ export default function Nabar() {
   return (
     <NavbarContainer>
         <ContactNavbar>
-            <ul className="navcont">
+            {/* <ul className="navcont">
                 <li className='list1'>  (+234) 01 3426109 &nbsp; 
                 (+234) 704 442 7923</li>
                 <li className='list2'>info@lagoonschool.com.ng</li>
-            </ul>
+            </ul> */}
             <ul className="navcont2">
                 <li className='list1'>  (+234) 01 3426109 <br />
                 (+234) 704 442 7923</li>
