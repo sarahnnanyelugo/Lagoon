@@ -4,14 +4,15 @@ import Logo from '../Assets/Logo.png'
 import { Link } from 'react-router-dom';
 import {navMenus,navLabels} from './MenuItems';
 import Dropdown from './Dropdown';
-
+import { GiHamburgerMenu } from "react-icons/gi";
+import { VscChromeClose } from "react-icons/vsc";
 
 
 
 
 export default function Nabar() {
     const [setClick] = useState(false);
-  
+    const [navbarState, setNavbarState] = useState(false);
   
     const [activeMenu, setActiveMenu] = useState({
         menu1: false,
@@ -65,7 +66,13 @@ export default function Nabar() {
     <NavbarContainer>
         <ContactNavbar>
             <ul className="navcont">
-                <li className='list1'>  (+234) 01 3426109 &nbsp; (+234) 704 442 7923</li>
+                <li className='list1'>  (+234) 01 3426109 &nbsp; 
+                (+234) 704 442 7923</li>
+                <li className='list2'>info@lagoonschool.com.ng</li>
+            </ul>
+            <ul className="navcont2">
+                <li className='list1'>  (+234) 01 3426109 <br />
+                (+234) 704 442 7923</li>
                 <li className='list2'>info@lagoonschool.com.ng</li>
             </ul>
         </ContactNavbar>
@@ -73,8 +80,14 @@ export default function Nabar() {
             <Link to={'/'} className='home'>
                 <img src={Logo} alt="logo" />
             </Link>
-            <div className='menu-item'></div>
-            <div className='list-container'>
+            <div className="menu-item">
+                {navbarState ? (
+                  <VscChromeClose   onClick={() => setNavbarState(false)} />
+                ) : (
+                  <GiHamburgerMenu onClick={() => setNavbarState(true)} />
+                )}
+          </div>
+            <div className={navbarState ? "list-container active" : "list-container "} >
                 <ul className='link-up'>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> About </Link>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Academics </Link>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
@@ -109,11 +122,9 @@ const ContactNavbar = styled.div`
     position:relative ;
     width:100% ;
     display: flex ;
-    flex-direction:column;
     text-align:center ;
     height: 60px ;
-    justify-content: center;
-    padding-left:20px  ;
+    align-items:center ;
 
     .navcont{
         padding: 0;
@@ -121,33 +132,100 @@ const ContactNavbar = styled.div`
         margin:0 ;
         display:flex ;
         gap:3rem;
+        padding-left:20px  ;
 
 
         .list1{
-            font-size:clamp(0.9rem, 2vw, 1rem);
-            
+            font-size:clamp(0.7rem, 1vw, 1rem);
+            display:flex ;
+            justify-content:center ;
+            align-items:center ;
+            text-align:left ;
             &:before{
                 content: '🕿';
                 padding-right:10px ;
-                font-size:clamp(1.1rem, 2vw, 0.9rem);
+                font-size:clamp(1.1rem, 1vw, 0.9rem);
                 color: red;
 
             }
         }
 
         .list2{
-            font-size:clamp(0.9rem, 2vw, 1rem);
-            
+          font-size:clamp(0.7rem, 1vw, 1rem);
+            display:flex ;
+            justify-content:center ;
+            align-items:center ;
+            text-align:left ;
+            line-height:break ;
             &:before{
                 content: '🖂';
                 padding-right:10px ;
                 color: red;
-                font-size:clamp(0.9rem, 2vw, 1rem);
+                font-size:clamp(0.9rem, 1vw, 1rem);
 
             }
         }
 
 
+    }
+
+    .navcont2{
+      display:none ;
+    }
+
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+      flex-direction:column;
+      justify-content: left;
+      position:relative ;
+      width:100% ;
+      display: flex ;
+      text-align:center ;
+      height: 60px ;
+      align-items:center ;
+      padding:  0   ;
+
+        .navcont{
+          display:none ;
+        }
+
+        .navcont2{
+          display:flex ;
+          justify-content:space-between ;
+          gap:0;
+          width: 93%;
+          padding:0 ;
+          .list1{
+            font-size:clamp(0.7rem, 1vw, 1rem);
+            display:flex ;
+            justify-content:center ;
+            align-items:center ;
+            text-align:left ;
+            &:before{
+                content: '🕿';
+                padding-right:10px ;
+                font-size:clamp(1.1rem, 1vw, 0.9rem);
+                color: red;
+
+            }
+        }
+
+        .list2{
+          font-size:clamp(0.7rem, 1vw, 1rem);
+            display:flex ;
+            justify-content:center ;
+            align-items:center ;
+            text-align:left ;
+            line-height:break ;
+            &:before{
+                content: '🖂';
+                padding-right:10px ;
+                color: red;
+                font-size:clamp(0.9rem, 1vw, 1rem);
+
+            }
+        }
+
+        }
     }
 `
 
@@ -158,9 +236,15 @@ const DetailsNavbar = styled.div`
     background-color:#e21020;
     z-index:100 ;
     position:relative ;
+    height: 7rem;
+    align-items: center;
 .home{
+    position: relative;
+    width: 20%;
     img{
-        height:6vw;
+        height:100%;
+        width:100% ;
+        object-fit:contain ;
     }
 }
 
@@ -193,6 +277,81 @@ const DetailsNavbar = styled.div`
         align-items:center;
       }}
   }}
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .home{
+        position: relative;
+        width: 60%;
+    img{
+        height:100%;
+        width:100% ;
+        object-fit:contain ;
+    }
+}
+
+    .list-container.active{
+      position: absolute;
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      /* justify-content: space-between; */
+      height: 500px;
+      background-color: #e2102073;
+      background-color:#e21020;
+      top:110px;
+      right:0 ;
+      width: 100%;
+      padding: 0;
+
+      .link-up{
+        display:flex ;
+        flex-direction:column ;
+        gap:2rem;
+        list-style:none ;
+        margin: 0;
+        padding: 0 2rem;
+    li{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        cursor: pointer;
+
+      a{
+          text-decoration:none;
+          font-size:clamp(1rem, 6vw, 1.3rem);
+          color:#fff ;
+          height:100% ;
+        display:flex;
+        align-items:center;
+      }}
+  }
+
+    }
+    .list-container{
+      position: absolute;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: #fff;
+      right:-700px;
+      top:-700px;
+        transition: all .5s linear;
+
+    }
+
+
+    .menu-item{
+        display:block;
+        width:15% ;
+
+        svg{
+          font-size:50px ;
+          color:#fff ;
+        }
+    }
+    
+  }
+
+  
 
 `
 
@@ -211,5 +370,12 @@ const Button = styled.button`
     &:hover{
         transform:scale(1.1);
         cursor:pointer;
+    }
+
+
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+      top:7% ;
+      width: 90% ;
+      margin:0 auto ;
     }
 `

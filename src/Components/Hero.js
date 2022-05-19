@@ -74,7 +74,7 @@ const BackgroundContent = styled.div`
        .ContentCover{
            text-align:center ;
            display:grid ;
-           grid-template-columns: 1fr 44rem;
+           grid-template-columns:  1fr 40%;
            width:90% ;
            margin: 0 auto ;
            justify-content:space-between ;
@@ -129,6 +129,37 @@ const BackgroundContent = styled.div`
             }
            }
        }
+       @media screen and (min-width: 280px) and (max-width: 1080px) {
+        .ContentCover{
+           text-align:center ;
+           display:grid ;
+           grid-template-columns:  repeat(1, 1fr);}
+
+           .play{
+           display:flex ;
+           flex-direction:column ;
+           text-align:left ;
+           justify-content:left ;
+
+           .cover{
+            display: flex;
+            flex-direction:column ;
+            text-align: left;
+            justify-content: left;
+            gap: 2rem;
+            align-items: left !important;
+
+            label{
+                color:#fff ;
+                font-size:clamp(2rem, 8vw, 2rem);
+                text-align:left ;
+
+            }
+           }
+       }
+       }
+
+       
 `
 
 const Button = styled.button`
