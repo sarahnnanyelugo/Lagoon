@@ -89,12 +89,12 @@ export default function Nabar() {
           </div>
             <div className={navbarState ? "list-container active" : "list-container "} >
                 <ul className='link-up'>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> About </Link>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Academics </Link>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Admission </Link>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Faith </Link>      {activeMenu.menu4 && <Dropdown menuArray={navMenus.faith} label={navLabels['faith']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.parents} label={navLabels['parents']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/about'} onClick={closeMobileMenu}> About </Link>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/academics'} onClick={closeMobileMenu}> Academics </Link>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/admission'} onClick={closeMobileMenu}> Admission </Link>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/faith'} onClick={closeMobileMenu}> Faith </Link>      {activeMenu.menu4 && <Dropdown menuArray={navMenus.faith} label={navLabels['faith']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/parents'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.parents} label={navLabels['parents']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/student-life'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>
                 
 
 

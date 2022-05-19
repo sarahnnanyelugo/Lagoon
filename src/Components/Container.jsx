@@ -6,10 +6,11 @@ import Hero from './Hero'
 import Images from './Images'
 import Join from './Join'
 import Welcome from './Welcome'
+import styled from 'styled-components';
 
 export default function Container() {
   return (
-    <div>
+    <Cover>
         <Hero/>
         <Welcome/>
         <Calendar/>
@@ -17,6 +18,11 @@ export default function Container() {
         <Images/>
         <Carousel/>
         <Join/>
-    </div>
+    </Cover>
   )
 }
+
+
+const Cover =styled.section`
+  overflow-x:hidden ;
+`
