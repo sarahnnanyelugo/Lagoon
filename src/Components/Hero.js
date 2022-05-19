@@ -131,13 +131,12 @@ const BackgroundContent = styled.div`
        }
        @media screen and (min-width: 280px) and (max-width: 1080px) {
         .ContentCover{
-            text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             height: 88%;
             align-items: baseline;
-            gap: 6rem;
+            gap: 6rem;}
 
            .play{
            display:flex ;
