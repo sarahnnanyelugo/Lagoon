@@ -5,7 +5,7 @@ import { BrowserRouter as Router,  Switch, Route
 import Nabar from './Components/Nabar';
 import Container from './Components/Container';
 import Footer from './Components/Footer';
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
+// import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import About from './Components/Pages/About';
 import Academics from './Components/Pages/Academics';
 import Admission from './Components/Pages/Admission';
@@ -18,14 +18,17 @@ function App() {
     <>
     <Router>                                                                                  
           <Nabar />
-          <Router render={({location}) => (  
-                <TransitionGroup>
-                  <CSSTransition 
-                    key={location.key}
-                    timeout={450}
-                    classNames="fade"
-                  >
-                      <Switch>
+          <Router 
+          // render={({location}) => (             // <TransitionGroup>
+          //       //   <CSSTransition  key={location.key} timeout={450} classNames="fade" >
+                      
+          //       //   </CSSTransition>
+          //       // </TransitionGroup>
+
+
+          //  )} 
+           />
+                    <Switch>
                               <Route path="/" component={Container}   exact/>
                               <Route path="/about" component={About} />
                               <Route path="/academics" component={Academics} />
@@ -35,11 +38,6 @@ function App() {
                               <Route path="/student-life" component={StudentLife} />
                               <Route path="*"  component={NotFound}  />
                         </Switch>
-                  </CSSTransition>
-                </TransitionGroup>
-
-
-           )} />
 
           <Footer/>
       </Router>
