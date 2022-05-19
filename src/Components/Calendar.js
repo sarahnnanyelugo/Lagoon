@@ -81,7 +81,10 @@ const CalendarSection = styled.section`
     grid-template-columns:1fr 500px ;
     width:85% ;
     margin:7rem auto ;
-
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+        display:grid ;
+        grid-template-columns:1fr  ;
+    }
 `
 
 const Events = styled.div`
@@ -221,5 +224,25 @@ const Dates = styled.div`
         &:hover{
             cursor: pointer;
         }
+    }
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+
+        padding-left: 2%;
+        .arrange{
+        display:grid;
+        grid-template-columns: 80px 1fr;
+        grid-gap: 40px;
+        margin-top:40px;
+        padding-left: 30px;
+        z-index:10 ;
+        &::before{
+            content: '';
+            height: 27%;
+            border-left: 2px solid #000;
+            position: absolute;
+            margin-top: -31px;
+            left: 12%;
+            z-index: -10;
+        }}
     }
 `

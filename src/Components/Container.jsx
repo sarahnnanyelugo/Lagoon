@@ -1,7 +1,7 @@
 import React from 'react'
-// import Calendar from './Calendar'
-// import Carousel from './Carousel'
-// import Counter from './Counter'
+import Calendar from './Calendar'
+import Carousel from './Carousel'
+import Counter from './Counter'
 import Hero from './Hero'
 import Images from './Images'
 import Join from './Join'
@@ -12,10 +12,10 @@ export default function Container() {
     <div>
         <Hero/>
         <Welcome/>
-        {/* <Calendar/> */}
-        {/* <Counter/> */}
+        <Calendar/>
+        <Counter/>
         <Images/>
-        {/* <Carousel/> */}
+        <Carousel/>
         <Join/>
     </div>
   )

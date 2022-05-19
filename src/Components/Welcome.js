@@ -202,6 +202,40 @@ const Vision = styled.div`
         }
     }
 
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+       
+
+    .box-container{
+        display:grid ;
+        grid-template-columns:repeat(1, 1fr) ;
+
+        gap:1rem;
+        width:80%;
+        margin:8rem auto;
+        .box{
+            border:2px solid #f63a32;
+            border-radius:5px;
+            width:100% ;
+            max-width:700px ;
+            min-height: 500px;
+            text-align:center ;
+            padding:10px ;
+            h4{
+                font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+            }
+
+            p{
+                text-align:center ;
+                font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
+
+                ol{
+                    text-align:left  ;
+                }
+            }
+        }
+    }
+    }
+
 `
 
 const ExploreCov = styled.div`
