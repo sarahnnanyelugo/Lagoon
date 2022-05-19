@@ -126,6 +126,10 @@ const ContactNavbar = styled.div`
     height: 60px ;
     align-items:center ;
 
+    .navcont2{
+      display:none ;
+    }
+
     .navcont{
         padding: 0;
         list-style:none;
@@ -169,9 +173,7 @@ const ContactNavbar = styled.div`
 
     }
 
-    .navcont2{
-      display:none ;
-    }
+    
 
     @media screen and (min-width: 280px) and (max-width: 1080px) {
       flex-direction:column;
@@ -185,11 +187,11 @@ const ContactNavbar = styled.div`
       padding:  0   ;
 
         .navcont{
-          display:none ;
+          display:none !important;
         }
 
         .navcont2{
-          display:flex ;
+          display:flex  !important;
           justify-content:space-between ;
           gap:0;
           width: 93%;
