@@ -217,7 +217,7 @@ const Vision = styled.div`
             border-radius:5px;
             width:100% ;
             max-width:700px ;
-            min-height: 500px;
+            min-height: 350px;
             text-align:center ;
             padding:10px ;
             h4{
