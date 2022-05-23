@@ -167,7 +167,7 @@ h4{
 
             h4{
                 color:red ;
-                font-size:1.3vw;
+                font-size:4.5vw;
                 margin:0 0 10px 0 ;
             }
 

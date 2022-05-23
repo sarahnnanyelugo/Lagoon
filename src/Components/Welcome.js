@@ -166,9 +166,65 @@ const Section = styled.section`
                     background-color:#f63a32;
                     cursor: pointer;
                 }
+                @media screen and (min-width: 280px) and (max-width: 1080px) {
+                    width:100% ;
+                }
             }
            
         }
+    }
+
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+
+        .school{
+        margin-top:5rem ;
+
+        .intro{
+            display:flex ;
+            flex-direction:column;
+            text-align:center ;
+            justify-content:center ;
+            width:90% ;
+            margin:0 auto ;
+
+            h4{
+                font-size: 7vw ;
+                color:#f63a32 ;
+                margin: 10px auto;
+                width: 80%;
+                border-top:3px solid #f63a32;
+                padding-top:1rem ;
+                border-bottom:3px solid #f63a32;
+                padding-bottom:1rem ;
+            }
+
+            p{
+                font-size:5vw;
+                line-height:40px;
+                text-align:left ;
+                padding-left: 10px;
+                
+            }
+
+            button{
+                padding:20px ;
+                width:100% ;
+                margin:0 auto ;
+                font-size:clamp(1.5rem, 6vw, 1.7rem ) ;
+                border:0;
+                background-color:#f63a327d;
+                color:#fff ;
+                font-family:monseratSemi;
+                transition: all 1.5s ease linear ;
+                &:hover{
+                    background-color:#f63a32;
+                    cursor: pointer;
+                }
+             
+            }
+           
+        }
+    }
     }
 `
 
@@ -284,6 +340,22 @@ const ExploreCov = styled.div`
             }
         }
        
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+
+    .heading{
+        h4{
+            font-size:clamp(2rem, 10vw, 2.5rem) ;
+                color:#f63a32 ;
+                margin: 10px auto;
+                width: 100%;
+                border-top:3px solid #f63a32;
+                padding-top:1rem ;
+                border-bottom:3px solid #f63a32;
+                padding-bottom:1rem ;
+        }
     }
 }
 `

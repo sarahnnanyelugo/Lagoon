@@ -70,7 +70,7 @@ export default Dropdown;
 const Dropcover =styled.section`
         width: 50vw !important;
         position: absolute;
-        top: 104px !important;
+        top: 110px !important;
         /* left: 0 !important; */
         right:10rem !important ;
         padding: 20px;

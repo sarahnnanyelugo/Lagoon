@@ -256,6 +256,8 @@ const DetailsNavbar = styled.div`
 .list-container{
     display:flex ;
     padding-right: 4%;
+    height: 100%;
+    align-items: center;
 
   .link-up{
         display:flex ;
@@ -263,6 +265,7 @@ const DetailsNavbar = styled.div`
         list-style:none ;
         margin: 0;
         padding: 0 2rem;
+        height:100% ;
     li{
         display: flex;
         flex-direction: column;
@@ -360,7 +363,7 @@ const DetailsNavbar = styled.div`
 const Button = styled.button`
     height: 40px;
     position: relative;
-    top:36% ;
+    /* top:36% ; */
     width: 6rem ;
     background-color:#e21020;
     color:#fff ;

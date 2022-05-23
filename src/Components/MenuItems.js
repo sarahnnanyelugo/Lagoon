@@ -1,9 +1,9 @@
 export const navMenus = {
     about: [
-        {title: 'Administrator’s Message', path: '/about/administrators-message', cName: 'dropdown-link'},
-        {title: 'Proprietor’s Message', path: '/about/proprietors-message', cName: 'dropdown-link'},
-        {title: 'History of the School', path: '/about/history', cName: 'dropdown-link'},
-        {title: 'Contact Us', path: '/about/contact-us', cName: 'dropdown-link'},
+        {title: 'WELCOME TO THE LAGOON SCHOOL', path: '/about/welcome-to-the-lagoon-school', cName: 'dropdown-link'},
+        {title: 'EDUCATIONAL PHILOSOPHY & MODEL', path: '/about/education', cName: 'dropdown-link'},
+        {title: 'OPUS DEI', path: '/about/opus-dei', cName: 'dropdown-link'},
+        {title: 'MESSAGE FROM THE PRINCIPAL', path: '/about/message-from-the-principal', cName: 'dropdown-link'},
     ],
     academics: [
        
