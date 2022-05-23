@@ -49,7 +49,7 @@ export default function Images() {
                         </div>
                     </div>
                 </ImageCont>
-                <ImageCont >
+                <ImageCont className='four'  >
                     <img src={Image4} alt="gallery" />
                     <div className='overlay'>
                         <div>
@@ -59,7 +59,7 @@ export default function Images() {
                         </div>
                     </div>
                 </ImageCont>
-                <ImageCont className='four'>
+                <ImageCont className='five'>
                     <img src={Image5} alt="gallery" />
                     <div className='overlay'>
                         <div>
@@ -69,7 +69,7 @@ export default function Images() {
                         </div>
                     </div>
                 </ImageCont>
-                <ImageCont className='five'>
+                <ImageCont className='six'>
                     <img src={Image6} alt="gallery" />
                     <div className='overlay'>
                         <div>
@@ -79,7 +79,7 @@ export default function Images() {
                         </div>
                     </div>
                 </ImageCont>
-                <ImageCont  className='six'>
+                <ImageCont  className='seven'>
                     <img src={ExploreTwo} alt="gallery" />
                     <div className='overlay'>
                         <div>
@@ -118,7 +118,7 @@ const ImageSection = styled.section`
     position:relative ;
     display:grid;
     grid-template-columns:repeat(8, 1fr);
-    grid-template-rows:repeat(2, minimx(150px, auto)) ;
+    grid-template-rows:repeat(2, minmax(150px, auto)) ;
     transition: all 5s linear;
 
    .one{
@@ -130,19 +130,56 @@ const ImageSection = styled.section`
    }
 
    .three{
-       grid-column:5/8 ;
+       grid-column:5/9 ;
    }
 
    .four{
-       grid-column:1/4 ;
+       grid-column:1/3 ;
    }
 
    .five{
-       grid-column:4/6 ;
+       grid-column:3/5 ;
    }
 
    .six{
-       grid-column:6/9 ;
+       grid-column:5/7 ;
+   }
+
+   .seven{
+       grid-column:7/9 ;
+   }
+   @media screen and (min-width: 280px) and (max-width: 1080px) {
+    grid-template-columns:repeat(8, 1fr);
+    grid-template-rows:repeat(2, minmax(150px, auto)) ;
+    .one{
+       grid-column:1/5 ;
+   }
+
+   .two{
+       grid-column:5/9 ;
+   }
+
+   .three{
+       grid-column:1/9 ;
+   }
+   .four{
+       grid-column:1/4 ;
+
+   }
+
+   .five{
+       grid-column:4/9 ;
+
+   }
+
+   .six{
+       grid-column:1/5 ;
+
+   }
+   .seven{
+       grid-column:5/9 ;
+
+   }
    }
 `
 

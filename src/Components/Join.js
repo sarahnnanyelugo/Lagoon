@@ -26,7 +26,6 @@ export default function Join() {
             <div className='join-us'>
                 <h4>Join Us</h4>
             </div>
-            <div >
                 <ul className=' apply-list'>
                     {Apply.map((app, index) =>{
                         return(
@@ -40,7 +39,6 @@ export default function Join() {
 
                     }
                 </ul>
-            </div>
         </Bacdrop>
     </JoinCov>
   )
@@ -102,7 +100,37 @@ const Bacdrop = styled.div`
         }
 
     }
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+        gap: 15rem;
 
+
+        .apply-list{
+        list-style:none ;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        grid-gap: 10px 100px;
+        transition: all 7s  linear ;
+        gap: 7rem;
+
+        li{
+            border:2px solid #fff;
+            padding:20px ;
+            text-align:center ;
+
+            a{
+                color:#fff ;
+                text-decoration:none ;
+                font-size:clamp(1.3rem, 6vw, 1.5rem) ;
+            };
+            &:hover{
+                transform:scale(1.2)
+            }
+        }
+
+    }
+
+    }
 
 
 `
@@ -111,5 +139,9 @@ const JoinCov = styled.section`
         height:40rem;
         position:relative;
 
-        
+        @media screen and (min-width: 280px) and (max-width: 1080px) {
+            height:60rem;
+
+
+        }
 `

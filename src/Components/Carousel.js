@@ -42,7 +42,7 @@ function Carousel() {
         ]
 
   return (
-    <>
+    <Container>
         <Slider {...settings}>
 
           {Slideing.map((slide, index) =>{
@@ -66,15 +66,26 @@ function Carousel() {
           })
 
           }
-            
-           
-            </Slider>
+        </Slider>
 
-    </>
+    </Container>
   )
 }
 
 export default Carousel
+
+
+const Container = styled.section`
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    overflow-x: hidden;
+
+`
+
 
 
 const SlickContent  = styled.div`
@@ -137,6 +148,61 @@ const SlickContent  = styled.div`
         }
     }
 
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+        height: 60rem;
+        align-items:center ;
+        .cont{
+        display:grid ;
+        grid-template-columns: repeat(1, 1fr);
+        gap:5rem;
+        width:100% ;
+        margin:0 auto ;
 
+        .stories{
+
+
+            label{
+                color:red;
+                font-size:clamp(1.3rem, 6vw, 1.5rem) ;
+                position: relative;
+                &::before{
+                    content: '';
+                    border-bottom: 5px solid red;
+                    width: 9rem;
+                    position: absolute;
+                    bottom: 0;
+                    top:30px ;
+                }
+            }
+
+            p{
+                font-size:clamp(1.3rem, 6vw, 1.7rem) ;
+            }
+        }
+
+       
+    }
+    .imagen{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+
+        img{
+            position: relative;
+            object-fit: cover;
+            width: 500px !important;
+            height: 300px !important;
+            border-radius: 20px;
+        }
+
+        h4{
+            font-size:clamp(1.3rem, 6vw, 1.7rem) ;
+
+        }
+    }
+    }
     
 `

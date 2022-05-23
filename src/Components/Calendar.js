@@ -144,7 +144,44 @@ h4{
         }
         
     }
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+        .content{
+        display:grid ;
+        grid-template-columns: repeat(1,1fr) ;
+        grid-gap:2rem;
 
+        .holder-img{
+            height:300px ;
+
+            img{
+                height:100% ;
+                width:100% ;
+                object-fit:cover ;
+                border-radius:20px ;
+
+            }
+
+        }
+
+        .pesp{
+
+            h4{
+                color:red ;
+                font-size:1.3vw;
+                margin:0 0 10px 0 ;
+            }
+
+            label{
+                color:rgba(0, 0, 0,0.5) ;
+            }
+
+            p{
+                font-size:clamp(1.3rem, 6vw,1.3rem);
+            }
+        }
+        
+    }
+    }
 `
 
 const Dates = styled.div`
@@ -241,7 +278,7 @@ const Dates = styled.div`
             border-left: 2px solid #000;
             position: absolute;
             margin-top: -31px;
-            left: 12%;
+            left: 22%;
             z-index: -10;
         }}
     }

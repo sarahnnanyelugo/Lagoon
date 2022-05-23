@@ -24,5 +24,5 @@ export default function Container() {
 
 
 const Cover =styled.section`
-  overflow-x:hidden ;
+  /* overflow-x:hidden ; */
 `

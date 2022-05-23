@@ -90,12 +90,12 @@ const FooterSection = styled.section`
     gap:4rem;
     background:#0a545f;
     padding:40px 80px;
-
+    overflow-x:hidden ;
     .col-1{
 
 
         p{
-            font-size:clamp(1rem, -0.875rem + 8.333vw, 1.2rem);
+            font-size:clamp(.6rem, -0.875rem + 8.333vw, 1.2rem);
             color:#fff ;
         }
     }
@@ -124,6 +124,18 @@ const FooterSection = styled.section`
             display:flex ;
             gap:2rem;
             
+        }
+    }
+    @media screen and (min-width: 280px) and (max-width: 1080px) {
+        display:grid;
+        grid-template-columns:repeat(1, 1fr);
+        gap:4rem; 
+        padding:20px 10px;
+
+        .col-1{
+            img{
+                width:80%;
+            }
         }
     }
 `
