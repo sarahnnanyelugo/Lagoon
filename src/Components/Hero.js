@@ -45,13 +45,13 @@ position:relative ;
 `
 
 const BackgroundCover = styled.div`
-    height: 100vh;
+    height: 70vh;
     z-index:1;
 
     img{
         width: 100%;
         filter: brightness(60%);
-        height: 100vh;
+        height: 100%;
         object-fit: cover;
     }
 
