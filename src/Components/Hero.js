@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import Background from '../Assets/Background.png'
-import Video from '../Assets/video-1.mp4'
+import Background from '../Assets/Background.png'
+// import Video from '../Assets/video-1.mp4'
 // import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -12,8 +12,8 @@ export default function Hero() {
   return (
    <Section>
        <BackgroundCover>
-           {/* <img src={Background} alt="" /> */}
-            <video src={Video} autoPlay loop muted />
+           <img src={Background} alt="" />
+            {/* <video src={Video} autoPlay loop muted /> */}
        </BackgroundCover>
        <BackgroundContent>
             <div className='ContentCover'>
