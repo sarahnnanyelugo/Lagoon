@@ -9,7 +9,7 @@ function Dropdown(props) {
     const [click, setClick] = useState(false);
     const {menuArray} = props;
     let label = props?.label[0].label;
-    console.log('label',label)
+    // console.log('label',label)
 
     const handleClick = () => setClick(!click);
 

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
+import 'aos/dist/aos.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

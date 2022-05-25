@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components';
 import ExploreOne from '../Assets/ExploreOne.png'
 import ExploreTwo from '../Assets/ExplaoreTwo.png'
+import {
+    // Rotate,Zoom,
+    Bounce } from 'react-reveal';
 
 export default function Welcome() {
     const Message = [
@@ -50,13 +53,17 @@ export default function Welcome() {
     <Section>
         {Message.map((msg,index) =>{
             return(
-                <div className="school" key={index}>
-                    <div className="intro">
-                        
-                        <h4>{msg.Heading}</h4>
-                        <p>{msg.Paragraph1}</p>
-                        <button>{msg.Button}</button>
-                    </div>
+                <div data-aos="zoom-in-down" data-aos-easing="ease-in-sine" className="school" key={index}>
+                    <Bounce bottom cascade>
+                        <div className="intro">
+                            <h4>{msg.Heading}</h4>
+                            <p>{msg.Paragraph1}</p>
+                            <div data-aos="fade-up"    data-aos-duration="3000">
+                        <button >{msg.Button}</button>
+                            </div>
+                            
+                        </div>
+                    </Bounce>
                 </div>
             )
         })
@@ -146,7 +153,7 @@ const Section = styled.section`
             }
 
             p{
-                font-size:clamp(1.5rem, 6vw, 1.7rem ) ;
+                font-size:clamp(1.3rem, 6vw, 1.5rem ) ;
                 line-height:40px;
 
                 
@@ -156,7 +163,7 @@ const Section = styled.section`
                 padding:20px ;
                 width:70% ;
                 margin:0 auto ;
-                font-size:clamp(1.5rem, 6vw, 1.7rem ) ;
+                font-size:clamp(1.3rem, 6vw, 1.5rem ) ;
                 border:0;
                 background-color:#f63a327d;
                 color:#fff ;

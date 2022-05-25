@@ -27,7 +27,7 @@ function App() {
                       </CSSTransition>
                     </TransitionGroup>
                   )} /> */}
-
+                                      <Route  to="/"  element={<Home />}  />
                                       <Route  to="/about"  element={<About />}  />
                                       <Route  to="/academics"  element={<Academics />} />
                                       <Route  to="/admission"  element={<Admission />} />
@@ -36,7 +36,6 @@ function App() {
                                       <Route  to="/student-life"  element={<StudentLife />} />
                                       <Route  to="*"   element={<NotFound />}  />
                   </Routes>
-                  {/* <Route  to="/"  element={}  /> */}
                   <Home />
               <Footer/>
           </BrowserRouter>

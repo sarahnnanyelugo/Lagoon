@@ -30,9 +30,9 @@ export default function Counter() {
     ]
 
     const Believe =[
-        {place:Confrence, sub:'ACADEMIC EXCELLENCE'},
-        {place:Faith, sub:'FAITH'},
-        {place:Inter, sub:'PARENT PARTNERSHIP'},
+        {place:Confrence, sub:'ACADEMIC EXCELLENCE', writeUp:'an person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’'},
+        {place:Faith, sub:'FAITH', writeUp:'an person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’'},
+        {place:Inter, sub:'PARENT PARTNERSHIP', writeUp:'an person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’'},
     ]
 
   return (
@@ -84,6 +84,7 @@ export default function Counter() {
                             <img src={bil.place} alt="" /> 
                             <div className='cover'>
                                 <p>{bil.sub}</p> 
+                                <h6>{bil.writeUp}</h6>
                             </div>
                         </div>
                     )
@@ -169,6 +170,7 @@ const CounterCov = styled.section`
         right: 0;
         left: 0;
         bottom: 200px;
+        transition: all 2.55s linear;
 
         .check{
             display:grid ;
@@ -194,15 +196,46 @@ const CounterCov = styled.section`
                     top:0 ;
                     vertical-align: center;
 
+
                     p{
                         position:absolute ;
                         bottom:0 ;
                         left:20px ;
                         color:#fff ;
                         font-size:20px ;
+                        animation-delay:.5s;
+
+                    }
+
+                    h6{
+                        display:none ;
+                        height:100% ;
+                        width:auto ;
+                        padding:0 20px ;
+                        position: relative;
+                        align-items:center ;
+                        justify-content:center ;
+                        font-size:1.1rem;
+                        color:#fff ;
+
                     }
                 }
 
+                &:hover{
+                    cursor: pointer;
+
+                    .cover{
+                        background-color:#83830b73;
+
+                        p{
+                            top:10px;
+                        }
+
+                        h6{
+                            display:flex ;
+                        }
+                    }
+                }
     }
 
         }

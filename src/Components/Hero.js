@@ -1,14 +1,19 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Background from '../Assets/Background.png'
 // import Video from '../Assets/video-1.mp4'
-// import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 export default function Hero() {
+    useEffect(() => {
+        Aos.init({  offset: 200,
+          duration: 600,
+          easing: 'ease-in-sine',
+          delay: 120,});
+    }, []);
   return (
    <Section>
        <BackgroundCover>
@@ -16,19 +21,18 @@ export default function Hero() {
             {/* <video src={Video} autoPlay loop muted /> */}
        </BackgroundCover>
        <BackgroundContent>
-            <div className='ContentCover'>
-                <div className='Info'>
+            <div  className='ContentCover'>
+                <div  data-aos="fade-left" data-aos-easing="ease-in-sine" className='Info'>
                     <label htmlFor="/">The Lagoon school</label>
                     <div className='comment'>Setting Standards For <br /> <mark>Long Term</mark> Student Success</div>
                 </div>
-                <div className='play'>
+                <div  data-aos="fade-right" data-aos-easing="ease-in-sine" className='play'>
                     <div className='cover'>
                         <Button>
                             <div className='mask'></div>
                             <div className='video-play'>
                                 <span className='icon'></span>
                             </div>
-                            {/* <FontAwesomeIcon icon={faPlayCircle} /> */}
                         </Button>
                         <label htmlFor="/">WATCH VIDEO <br /> TOUR</label>
                     </div>
@@ -178,13 +182,13 @@ const Button = styled.button`
        transition: all .25s cubic-bezier(.645,.045,.355,1);
        position:relative ;
        border:none;
+       cursor: pointer;
        .mask{
             position: absolute;
             width: 200px;
             height: 200px;
             top: 50%;
             left: 50%;
-        
             transform: translate(-50%,-50%);
             color: #ccc;
 

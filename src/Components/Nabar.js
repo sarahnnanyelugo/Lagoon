@@ -24,7 +24,6 @@ export default function Nabar() {
     })
   
     const onMouseEnter = (e) => {
-        console.log('inner text is', e.target.text)
       const menuText = e.target.text.trim().toLowerCase() || '';
   
       if (window.innerWidth < 960){
@@ -40,7 +39,6 @@ export default function Nabar() {
           
         })
       }
-      console.log('active menu is', setActiveMenu)
     }
   
     const onMouseLeave = () =>{
@@ -102,7 +100,7 @@ export default function Nabar() {
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li> */}
                 </ul>
                 <Button>
-                    <a href={'https://lagoon.eschoolng.net'} target='_blank'>
+                    <a href={'https://lagoon.eschoolng.net'} target='_blank'rel="noopener noreferrer">
                       PORTAL
                     </a>
                 </Button>
