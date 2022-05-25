@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter ,  Routes, Route, Navigate
+import { BrowserRouter ,  Switch, Route, Redirect
 } from 'react-router-dom';
 import NotFound from '../../Components/NotFound';
 import Education from './Sub-pages/About/Education';
@@ -11,16 +11,16 @@ import Message from './Sub-pages/About/Message';
 export default function About() {
   return (
     <BrowserRouter>
-    <Routes>
-              <Route path={'/about'} exact >
-                <Navigate to={'/about/welcome-to-the-lagoon-school'}/>
-              </Route>
-              <Route exact path="/about/welcome-to-the-lagoon-school"  element={<Welcome />} />
-              <Route exact path="/about/education" element={<Education />}/>
-              <Route exact path="/about/opus-dei" element={<OpusDei />}/>
-              <Route exact path="/about/message-from-the-principal" element={<Message />}/>
-            <Route path="*"  element={<NotFound />}/>
-      </Routes>
+        <Switch>
+                  <Route path={'/about'} exact >
+                    <Redirect to={'/about/welcome-to-the-lagoon-school'}/>
+                  </Route>
+                  <Route  path="/about/welcome-to-the-lagoon-school"  component={Welcome } />
+                  <Route  path="/about/education" component={Education }/>
+                  <Route  path="/about/opus-dei" component={OpusDei }/>
+                  <Route  path="/about/message-from-the-principal" component={Message }/>
+                <Route path="*"  component={NotFound}/>
+          </Switch>
 </BrowserRouter>
   )
 }
