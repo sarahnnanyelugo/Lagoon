@@ -8,7 +8,7 @@ export default function Welcome() {
         {
             Heading :'Welcome to the Lagoon School',
             Paragraph1:"The Lagoon School aims at investing in the N igerian girl child for the good of the society. W e have both  primary and secondary sections. O ur school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
-            Button:"READ MORE FROM MRS ISEBOR MARGARET| THE SCHOOL HEAD"
+            Button:"READ MORE FROM MISS DOREEN ONYEKWELU| THE SCHOOL HEAD"
         }
     ];
 

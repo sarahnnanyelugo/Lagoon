@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { Link } from 'react-router-dom';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import Background from '../Assets/Background.png'
 import Video from '../Assets/video-1.mp4'
-import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
+// import { faPlayCircle } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -19,12 +19,16 @@ export default function Hero() {
             <div className='ContentCover'>
                 <div className='Info'>
                     <label htmlFor="/">The Lagoon school</label>
-                    <div className='comment'>Setting Standards For <br /> <Link to={'/'}>Long Term</Link> Student Success</div>
+                    <div className='comment'>Setting Standards For <br /> <mark>Long Term</mark> Student Success</div>
                 </div>
                 <div className='play'>
                     <div className='cover'>
                         <Button>
-                            <FontAwesomeIcon icon={faPlayCircle} />
+                            <div className='mask'></div>
+                            <div className='video-play'>
+                                <span className='icon'></span>
+                            </div>
+                            {/* <FontAwesomeIcon icon={faPlayCircle} /> */}
                         </Button>
                         <label htmlFor="/">WATCH VIDEO <br /> TOUR</label>
                     </div>
@@ -98,11 +102,12 @@ const BackgroundContent = styled.div`
                    font-weight:900px;
                    font-family:monseratSemi;
                    flex-wrap:wrap;
-                   a{
+                   mark{
                        margin:0 ;
                        padding:0 ;
                        width: 0;
                        color:#e21020 ;
+                       background-color:transparent ;
                    }
                }
            }
@@ -167,16 +172,112 @@ const BackgroundContent = styled.div`
 
 const Button = styled.button`
 
-       height:10rem ;
-       width:10rem ;
-       border-radius:100px;
+       height:78px ;
+       width: 78px;
        background-color:transparent ;
-       border:2px solid #fff ;
+       transition: all .25s cubic-bezier(.645,.045,.355,1);
+       position:relative ;
+       border:none;
+       .mask{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+        
+            transform: translate(-50%,-50%);
+            color: #ccc;
 
-       svg{
+            &::before{
+                opacity: 0;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                border: 3px solid currentColor;
+                width: 100%;
+                height: 100%;
+                animation: zoomBig 1.5s linear infinite;
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
+                transform-origin: center;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                animation-delay: .5s;
+
+            }
+
+            &::after{
+                animation-delay: 1.55s;
+                opacity: 0;
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                border: 3px solid currentColor;
+                width: 100%;
+                height: 100%;
+                -webkit-animation: zoomBig 1.5s linear infinite;
+                animation: zoomBig 1.5s linear infinite;
+                -webkit-transform-origin: center;
+                -ms-transform-origin: center;
+                transform-origin: center;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            @keyframes zoomBig{
+                0%{transform:scale(.3);transform:scale(.3);opacity:.8;border-width:4px}
+                25%{border-width:3px}
+                50%{border-width:2px}
+                to{transform:scale(1.2);transform:scale(1.2);opacity:0;border-width:1px}}
+       }
+
+       .video-play{
+        width: 78px;
+        height: 78px;
+        font-size: 78px;
+        background: #FFFFFF;
+        border-color: #FFFFFF;
+        position: relative;
+        border-radius: 50%;
+        z-index: 1;
+
+        .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            line-height: 1;
+            margin-left: 2px;
+            z-index: 2;
+
+            &::before{
+                content: "";
+                border-top: 9px solid transparent;
+                border-bottom: 9px solid transparent;
+                border-left: 14px solid #111;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%,-50%);
+                -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
+
+            }
+        }
+       }
+
+       /* svg{
            height:5rem ;
            color:#fff ;
            cursor: pointer;
-       }
+       } */
 
 `

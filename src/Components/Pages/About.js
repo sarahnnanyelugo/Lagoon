@@ -1,27 +1,26 @@
 import React from 'react';
-import { BrowserRouter as Router,  Switch, Route,Redirect
+import { BrowserRouter ,  Routes, Route, Navigate
 } from 'react-router-dom';
 import NotFound from '../../Components/NotFound';
 import Education from './Sub-pages/About/Education';
 import Welcome from './Sub-pages/About/Welcome';
-import OpusDei from './Sub-pages/About/Opus-dei';
+import OpusDei from './Sub-pages/About/OpusDei';
 import Message from './Sub-pages/About/Message';
 
 
 export default function About() {
   return (
-    <Router>
-    <Switch>
+    <BrowserRouter>
+    <Routes>
               <Route path={'/about'} exact >
-                <Redirect to={'/about/welcome-to-the-lagoon-school'}/>
+                <Navigate to={'/about/welcome-to-the-lagoon-school'}/>
               </Route>
-              <Route path="/about/welcome-to-the-lagoon-school" component={Welcome}   exact/>
-              <Route path="/about/education" component={Education}   exact/>
-              <Route path="/about/opus-dei" component={OpusDei}   exact/>
-              <Route path="/about/message-from-the-principal" component={Message}   exact/>
-
-            <Route path="*" component={NotFound}  />
-      </Switch>
-</Router>
+              <Route exact path="/about/welcome-to-the-lagoon-school"  element={<Welcome />} />
+              <Route exact path="/about/education" element={<Education />}/>
+              <Route exact path="/about/opus-dei" element={<OpusDei />}/>
+              <Route exact path="/about/message-from-the-principal" element={<Message />}/>
+            <Route path="*"  element={<NotFound />}/>
+      </Routes>
+</BrowserRouter>
   )
 }
