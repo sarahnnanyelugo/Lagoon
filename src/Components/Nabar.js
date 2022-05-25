@@ -102,9 +102,9 @@ export default function Nabar() {
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li> */}
                 </ul>
                 <Button>
-                    <Link to={'https://lagoon.eschoolng.net/'}>
+                    <a href={'https://lagoon.eschoolng.net'} target='_blank'>
                       PORTAL
-                    </Link>
+                    </a>
                 </Button>
             </div>
             
