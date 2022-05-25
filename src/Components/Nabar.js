@@ -373,6 +373,12 @@ const Button = styled.button`
     transition:all 0.5s ease ;
     font-size:clamp(.9rem, 6vw, 1rem);
     font-weight:900;
+
+    a{
+      text-decoration:none ;
+      color:#fff ;
+    }
+
     &:hover{
         transform:scale(1.1);
         cursor:pointer;
