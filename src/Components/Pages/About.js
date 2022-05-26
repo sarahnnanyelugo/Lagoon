@@ -1,26 +1,37 @@
 import React from 'react';
-import { BrowserRouter ,  Switch, Route, Redirect
+import {   Switch, Route, Redirect,useLocation
 } from 'react-router-dom';
 import NotFound from '../../Components/NotFound';
 import Education from './Sub-pages/About/Education';
-import Welcome from './Sub-pages/About/Welcome';
+// import Welcome from './Sub-pages/About/Welcome';
 import OpusDei from './Sub-pages/About/OpusDei';
 import Message from './Sub-pages/About/Message';
+import VirtualTour from './Sub-pages/About/VirtualTour';
+import Parents from './Sub-pages/About/Parents';
+const Welcome = React.lazy(() => import('./Sub-pages/About/Welcome'))
 
-
-export default function About() {
+function About() {
+  const location = useLocation();
   return (
-    <BrowserRouter>
-        <Switch>
+            <Switch location={location} key={location.pathname}>
                   <Route path={'/about'} exact >
                     <Redirect to={'/about/welcome-to-the-lagoon-school'}/>
-                  </Route>
-                  <Route  path="/about/welcome-to-the-lagoon-school"  component={Welcome } />
-                  <Route  path="/about/education" component={Education }/>
-                  <Route  path="/about/opus-dei" component={OpusDei }/>
-                  <Route  path="/about/message-from-the-principal" component={Message }/>
-                <Route path="*"  component={NotFound}/>
-          </Switch>
-</BrowserRouter>
+                    </Route>
+                    <Route  path="/about/welcome-to-the-lagoon-school"  >
+                        <Welcome/>
+                    </Route>
+                    <Route  path="/about/education" component={Education }/>
+                    <Route  path="/about/opus-dei" component={OpusDei }/>
+                    <Route  path="/about/message-from-the-principal" component={Message }/>
+                    <Route  path="/about/virtual-tour" component={VirtualTour }/>
+                    <Route  path="/about/partnership-with-parents" component={Parents}/>
+
+                  <Route path="*"  component={NotFound}/>
+            </Switch>
+
   )
 }
+
+
+
+export default About

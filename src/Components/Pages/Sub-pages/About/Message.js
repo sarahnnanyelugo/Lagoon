@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
+import { subRoute } from './AboutItems';
 
 export default function Message() {
   return (
@@ -8,7 +9,19 @@ export default function Message() {
       <div className='placeholder'>
           <img src={Backdrop} alt="placeholder" />
         <div className='overlay'>
-
+            <ul>
+                {subRoute?.map((sub, idx)=>{
+                  return(
+                      <li key={idx}>
+                          <a className={sub.cName} href={sub.path}>
+                            {sub.title}
+                          </a>
+                      </li>
+                  )
+                  
+                })
+                }
+              </ul>
         </div>
       </div>
       <div className='content'>
@@ -56,6 +69,32 @@ const Container = styled.section`
       background-color:rgba(0,0,0,0.5) ;
       width:100% ;
       height:100% ;
+      ul{
+        padding:0 ;
+        list-style:none ;
+        display:flex ;
+        justify-content:center ;
+        flex-wrap:wrap ;
+        gap:2rem;
+        /* height:100% ; */
+        align-items:baseline ;
+        position: absolute;
+        bottom: 30%;
+
+        li{
+          display:flex ;
+          flex-direction:column ;
+          /* height:70% ; */
+          align-items:baseline ;
+          justify-content:flex-end ;
+
+          a{
+            text-decoration:none ;
+            font-size:1.5rem;
+            color:#fff ;
+          }
+        }
+      }
     }
   }
 

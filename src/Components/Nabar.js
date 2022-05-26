@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import styled from 'styled-components';
 import Logo from '../Assets/Logo.png'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {navMenus,navLabels} from './MenuItems';
 import Dropdown from './Dropdown';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -11,7 +11,7 @@ import { VscChromeClose } from "react-icons/vsc";
 
 
 export default function Nabar() {
-    const [setClick] = useState(false);
+    // const [setClick] = useState(false);
     const [navbarState, setNavbarState] = useState(false);
   
     const [activeMenu, setActiveMenu] = useState({
@@ -56,7 +56,7 @@ export default function Nabar() {
       }
     };
   
-    const closeMobileMenu = () => setClick(false)
+    // const closeMobileMenu = () => setClick(false)
 
 
 
@@ -75,9 +75,9 @@ export default function Nabar() {
             </ul>
         </ContactNavbar>
         <DetailsNavbar>
-            <Link to={'/'} className='home'>
+            <a href={'/'} className='home'>
                 <img src={Logo} alt="logo" />
-            </Link>
+            </a>
             <div className="menu-item">
                 {navbarState ? (
                   <VscChromeClose   onClick={() => setNavbarState(false)} />
@@ -87,12 +87,12 @@ export default function Nabar() {
           </div>
             <div className={navbarState ? "list-container active" : "list-container "} >
                 <ul className='link-up'>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/about'} onClick={closeMobileMenu}> About </Link>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/academics'} onClick={closeMobileMenu}> Academics </Link>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/admission'} onClick={closeMobileMenu}> Admission </Link>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/faith'} onClick={closeMobileMenu}> Faith </Link>      {activeMenu.menu4 && <Dropdown menuArray={navMenus.faith} label={navLabels['faith']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/parents'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.parents} label={navLabels['parents']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/student-life'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/about/welcome-to-the-lagoon-school'}> About </a>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/academics'}> Academics </a>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/admission'}> Admission </a>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/faith'}> Faith </a>      {activeMenu.menu4 && <Dropdown menuArray={navMenus.faith} label={navLabels['faith']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/parents'}> Parents </a>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.parents} label={navLabels['parents']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/student-life'}> Student Life </a>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>
                 
 
 
