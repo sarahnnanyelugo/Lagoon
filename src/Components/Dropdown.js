@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import ExploreTwo from '../Assets/ExplaoreTwo.png'
 
@@ -45,13 +45,13 @@ function Dropdown(props) {
                         {menuArray?.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <Link
+                                    <a
                                         className={item.cName}
-                                        to={item.path}
+                                        href={item.path}
                                         onClick={() => setClick(false)}
                                     >
                                         {item.title}
-                                    </Link>
+                                    </a>
                                 </li>
                             );
                         })}
