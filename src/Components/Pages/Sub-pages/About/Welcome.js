@@ -2,6 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import Holder from '../../../../Assets/ExplaoreTwo.png'
+import Girl from '../../../../Assets/Confrence.png'
+import Girl1 from '../../../../Assets/Counter.png'
+import Girl2 from '../../../../Assets/Image3.png'
+
 // import {Link} from 'react-router-dom';
 import { subRoute } from './AboutItems';
 
@@ -80,6 +84,69 @@ export default function Welcome(props) {
               </div>
 
           </div>
+      </div>
+      <div className="potrait">
+        <div className='first-col'>
+              <h4>A PORTRAIT OF LAGOON GIRLS</h4>
+        </div>
+        <div>
+            <img src={Girl} alt="placeholder" />
+            <ul>
+              <li>Intellectual curiosity</li>
+              <li>Ability to problem-solve</li>
+              <li>Passion for learning, a breadth of interests and a clear sense of purpos</li>
+              <li>Resilience and perseverance in the face of difficulty</li>
+              <li>Practical wisdom and the competence to commit herself to what is noble and worthwhile</li>
+            </ul>
+        </div>
+        <div>
+            <img src={Girl1} alt="placeholder" />
+            <ul>
+              <li>Understands the integral
+                  relationship between faith and
+                  reason
+                </li>
+              <li>Cultivates a philosophical mind
+                  and knows that all work can
+                  glorify God
+                </li>
+                <li>espects the uniqueness of
+                  others
+                </li>
+              <li>Is empathetic</li>
+              <li>Seeks to build unity among
+                  diverse groups
+                </li>
+                <li>  Has a desire to discover her
+                    own unique purpose, vocation
+                    and contribution to the world
+                </li>
+                <li>
+                    Understands the value of a
+                    personal relationship with God
+                </li>
+            </ul>
+        </div>
+        <div>
+            <img src={Girl2} alt="placeholder" />
+            <ul>
+              <li>A strong self-knowledge</li>
+              <li>An open and loving heart,
+                  actively participating in and
+                  serving her community
+                </li>
+              <li>Confidence, initiative and
+                  courage</li>
+              <li>A sense of balance and a sense
+of humor</li>
+              <li>The wisdom to use her freedom
+responsibly</li>
+              <li>A principled, independent
+ability to challenge others
+articulately and respectfully</li>
+              
+            </ul>
+        </div>
       </div>
     </Container>
   )
@@ -228,6 +295,51 @@ const Container = styled.section`
       font-weight:500 ;
     }
   }
+
+.potrait{
+  display:grid ;
+  grid-template-columns:repeat(3, 1fr) ;
+  width:90% ;
+  margin:0 auto ;
+  gap:3rem;
+  margin-top: 7rem;
+  .first-col{
+        grid-column:1/4;
+        text-align:center ;
+
+              h4{
+                    position:relative ;
+                    font-size:1.5rem ;
+                    &::before{
+                      content: '';
+                      border-bottom: 5px solid red;
+                      width: 5rem;
+                      position: absolute;
+                      bottom: 0;
+                      top: 30px;
+                    }
+
+                  }
+        
+      }
+
+      img{
+        width:100% ;
+        height:20rem ;
+        object-fit:cover ;
+      }
+
+      ul{
+        font-size: 1.1rem;
+        line-height: 25px;
+      
+        letter-spacing: 1px;
+        font-weight: 500;
+      }
+
+}
+
+
 
 
   /* header{

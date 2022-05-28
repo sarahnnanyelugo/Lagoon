@@ -17,7 +17,7 @@ export const subRoute = [
     {
       title:'FAITH',
       cName:'linked',
-      path:'/about/faith'
+      path:'/about/opus-dei'
     },
     {
       title:'Virtual Tour',
