@@ -61,10 +61,10 @@ function App() {
                                     <Route  path="/academics">
                                     <Academics/>
                                     </Route>
-                                    <Route  to="/admission"  component={Admission } />
-                                    <Route  to="/parents"  component={<Parents />} />
-                                    <Route  to="/student-life"  component={<StudentLife />} />
-                                    <Route  to="*"   component={<NotFound />}  />
+                                    <Route  to="/admission"  component={Admission} />
+                                    <Route  to="/parents"  component={Parents }/>
+                                    <Route  to="/student-life"  component={StudentLife} />
+                                    <Route  to="*"   component={NotFound}/>
                             </Switch>
                   <Footer/>
                </Suspense> 
