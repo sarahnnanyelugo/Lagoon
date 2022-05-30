@@ -98,14 +98,12 @@ const Dropcover =styled.section`
             position: relative;
 
             .red-abel{
-                position:absolute ;
-                top:-10px ;
-                left:0 ;
-                right:20% ;
+                grid-column:1/3;
+                /* right:20% ; */
+                position: relative;
                 text-align:center ;
                 color:red ;
                 font-weight:900 ;
-
             }
 
             p{
