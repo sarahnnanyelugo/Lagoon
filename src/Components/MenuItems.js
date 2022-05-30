@@ -25,16 +25,16 @@ export const navMenus = {
 
     ],
     studentlife: [
-        {title: 'Life in lagoon', path: '/student-life/life-in-lagoon', cName: 'dropdown-link', description: '', },
-        {title: 'lagoon traditions', path: '/student-life/lagoon-traditions', cName: 'dropdown-link'},
-        {title: 'service', path: '/student-life/service', cName: 'dropdown-link'},
-        {title: 'club & activities', path: '/student-life/activities', cName: 'dropdown-link'},
-        {title: 'Mentoring & tutorials', path: '/student-life/mentorship', cName: 'dropdown-link'},
+        {title: 'Life in lagoon', path: '/student_life/life_in_lagoon', cName: 'dropdown-link', description: '', },
+        {title: 'lagoon traditions', path: '/student_life/lagoon_traditions', cName: 'dropdown-link'},
+        {title: 'service', path: '/student_life/service', cName: 'dropdown-link'},
+        {title: 'club & activities', path: '/student_life/activities', cName: 'dropdown-link'},
+        {title: 'Mentoring & tutorials', path: '/student_life/mentorship', cName: 'dropdown-link'},
 
    
     ],
     parents: [
-        {title: 'N.F.A.D', path: '/parents/nafad', cName: 'dropdown-link'},
+        {title: 'N.F.A.D', path: 'https://nafad.org.ng/', cName: 'dropdown-link'},
         {title: 'digital safety', path: '/parents/lunch', cName: 'dropdown-link'},
         {title: 'lunch menu', path: '/parents/safety', cName: 'dropdown-link'},
     ],

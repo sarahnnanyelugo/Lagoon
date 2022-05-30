@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Backdrop from '../../../../Assets/Backdrop.png'
+import Backdrop from '../../../../Assets/Backdrop.png';
+import Holdr from '../../../../Assets/Image2.png'
+
 import { subRoute } from './AboutItems';
 
 
@@ -29,24 +31,41 @@ export default function Parents() {
         </div>
       </div>
       <div className='content'>
-        <header>Welcome to The Lagoon School</header>
-          <div>
-            <h4>he Lagoon School is the first project of the Nigerian
-                Association for Women`s Advancement (NAWA), a not-
-                for-profit and non-governmental educational and social
-                trust dedicated to investing in the girl child for the
-                good of the societ</h4>
-                          </div>
-                          <div>
-                            <p>The Lagoon School is open to girls of all cultural,
-                religious and ethnic backgrounds. Our educational
-                model is based on our mission statement: Partnership
-                with parents to give an all-round education to each
-                child based on the dignity of the human person,
-                integrity, leadership qualities and academic
-                excellence.
-                </p>
-          </div>
+        <div className="redup">
+            <h4>
+                  Parent partnership is foundational to the mission and philosophy of Oakcrest
+                  School. We are committed to supporting parents as the primary educators of their
+                  daughters. By offering continuing education programs for parents, we assist
+                  parents in their noble mission of forming their daughters to be passionate,
+                  confident, empathetic and service-oriented leaders.
+            </h4>
+        </div>
+        <div className='primary'>
+            <img src={Holdr} alt="" />
+            <div className='table'>
+                <ul>
+                  <li>What is a primary educator?</li>
+                  <li>What does it mean to be a steward of the School?</li>
+                  <li>What does it mean to be an ambassador of LAGOON? </li>
+                </ul>
+            </div>
+            <div className='principle'>
+                <header>Seven principles of Catholic Social Teaching:</header>
+                <ul>
+                  <li>Life and Dignity of the Human Person</li>
+                  <li>Call to Family, Community, and Participation</li>
+                  <li>Rights and Responsibilities</li>
+                  <li>Option for the Poor and Vulnerable</li>
+                  <li>The Dignity of Work and the Rights of Workers</li>
+                  <li>Solidarity</li>
+                  <li>Care for God's Creation</li>
+                </ul>
+            </div>
+        </div>
+        <div className='stacks'>
+            <img src={Holdr} alt="" />
+            <img src={Holdr} alt="" />
+        </div>
       </div>
     </Container>
   )
@@ -96,6 +115,9 @@ const Container = styled.section`
             text-decoration:none ;
             font-size:1.5rem;
             color:#fff ;
+            &:hover{
+              color:red ;
+            }
           }
         }
       }
@@ -103,19 +125,94 @@ const Container = styled.section`
   }
 
   .content{
+    width:90% ;
+    margin:0 auto ;
+    margin-top:5rem;  
     display:grid ;
-    grid-template-columns:repeat(2,1fr)
+    grid-template-columns: 1fr 30% ;
+   .redup{
+        background-color:#f85f58;
+        padding:20px ;
+        text-align:center ;
+        grid-column:1/3;
+        border-radius:10px;
+      h4{
+        color:#fff ;
+        font-size:1.5rem;
+        letter-spacing:2px ;
+        line-height:30px;
+      }
+   }
+
+   .primary{
+      width:80% ;
+      margin-top:8rem;
+      img{
+        width:100% ;
+        height:20rem ;
+        object-fit:cover;
+      }
+
+      .table{
+        ul{
+          list-style:none ;
+            padding:0;
+            margin-top: 10rem;
+              li{
+                font-size:20px;
+                font-weight:900;
+                padding:15px;
+                border:2px solid #000 ;
+                position: relative;
+                &::after{
+                  content:'+';
+                  position:absolute ;
+                  right:20px ;
+                }
+              }
+          }
+      }
+
+    .principle{
+      margin-top: 10rem;
+
+        header{
+          color:red ;
+          margin:0 ;
+          padding:0 ;
+          font-size:20px;
+          font-weight:900;
+        }
+
+        ul{
+
+          li{
+            font-size:20px;
+            font-weight:900;
+          }
+        }
+    }
+     
+
+   }
+
+   .stacks{
+    margin-top:8rem;
+
+
+    img{
+        width:100% ;
+        height:20rem ;
+        object-fit:cover;
+
+        &:nth-child(n+2){
+          margin-top: 3rem;
+        }
+      }
+   }
 
   }
 
 
-  header{
-    grid-column:1/3 ;
-    text-align:center;
-    color:red ;
-    font-size:2rem;
-    margin-top:30px;
-
-  }
 
 `

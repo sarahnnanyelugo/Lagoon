@@ -17,7 +17,7 @@ function Admission() {
                     <Redirect to={'/admission/admission-proceedure'}/>
                     </Route>
                     <Route  path="/admission/admission-proceedure"  >
-                        <Proceedure/>
+                      <Proceedure/>
                     </Route>
                     <Route  path="/admission/apply-to-lagoon" component={Applyto }/>
                     <Route  path="/admission/f-a-q" component={Frequent}/>

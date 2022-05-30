@@ -12,17 +12,17 @@ function StudentLife() {
   const location = useLocation();
   return (
             <Switch location={location} key={location.pathname}>
-                  <Route path={'/student-life'} exact >
-                    <Redirect to={'/student-life/life-in-lagoon'}/>
+                  <Route path={'/student_life'} exact >
+                    <Redirect to={'/student_life/life_in_lagoon'}/>
                     </Route>
-                    <Route  path="/student-life/life-in-lagoon"  >
+                    <Route  path="/student_life/life_in_lagoon"  >
                         <Life/>
                     </Route>
-                    <Route  path="/student-life/lagoon-traditions" component={Traditions }/>
-                    <Route  path="/student-life/mentorship" component={Mentor}/>
-                    <Route  path="/student-life/service" component={Service}/>
-                    <Route  path="/student-life/activities" component={Activities}/>
-                  <Route path="*"  component={NotFound}/>
+                    <Route  path="/student_life/lagoon_traditions" component={Traditions }/>
+                    <Route  path="/student_life/mentorship" component={Mentor}/>
+                    <Route  path="/student_life/service" component={Service}/>
+                    <Route  path="/student_life/activities" component={Activities}/>
+                    <Route path="*"  component={NotFound}/>
             </Switch>
 
   )

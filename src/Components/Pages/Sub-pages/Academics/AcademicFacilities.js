@@ -3,7 +3,7 @@
  function AcademicFacilities() {
    return (
      <div>
-       
+       er
      </div>
    )
  }
