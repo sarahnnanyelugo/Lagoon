@@ -25,14 +25,18 @@ export const navMenus = {
 
     ],
     studentlife: [
-        {title: 'Apply', path: '/academics/how_to_apply', cName: 'dropdown-link', description: '', },
-        {title: 'Fees', path: '/academics/school-fees', cName: 'dropdown-link'},
-        {title: 'Transfer New', path: '/academics/result_&_scholarships', cName: 'dropdown-link'},
+        {title: 'Life in lagoon', path: '/student-life/life-in-lagoon', cName: 'dropdown-link', description: '', },
+        {title: 'lagoon traditions', path: '/student-life/lagoon-traditions', cName: 'dropdown-link'},
+        {title: 'service', path: '/student-life/service', cName: 'dropdown-link'},
+        {title: 'club & activities', path: '/student-life/activities', cName: 'dropdown-link'},
+        {title: 'Mentoring & tutorials', path: '/student-life/mentorship', cName: 'dropdown-link'},
+
    
     ],
     parents: [
-        {title: 'school', path: '/news/school_news', cName: 'dropdown-link'},
-        {title: 'school activities', path: '/news/school_activities', cName: 'dropdown-link'},
+        {title: 'N.F.A.D', path: '/parents/nafad', cName: 'dropdown-link'},
+        {title: 'digital safety', path: '/parents/lunch', cName: 'dropdown-link'},
+        {title: 'lunch menu', path: '/parents/safety', cName: 'dropdown-link'},
     ],
     
    
