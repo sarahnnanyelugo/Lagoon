@@ -138,7 +138,6 @@ const Container = styled.section`
           /* height:70% ; */
           align-items:baseline ;
           justify-content:flex-end ;
-
           a{
             text-decoration:none ;
             font-size:1.5rem;

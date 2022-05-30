@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components';
 import ExploreOne from '../Assets/ExploreOne.png'
 import ExploreTwo from '../Assets/ExplaoreTwo.png'
+import Roll from 'react-reveal/Roll';
+
 import {
     // Rotate,Zoom,
     Bounce } from 'react-reveal';
@@ -10,7 +12,7 @@ export default function Welcome() {
     const Message = [
         {
             Heading :'Welcome to the Lagoon School',
-            Paragraph1:"The Lagoon School aims at investing in the N igerian girl child for the good of the society. W e have both  primary and secondary sections. O ur school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
+            Paragraph1:"The Lagoon School aims at investing in the Nigerian girl child for the good of the society. W e have both  primary and secondary sections. O ur school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
             Button:"READ MORE FROM MISS DOREEN ONYEKWELU| THE SCHOOL HEAD"
         }
     ];
@@ -71,16 +73,18 @@ export default function Welcome() {
         }
         
         <Vision>
-            <div className='box-container'>
+        <Roll left cascade>
+            <div className='box-container' data-aos="flip-up" data-aos-easing="ease-in-sine" >
                 {Mission.map((mission, index) =>{
                     return(
-                           <div className='box'  key={index}>
+                           <div data-aos="fade-up" data-aos-easing="ease-in-sine"  className='box'  key={index}>
                                 <h4>{mission.Heading}</h4>
                                 <p dangerouslySetInnerHTML={{__html: mission.Paragraph1}}></p>
                             </div>
                     )
                 } )}    
             </div>
+        </Roll>
         </Vision>
         
         <ExploreCov>
@@ -155,6 +159,7 @@ const Section = styled.section`
             p{
                 font-size:clamp(1.3rem, 6vw, 1.5rem ) ;
                 line-height:40px;
+                font-weight:900;
 
                 
             }

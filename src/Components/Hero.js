@@ -24,7 +24,7 @@ export default function Hero() {
             <div  className='ContentCover'>
                 <div  data-aos="fade-left" data-aos-easing="ease-in-sine" className='Info'>
                     <label htmlFor="/">The Lagoon school</label>
-                    <div className='comment'>Setting Standards For <br /> <mark>Long Term</mark> Student Success</div>
+                    <div className='comment'>A SCHOOL WHERE <br /> <mark>ALL - ROUND </mark> <br /> FORMATION IS <br /> PROVIDED </div>
                 </div>
                 <div  data-aos="fade-right" data-aos-easing="ease-in-sine" className='play'>
                     <div className='cover'>

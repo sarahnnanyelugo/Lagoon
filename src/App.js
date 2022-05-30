@@ -13,7 +13,7 @@ import Admission from './Components/Pages/Admission';
 import Faith from './Components/Pages/Faith';
 import Parents from './Components/Pages/Parents';
 import StudentLife from './Components/Pages/StudentLife';
-import CircleLoader from "react-spinners/CircleLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 import { css } from "@emotion/react";
 
 // import Loader from './Components/Loader';
@@ -48,7 +48,7 @@ function App() {
   },[])
   return (
     <>
-            {loading?       <CircleLoader color={'red'} loading={loading} css={override}  size={150} />
+            {loading?       <PuffLoader color={'red'} loading={loading} css={override}  size={150} />
               :
                    <Suspense > 
                     <NavBar />                                                                 
