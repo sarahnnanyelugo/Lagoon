@@ -5,23 +5,24 @@ export const navMenus = {
         {title: 'Educational phylosophy and model', path: '/about/education', cName: 'dropdown-link'},
         {title: 'Virtual tour', path: '/about/virtual-tour', cName: 'dropdown-link'},
         {title: 'faith', path: '/about/opus-dei', cName: 'dropdown-link'},
+        {title: 'patnership with parents', path: '/about/partnership-with-parents', cName: 'dropdown-link'},
+
     ],
     academics: [
        
-        {title: 'How to Apply', path: '/academics/how_to_apply', cName: 'dropdown-link', description: '', },
-        {title: 'School Fees', path: '/academics/school-fees', cName: 'dropdown-link'},
-        {title: 'Transfer', path: '/academics/result_&_scholarships', cName: 'dropdown-link'},
-   
+        {title: 'Academic facilities', path: '/academics/academic-facilities', cName: 'dropdown-link', description: '', },
+        {title: 'Primary school ', path: '/academics/primary-school', cName: 'dropdown-link'},
+        {title: 'seconday school', path: '/academics/secondary-school', cName: 'dropdown-link'},
+        {title: 'courses', path: '/academics/courses', cName: 'dropdown-link'},
+        {title: 'academic calendar', path: '/academics/calendar', cName: 'dropdown-link'},
     ],
     admission: [
-       
-        {title: 'Senior School', path: '/learn/early-years', cName: 'dropdown-link'},
-        {title: 'Junior school', path: '/learn/nursery', cName: 'dropdown-link'},
-    ],
-    faith: [
-        {title: 'Curriculum', path: '/school/curriculum', cName: 'dropdown-link'},
-        {title: 'Academic Structure', path: '/school/academic-structure', cName: 'dropdown-link'},
-        {title: 'Academic Probation', path: '/school/academic-probation', cName: 'dropdown-link'},
+        {title: 'Admission Proceedure', path: '/admission/admission-proceedure', cName: 'dropdown-link'},
+        {title: 'school tuition fees', path: '/admission/tuition', cName: 'dropdown-link'},
+        {title: 'scholarships', path: '/admission/scholarship', cName: 'dropdown-link'},
+        {title: 'FAQs', path: '/admission/f-a-q', cName: 'dropdown-link'},
+        {title: 'Apply to lagoon school', path: '/admission/apply-to-lagoon', cName: 'dropdown-link'},
+
     ],
     studentlife: [
         {title: 'Apply', path: '/academics/how_to_apply', cName: 'dropdown-link', description: '', },
@@ -33,6 +34,9 @@ export const navMenus = {
         {title: 'school', path: '/news/school_news', cName: 'dropdown-link'},
         {title: 'school activities', path: '/news/school_activities', cName: 'dropdown-link'},
     ],
+    
+   
+   
 }
 
 
@@ -52,11 +56,12 @@ export const navLabels = {
     faith: [
         {label: 'FAITH'}
     ],
-    studentlife: [
-        {label: 'STUDENT LIFE'}
-    ],
+    
     parents: [
         {label: 'PARENTS'}
+    ],
+    studentlife: [
+        {label: 'STUDENT LIFE'}
     ],
 }
 

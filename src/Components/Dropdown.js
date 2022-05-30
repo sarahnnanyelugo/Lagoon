@@ -146,9 +146,13 @@ const Dropcover =styled.section`
 
             &:hover{
                 background: rgba(0, 0, 0, 0.6);
-                border-bottom: 1px solid #fff;  
-            }
+                border-bottom: 1px solid #fff; 
+                color :#fff !important;
 
+            }
+            &:hover .dropdown-link{
+                color :#fff !important;
+            }
             .dropdown-link {
                 display: block;
                 height: 100%;
