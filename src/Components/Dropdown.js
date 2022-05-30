@@ -68,7 +68,7 @@ export default Dropdown;
 
 
 const Dropcover =styled.section`
-        width: 50vw !important;
+        width: 46vw !important;
         position: absolute;
         top: 110px !important;
         /* left: 0 !important; */
@@ -80,7 +80,7 @@ const Dropcover =styled.section`
         align-items: center;
         justify-content: center;
         min-height: 17rem;
-        box-shadow:10px 30px 9px 10px rgba(0, 0, 0, 0.6) ;
+        box-shadow:10px 30px 9px 10px rgba(0, 0, 0, 0.3) ;
 
     .arrange{
         display:flex ;
@@ -88,13 +88,13 @@ const Dropcover =styled.section`
         justify-content: center;
         text-align: left;
         display:grid ;
-        grid-template-columns: 1fr 38%;
+        grid-template-columns: 1fr 44%;
         .content{
             display:grid ;
             grid-template-columns: 36% 1fr;
             gap: 20px;
             align-items: flex-start;
-            align-self: flex-end;
+            align-self: flex-start;
             position: relative;
 
             .red-abel{
@@ -108,6 +108,8 @@ const Dropcover =styled.section`
 
             p{
                 padding-top:20px ;
+                font-size: 18px;
+
             }
 
             img{
@@ -140,6 +142,7 @@ const Dropcover =styled.section`
             color: #000 !important;
             text-align: left !important;
             border-bottom: 1px solid #fff;
+            text-transform: capitalize;
 
             &:hover{
                 background: rgba(0, 0, 0, 0.6);
@@ -154,6 +157,8 @@ const Dropcover =styled.section`
                 color: #000 !important;
                 padding: 16px;
                 font-size:18px !important;
+                text-transform: capitalize;
+
                 }
         }
 

@@ -1,9 +1,10 @@
 export const navMenus = {
     about: [
-        {title: 'WELCOME TO THE LAGOON SCHOOL', path: '/about/welcome-to-the-lagoon-school', cName: 'dropdown-link'},
-        {title: 'EDUCATIONAL PHILOSOPHY & MODEL', path: '/about/education', cName: 'dropdown-link'},
-        {title: 'OPUS DEI', path: '/about/opus-dei', cName: 'dropdown-link'},
-        {title: 'MESSAGE FROM THE PRINCIPAL', path: '/about/message-from-the-principal', cName: 'dropdown-link'},
+        {title: 'Welcome to the Lagoon school', path: '/about/welcome-to-the-lagoon-school', cName: 'dropdown-link'},
+        {title: 'meet the head', path: '/about/message-from-the-principal', cName: 'dropdown-link'},
+        {title: 'Educational phylosophy and model', path: '/about/education', cName: 'dropdown-link'},
+        {title: 'Virtual tour', path: '/about/virtual-tour', cName: 'dropdown-link'},
+        {title: 'faith', path: '/about/opus-dei', cName: 'dropdown-link'},
     ],
     academics: [
        

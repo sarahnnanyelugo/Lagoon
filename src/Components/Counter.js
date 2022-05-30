@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import CounterImg from '../Assets/Counter.png'
-import Feather from '../Assets/Insta.png'
 import Confrence from '../Assets/Confrence.png'
 import Faith from '../Assets/Faith.png'
 import Inter from '../Assets/Interhouse.png'
+import Feather from '../Assets/people_24px.svg'
+import Feather1 from '../Assets/school_24px.svg'
+import Feather2 from '../Assets/Vector.svg'
 
 
 export default function Counter() {
@@ -14,16 +16,16 @@ export default function Counter() {
             numbers:'300',
             label:'GRADUATES'
         },
-        {   icon: Feather,
+        {   icon: Feather1,
             numbers:'1 : 1',
             label:'STUDENT MENTOR RATIO'
         },
-        {   icon: Feather,
+        {   icon: Feather2,
             numbers:'800',
             label:'ENROLLMENT'
         },
         {   icon: Feather,
-            numbers:'25',
+            numbers:'35',
             label:'AVERAGE CLASS SIZE'
         }
 
@@ -130,7 +132,7 @@ const CounterCov = styled.section`
             align-items: center;
 
             table{
-
+                margin-top: 3rem;
 
                 tr{
 
@@ -181,7 +183,7 @@ const CounterCov = styled.section`
                 width: 400px ;
                 height:370px ;
                 position:relative ;
-
+                border:2px solid #fff ;
                 img{
                     height:100% ;
                     width:100% ;

@@ -33,7 +33,7 @@ export default function OpusDei() {
             <h4>
               Christ is at the heart of everything we do. Our education,
               guided by the teachings of the Catholic Church and the
-              spirituality of Opus Dei, immerses students in a life of
+              spirituality of <a href={"https://www.opusdei.ng/"} target="_blank" rel='noopener noreferrer'>Opus Dei</a>, immerses students in a life of
               Christian virtue and helps them discover the joy of
               friendship with God. Whether it’s through Enrichment—
               when the school day pauses for daily Mass—monthly
