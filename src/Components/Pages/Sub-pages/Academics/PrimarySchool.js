@@ -40,83 +40,110 @@ export default function PrimarySchool() {
           </div>
           <div className='conimages'>
                 <div>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
                 </div>
                 <div>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
                 </div>
                 <div>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
                 </div>
                 <div className='full'>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                          Small classes averaging 15 encourage a high level of rapport between students and teachers. Our
+                          middle school faculty know how to tap and channel the intellectual energy and passion of middle
+                          school girls.
+                        </p>
+                        <p>
+                            During the primary school years, students gradually take ownership of their learning. They grow
+                            in self-knowledge, build and value friendships, and come to understand their responsibility to
+                            each other as well as to the wider community.
+                        </p>
+                        <p>
+                            Our primary school curriculum sets girls up for success in our rigorous upper school college
+                            preparatory, honors lists, while a wide variety of cocurricular activities allows them to explore and
+                            develop interests.
+                        </p>
+                    </div>
+                    
+                </div>
+                {/* <div>
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
                 </div>
                 <div>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
                 </div>
                 <div>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <div>
-                    <img src={Holder} alt="" />
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi
-                        ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-
+                    <div>
+                        <img src={Holder} alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi
+                            ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    
+                </div> */}
           </div>
          
       </div>
@@ -223,11 +250,22 @@ const Container = styled.section`
   .conimages{
     display:grid ;
     grid-template-columns:repeat(3,20rem) ;
-    gap:5rem;
-    justify-content: center;
+    /* gap:5rem; */
+    justify-content: space-around;
 
     .full{
       grid-column:1/4;
+      margin-top:5rem ;
+      img{
+        width:100% ;
+      height:467px ;
+      object-fit:cover ;
+      }
+
+      p{
+        font-size:20px;
+        font-weight:900;
+      }
     }
 
     img{
