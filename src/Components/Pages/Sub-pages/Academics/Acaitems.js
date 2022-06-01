@@ -1,33 +1,29 @@
 export const subRoute = [
     {
-      title:'WELCOME TO THE LAGOON SCHOOL',
+      title:'Academic Facilities',
       cName:'linked',
-      path:'/about/welcome-to-the-lagoon-school'
+      path:'/academics/academic-facilities'
     },
     {
-      title:'MESSAGE FROM THE PRINCIPAL',
+      title:'Primary School',
       cName:'linked',
-      path:'/about/message-from-the-principal'
+      path:'/academics/primary-school'
     },
     {
-      title:'EDUCATIONAL PHILOSOPHY & MODEL',
+      title:'Seconday School',
       cName:'linked',
-      path:'/about/education'
+      path:'/academics/secondary-school'
     },
     {
-      title:'FAITH',
+      title:'Courses',
       cName:'linked',
-      path:'/about/opus-dei'
+      path:'/academics/courses'
     },
     {
-      title:'Virtual Tour',
+      title:'Academic calendar',
       cName:'linked',
-      path:'/about/virtual-tour'
-    },
-    {
-      title:'Partnership with Parents',
-      cName:'linked',
-      path:'/about/partnership-with-parents'
+      path:'/academics/calendar'
     }
+    
 
 ]

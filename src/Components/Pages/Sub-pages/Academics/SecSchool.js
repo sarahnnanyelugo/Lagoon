@@ -151,6 +151,7 @@ const Container = styled.section`
         align-items:baseline ;
         position: absolute;
         bottom: 30%;
+        width:100% !important;
 
         li{
           display:flex ;

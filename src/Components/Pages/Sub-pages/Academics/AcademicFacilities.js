@@ -85,10 +85,10 @@ const Container = styled.section`
         flex-wrap:wrap ;
         gap:2rem;
         /* height:100% ; */
-        align-items:baseline ;
+        align-items:center ;
         position: absolute;
         bottom: 30%;
-
+        width:100% !important;
         li{
           display:flex ;
           flex-direction:column ;
