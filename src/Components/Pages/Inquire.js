@@ -37,7 +37,7 @@ export default function Inquire() {
 const List = styled.ul`
     display:flex ;
     width:90% ;
-    justify-content:space-around ;
+    justify-content:space-between ;
     list-style:none ;
     transition: all .5s linear ;
     margin: 5rem 0 4rem 0 ;
