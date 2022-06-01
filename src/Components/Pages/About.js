@@ -8,11 +8,13 @@ import OpusDei from './Sub-pages/About/OpusDei';
 import Message from './Sub-pages/About/Message';
 import VirtualTour from './Sub-pages/About/VirtualTour';
 import Parents from './Sub-pages/About/Parents';
+import Inquire from './Inquire';
 const Welcome = React.lazy(() => import('./Sub-pages/About/Welcome'))
 
 function About() {
   const location = useLocation();
   return (
+    <>
             <Switch location={location} key={location.pathname}>
                   <Route path={'/about'} exact >
                     <Redirect to={'/about/welcome-to-the-lagoon-school'}/>
@@ -28,7 +30,8 @@ function About() {
 
                   <Route path="*"  component={NotFound}/>
             </Switch>
-
+        <Inquire/>
+    </>
   )
 }
 

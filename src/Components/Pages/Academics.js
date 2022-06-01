@@ -2,6 +2,7 @@ import React from 'react';
 import {   Switch, Route, Redirect,useLocation
 } from 'react-router-dom';
 import NotFound from '../../Components/NotFound';
+import Inquire from './Inquire';
 import AcademicFacilities from './Sub-pages/Academics/AcademicFacilities';
 import Calendar from './Sub-pages/Academics/Calendar';
 import Courses from './Sub-pages/Academics/Courses';
@@ -11,7 +12,8 @@ import SecSchool from './Sub-pages/Academics/SecSchool';
 function Academics() {
   const location = useLocation();
   return (
-            <Switch location={location} key={location.pathname}>
+    <>
+      <Switch location={location} key={location.pathname}>
                   <Route path={'/academics'} exact >
                     <Redirect to={'/academics/academic-facilities'}/>
                     </Route>
@@ -24,6 +26,9 @@ function Academics() {
                     <Route  path="/academics/secondary-school" component={SecSchool}/>
                   <Route path="*"  component={NotFound}/>
             </Switch>
+          <Inquire/>
+    </>
+          
 
   )
 }
