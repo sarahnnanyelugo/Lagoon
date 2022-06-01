@@ -40,7 +40,8 @@ const List = styled.ul`
     justify-content:space-between ;
     list-style:none ;
     transition: all .5s linear ;
-    margin: 5rem 0 4rem 0 ;
+    margin: 5rem auto 4rem auto;
+    padding:0 ;
     li{
         border:2px solid red ;
         padding:10px 10px ;
