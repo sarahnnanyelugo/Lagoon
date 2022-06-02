@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png';
 import Holdr from '../../../../Assets/Image2.png'
-
+import { accordionData } from './Accordion';
 import { subRoute } from './AboutItems';
+import Accordion from './Accordion';
 
 
 
@@ -43,11 +44,12 @@ export default function Parents() {
         <div className='primary'>
             <img src={Holdr} alt="" />
             <div className='table'>
-                <ul>
-                  <li>What is a primary educator?</li>
-                  <li>What does it mean to be a steward of the School?</li>
-                  <li>What does it mean to be an ambassador of LAGOON? </li>
-                </ul>
+              
+                  <div className="accordion">
+                      {accordionData.map(({ title, content }) => (
+                        <Accordion title={title} content={content} />
+                              ))}
+                    </div>
             </div>
             <div className='principle'>
                 <header>Seven principles of Catholic Social Teaching:</header>

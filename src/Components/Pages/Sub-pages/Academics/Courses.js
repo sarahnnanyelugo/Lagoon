@@ -3,8 +3,19 @@ import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import { subRoute } from './Acaitems';
 // import Holder from '../../../../Assets/ExplaoreTwo.png'
-
+// import { useLocation } from 'react-router-dom';
+// import { useRoute } from '@react-navigation/native';
 export default function Courses() {
+
+  // const router = useLocation();
+
+
+  function handleChange(e) {
+    let link = e.target.value;
+    console.log(link)
+    window.location = link;
+  }
+
   return (
     <Container>
       <div className='placeholder'>
@@ -43,12 +54,17 @@ export default function Courses() {
                             <td>
                                   <label>
                                         <p>SCHOOL LEVEL</p>
-                                        <input list="classes" placeholder='choose' name="myBrowser" />  
+                                        {/* <input list="classes" placeholder='choose' />   */}
                                   </label>   
-                              <datalist id="classes">
-                                  <option value=" Primary" to='/' />
-                                  <option value=" Secondary" />
-                              </datalist>
+                              {/* <select  onChange={event => handleChange(event.target.value)}>
+                                  <option value="Primary"   />
+                                  <option value="Secondary" />
+                              </select> */}
+                              <select id="lang" onChange={handleChange}>
+                                  <option value="" disabled selected>Select School Level</option>
+                                  <option value="/about/welcome-to-the-lagoon-school">Primary</option>
+                                  <option value="/academics/primary-school">Secondary</option>
+                              </select>
                             </td>
                           </tr>
                     </tbody>
@@ -192,8 +208,8 @@ const Container = styled.section`
                               font-size:18px ;
                               align-items:center ;
                             }
-
-                            input{
+                          }
+                          select{
                               height: 30px;
                               width: 15%;
                               position:relative ;
@@ -211,8 +227,19 @@ const Container = styled.section`
                                 align-self:center ;
                                 padding-left:10px;
                               }
+
+                             option{
+
+                              &:disabled{
+                                color:#000 ;
+                                font-size:18px ;
+                                text-transform:uppercase ;
+                                vertical-align:center ;
+                                align-self:center ;
+                                padding-left:10px;
+                              }
+                             }
                             }
-                          }
                         }
                       }
                     }
