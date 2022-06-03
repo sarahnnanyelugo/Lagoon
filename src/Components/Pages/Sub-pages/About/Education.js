@@ -6,6 +6,8 @@ import Badge from '../../../../Assets/Badge.png'
 import { subRoute } from './AboutItems';
 
 export default function Education() {
+  const currentPath = window.location.pathname;
+
   return (
     <Container>
     <div className='placeholder'>
@@ -15,7 +17,9 @@ export default function Education() {
             {subRoute?.map((sub, idx)=>{
               return(
                   <li key={idx}>
-                      <a className={sub.cName} href={sub.path}>
+                      <a className={sub.cName} href={sub.path}               
+                        style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}
+                        >
                         {sub.title}
                       </a>
                   </li>

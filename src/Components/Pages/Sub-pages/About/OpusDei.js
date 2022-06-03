@@ -8,6 +8,8 @@ import Dei from '../../../../Assets/image.JQQTM1.png'
 
 
 export default function OpusDei() {
+  const currentPath = window.location.pathname;
+
   return (
     <Container>
     <div className='placeholder'>
@@ -17,7 +19,7 @@ export default function OpusDei() {
               {subRoute?.map((sub, idx)=>{
                 return(
                     <li key={idx}>
-                        <a className={sub.cName} href={sub.path}>
+                        <a className={sub.cName} href={sub.path}   style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}     >
                           {sub.title}
                         </a>
                     </li>

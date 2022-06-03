@@ -5,6 +5,8 @@ import { subRoute } from './Acaitems';
 import Holder from '../../../../Assets/ExplaoreTwo.png'
 
 export default function PrimarySchool() {
+  const currentPath = window.location.pathname;
+
   return (
     <Container>
       <div className='placeholder'>
@@ -14,7 +16,9 @@ export default function PrimarySchool() {
                 {subRoute?.map((sub, idx)=>{
                   return(
                       <li key={idx}>
-                          <a className={sub.cName} href={sub.path}>
+                          <a className={sub.cName} href={sub.path}   style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}>
+
+                          
                             {sub.title}
                           </a>
                       </li>
@@ -232,10 +236,14 @@ const Container = styled.section`
             }
             h4{
                 font-size:1.4rem ;
-                line-height:25px ;
+                line-height:30px ;
                 letter-spacing:1px ;
                 font-weight:500 ;
-                font-weight:900 ;
+
+                mark{
+                  font-weight:900 ;
+                  background-color:#fff;
+                }
               }
             button{
               width:100% ;
@@ -253,6 +261,18 @@ const Container = styled.section`
     grid-template-columns:repeat(3,20rem) ;
     /* gap:5rem; */
     justify-content: space-around;
+
+    div{
+
+      div{
+         
+        p{
+          font-weight:900 ;
+          font-size:20px ;
+          margin-top:3rem ;
+        }
+      }
+    }
 
     .full{
       grid-column:1/4;

@@ -20,7 +20,9 @@ function Academics() {
                     <Route  path="/academics/academic-facilities"  >
                         <AcademicFacilities/>
                     </Route>
-                    <Route  path="/academics/calendar" component={Calendar }/>
+                    <Route  path="/academics/calendar" component={Calendar }>
+                        <Redirect to={'*'}/>
+                    </Route>
                     <Route  path="/academics/courses" component={Courses}/>
                     <Route  path="/academics/primary-school" component={PrimarySchool }/>
                     <Route  path="/academics/secondary-school" component={SecSchool}/>
