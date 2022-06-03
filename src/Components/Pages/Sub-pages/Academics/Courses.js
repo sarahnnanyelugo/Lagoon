@@ -75,12 +75,15 @@ export default function Courses() {
               
                 
                 
-                  
-                <h4>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </h4>
+                  <div>
+                      <h4>
+                        “ Lagoon encourages students not only to think but also reflect, a skill
+                          that is absolutely necessary in college. This type of preparation at the
+                          high school level is rare. “
+                      </h4>
+                    <label >- Nweze Isabella</label>
+                  </div>  
+               
           </div>
          
          

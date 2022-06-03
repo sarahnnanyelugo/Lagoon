@@ -80,6 +80,9 @@ export default function OpusDei() {
         <div className='hold'>
               <img src={Holder} alt="" />
               <img src={Holder} alt="" />
+                <span>
+                    <h2>Opus Dei</h2>
+                </span>
               <h4>
                   Opus Dei is a personal prelature of the Catholic
                   Church founded in 1928 by St. Josemaría Escrivá.
@@ -182,7 +185,7 @@ const Container = styled.section`
       justify-content:center ;
       display:grid ;
       grid-template-columns:repeat(1,1fr);
-      text-align:center;
+      text-align:left;
       align-items:center;
 
       img{
@@ -194,6 +197,23 @@ const Container = styled.section`
         &:nth-child(n+2){
             margin-top: 5rem;
           }
+      }
+
+      span {
+        text-align:center ;
+        h2{
+          padding:0 ;
+          margin:0 ;
+          position:relative ;
+          &::before{
+              content: '';
+              border-bottom: 5px solid red;
+              width: 5rem;
+              position: absolute;
+              bottom: 0;
+              top: 30px;
+          }
+        }
       }
 
       h4{
