@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Life() {
+function stuLife() {
   return (
     <div>Life</div>
   )
 }
 
-export default Life
+export default stuLife

@@ -87,7 +87,7 @@ export default function Nabar() {
           </div>
             <div className={navbarState ? "list-container active" : "list-container "} >
                 <ul className='link-up'>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/about/welcome-to-the-lagoon-school'}> About </a>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/about'}> About </a>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/academics'}> Academics </a>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/admission'}> Admission </a>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/student_life'}> Student Life </a>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>

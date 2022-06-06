@@ -25,13 +25,11 @@ export const navMenus = {
 
     ],
     studentlife: [
-        {title: 'Life in lagoon', path: '/student_life/life_in_lagoon', cName: 'dropdown-link', description: '', },
+        {title: 'Life in lagoon', path: '/student_life/life_in_lagoon', cName: 'dropdown-link',  },
         {title: 'lagoon traditions', path: '/student_life/lagoon_traditions', cName: 'dropdown-link'},
         {title: 'service', path: '/student_life/service', cName: 'dropdown-link'},
         {title: 'club & activities', path: '/student_life/activities', cName: 'dropdown-link'},
         {title: 'Mentoring & tutorials', path: '/student_life/mentorship', cName: 'dropdown-link'},
-
-   
     ],
     parents: [
         {title: 'N.F.A.D', path: 'https://nafad.org.ng/', cName: 'dropdown-link'},
