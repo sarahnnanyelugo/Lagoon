@@ -100,7 +100,7 @@ export default function PrimarySchool() {
                         </p>
                         <p>
                             Our primary school curriculum sets girls up for success in our rigorous upper school college
-                            preparatory, honors lists, while a wide variety of cocurricular activities allows them to explore and
+                            preparatory, honors lists, while a wide variety of <a href="/academics/club_&_activities">curricular activities</a> allows them to explore and
                             develop interests.
                         </p>
                     </div>

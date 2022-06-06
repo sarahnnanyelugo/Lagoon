@@ -206,7 +206,11 @@ const Container = styled.section`
                 line-height:25px ;
                 letter-spacing:1px ;
                 font-weight:500 ;
-                font-weight:900 ;
+
+                mark{
+                  font-weight: 900;
+                  background-color: #fff;
+                }
               }
             button{
               width:100% ;

@@ -12,7 +12,7 @@ const Accordion = ({ title, content }) => {
                 <div>{title}</div>
                 <div>{isActive ? '-' : '+'}</div>
             </div>
-            {isActive && <div className="accordion-content">{content}</div>}
+            {isActive && <div className="accordion-content" dangerouslySetInnerHTML={{__html: content}}></div>}
     </Accord>
   );
 };
@@ -51,6 +51,15 @@ const Accord = styled.div`
 .accordion-content {
   padding: 1rem;
   border:2px solid #000;
+
+  ul{
+
+    li{
+      font-size:1.4rem ;
+      font-weight:300 ;
+    }
+  }
+
 }
 
 .accordion-content {
@@ -82,5 +91,17 @@ export const accordionData = [
       content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
       quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
       dolor ut sequi minus iste? Quas?`
+    }
+  ];
+
+
+  export const accordionData2 = [
+    {
+      title: 'Primary School',
+      content: `<ul> <li>Babysitting Course </li> <li>Clef Hangers - A Cappella  </li><li>Drama & Musicals – Lagoon Players</li><li>Film Club   </li><li>Junior Classical League</li><li>Junior Faith Peer Leaders</li><li>Lectors and Cantors</li><li>LifeCompass Digital Squad</li><li>Math League</li><li>Medfield Food Pantry</li><li>Newspaper - The Looking Glass</li><li>Robotics</li><li>Set Design Club</li><li>Ski Club</li><li>Soldier Support</li><li>Speech Team</li><li>Student Government</li><li>Thomas Upham House</li><li>Tone Chimes</li></ul> `
+    },
+    {
+      title: 'Secondary School   ',
+      content: `<ul> <li>Babysitting Course </li> <li>Clef Hangers - A Cappella  </li><li>Drama & Musicals – Lagoon Players</li><li>Film Club   </li><li>Junior Classical League</li><li>Junior Faith Peer Leaders</li><li>Lectors and Cantors</li><li>LifeCompass Digital Squad</li><li>Math League</li><li>Medfield Food Pantry</li><li>Newspaper - The Looking Glass</li><li>Robotics</li><li>Set Design Club</li><li>Ski Club</li><li>Soldier Support</li><li>Speech Team</li><li>Student Government</li><li>Thomas Upham House</li><li>Tone Chimes</li></ul> `
     }
   ];

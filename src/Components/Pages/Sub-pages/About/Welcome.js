@@ -74,19 +74,22 @@ export default function Welcome() {
               <button>MEET A LAGOON STUDENT</button>
           </div>
           <div className='second'>
-              <div className='img-hold'>
-                  <img src={Holder} alt="placeHolder" />
-              </div>
-              <div className='cont-hold'>
-                <span>
-                      <h2>WHAT PARENTS ARE SAYING</h2>
-                  </span>
-                <p>"Where Girls are Called to Greatness' isn’t just a tagline or a
-                    marketing tool, it is woven into the fabric of everything Montrose
-                    does. The girls are constantly encouraged to be the best version
-                    of themselves all the while with amazing support from teachers,
-                    mentors, coaches, administration and their peers."</p>
-              </div>
+                <div className='size'>
+                    <div className='img-hold'>
+                          <img src={Holder} alt="placeHolder" />
+                      </div>
+                      <div className='cont-hold'>
+                        <span>
+                              <h2>WHAT PARENTS ARE SAYING</h2>
+                          </span>
+                        <p>"Where Girls are Called to Greatness' isn’t just a tagline or a
+                            marketing tool, it is woven into the fabric of everything Montrose
+                            does. The girls are constantly encouraged to be the best version
+                            of themselves all the while with amazing support from teachers,
+                            mentors, coaches, administration and their peers."</p>
+                      </div>
+                </div>
+              
 
           </div>
       </div>
@@ -213,7 +216,7 @@ const Container = styled.section`
 
   .content{
     display:grid ;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 40%;
     width:90% ;
     margin:5rem auto 0 auto ;
 
@@ -247,16 +250,22 @@ const Container = styled.section`
    }
 
    .second{
+    display:flex ;
+    justify-content:flex-end ;
+    .size{
+        width:80% ;
 
-
-      .img-hold{
-        display:flex ;
-        justify-content:flex-end ;
-        /* flex-direction:column ; */
-        img{
-          height:400px ;
-          width: 500px;
-        }
+        .img-hold{
+          display:flex ;
+          justify-content:flex-end ;
+          /* flex-direction:column ; */
+          img{
+            height:400px ;
+            width: 100%;
+            object-fit:cover ;
+          }
+    }
+      
 
         
 

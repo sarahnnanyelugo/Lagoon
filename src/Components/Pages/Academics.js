@@ -5,6 +5,7 @@ import NotFound from '../../Components/NotFound';
 import Inquire from './Inquire';
 import AcademicFacilities from './Sub-pages/Academics/AcademicFacilities';
 import Calendar from './Sub-pages/Academics/Calendar';
+import Club from './Sub-pages/Academics/Club';
 import Courses from './Sub-pages/Academics/Courses';
 import PrimarySchool from './Sub-pages/Academics/PrimarySchool';
 import SecSchool from './Sub-pages/Academics/SecSchool';
@@ -26,6 +27,8 @@ function Academics() {
                     <Route  path="/academics/courses" component={Courses}/>
                     <Route  path="/academics/primary-school" component={PrimarySchool }/>
                     <Route  path="/academics/secondary-school" component={SecSchool}/>
+                    <Route  path="/academics/club_&_activities" component={Club}/>
+
                   <Route path="*"  component={NotFound}/>
             </Switch>
           <Inquire/>

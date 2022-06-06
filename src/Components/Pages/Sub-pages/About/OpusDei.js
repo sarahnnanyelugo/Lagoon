@@ -82,24 +82,27 @@ export default function OpusDei() {
         <div className='hold'>
               <img src={Holder} alt="" />
               <img src={Holder} alt="" />
-                <span>
-                    <h2>Opus Dei</h2>
-                </span>
-              <h4>
-                  Opus Dei is a personal prelature of the Catholic
-                  Church founded in 1928 by St. Josemaría Escrivá.
-                  At the core of Opus Dei’s mission is the teaching
-                  that all men and women are called to holiness,
-                  which can be pursued through our everyday lives
-                  and work.
-              </h4>
-              <h4>
-                Our chaplains, priests of the Prelature, celebrate
-                Mass in our chapel daily, and our school community
-                approaches all work in a manner reflective of the
-                spirit of Opus Dei—with dedication and
-                cheerfulness, especially in the face of challenges.
-              </h4>
+              <div>
+                  <span>
+                        <h2>Opus Dei</h2>
+                    </span>
+                  <h4>
+                      Opus Dei is a personal prelature of the Catholic
+                      Church founded in 1928 by St. Josemaría Escrivá.
+                      At the core of Opus Dei’s mission is the teaching
+                      that all men and women are called to holiness,
+                      which can be pursued through our everyday lives
+                      and work.
+                  </h4>
+                  <h4>
+                    Our chaplains, priests of the Prelature, celebrate
+                    Mass in our chapel daily, and our school community
+                    approaches all work in a manner reflective of the
+                    spirit of Opus Dei—with dedication and
+                    cheerfulness, especially in the face of challenges.
+                  </h4>
+              </div>
+               
         </div>
     </div>
   </Container>
