@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Cover from '../Assets/Cover.png';
 import Inter from '../Assets/Interhouse.png'
+import Roll from 'react-reveal/Roll';
 
 
 export default function Calendar() {
@@ -39,37 +40,43 @@ export default function Calendar() {
   return (
     <CalendarSection>
         <Events>
-            <div className='upcoming'>
-                <h4>Recent Posts</h4>
-            </div>
-            {EventContent.map((ent, index)=>{
-                return(
-                    <div className='content' key={index}>
-                        <div className='holder-img'>
-                            <img src={ent.holder} alt="holder" />
-                        </div>
-                        <div className='pesp'>
-                            <h4>{ent.header}</h4>
-                            <label >{ent.date}</label>
-                            <p>{ent.ceremony}</p>
-                        </div>
-                    </div>
-                )
-            })}
+            <Roll left cascade>
+                <div className='upcoming' data-aos="zoom-in-right">
+                    <h4>Recent Posts</h4>
+                </div>
+                        {EventContent.map((ent, index)=>{
+                            return(
+                            <div className='content' key={index} data-aos="zoom-in-left">
+                                <div className='holder-img'>
+                                    <img src={ent.holder} alt="holder" />
+                                </div>
+                                <div className='pesp'>
+                                    <h4>{ent.header}</h4>
+                                    <label >{ent.date}</label>
+                                    <p>{ent.ceremony}</p>
+                                </div>
+                            </div>
+                        )
+                    })}
+            </Roll>
+
         </Events>
         <Dates>
-            <div className='upcoming'>
-                <h4>UPCOMING EVENTS</h4>
-            </div>
-                {EventDates.map((duty, index)=>{
-                    return(
-                       <div className='arrange' key={index}>
-                           <div className='date'>{duty.date}</div>
-                           <div className='comment'>{duty.ceremony}</div>
-                       </div>
-                    )
-                })}
+            <Roll right cascade>
+
+                <div className='upcoming'>
+                    <h4>UPCOMING EVENTS</h4>
+                </div>
+                    {EventDates.map((duty, index)=>{
+                        return(
+                        <div className='arrange' key={index}>
+                            <div className='date'>{duty.date}</div>
+                            <div className='comment'>{duty.ceremony}</div>
+                        </div>
+                        )
+                    })}
                 <button>View Calendar</button>
+            </Roll>
         </Dates>
     </CalendarSection>
   )

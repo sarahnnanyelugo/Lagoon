@@ -7,6 +7,7 @@ import Inter from '../Assets/Interhouse.png'
 import Feather from '../Assets/people_24px.svg'
 import Feather1 from '../Assets/school_24px.svg'
 import Feather2 from '../Assets/Vector.svg'
+import Roll from 'react-reveal/Roll';
 
 
 export default function Counter() {
@@ -57,7 +58,10 @@ export default function Counter() {
                             //         </div>
                             // </div>
                             <table key={index}>
+                                            <Roll left cascade>
+
                                     <tbody>
+                                        
                                         <tr> 
                                             <td>   <img src= {rte.icon}alt="" />   </td>
                                         </tr>
@@ -68,7 +72,7 @@ export default function Counter() {
                                             <td> <label htmlFor="">{rte.label} </label> </td>
                                         </tr>
                                     </tbody>
-                                    
+                                    </Roll>
                             </table>
                         )
                     })
@@ -79,20 +83,22 @@ export default function Counter() {
             
         </div>
         <div className='photos'>
-            <div className='check'>
-                    {Believe.map((bil,index) =>{
-                    return(
-                        <div className='evenst' key={index}>
-                            <img src={bil.place} alt="" /> 
-                            <div className='cover'>
-                                <p>{bil.sub}</p> 
-                                <h6>{bil.writeUp}</h6>
+            <Roll left cascade>
+                <div className='check'>
+                        {Believe.map((bil,index) =>{
+                        return(
+                            <div className='evenst' key={index}>
+                                <img src={bil.place} alt="" /> 
+                                    <div className='cover'>
+                                        <p>{bil.sub}</p> 
+                                        <h6>{bil.writeUp}</h6>
+                                    </div>
                             </div>
-                        </div>
-                    )
-                })}
-            </div>
-                
+                        )
+                    })}
+                </div>
+            </Roll>
+     
             
         </div>
     </CounterCov>

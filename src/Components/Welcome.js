@@ -88,10 +88,13 @@ export default function Welcome() {
         </Vision>
         
         <ExploreCov>
-                <div className='heading'>
-                    <h4>Explore more</h4>
-                </div>
-                <div className='expcov'>
+                <Bounce  bottom cascade>
+                    <div className='heading' data-aos="zoom-in-left">
+                        <h4>Explore more</h4>
+                    </div>
+                </Bounce>
+            <Bounce  bottom cascade>
+                <div className='expcov' data-aos="zoom-in-right">
                     {Explore.map((exp, index)=>{
                         return(
                             <div key={index}>
@@ -107,6 +110,8 @@ export default function Welcome() {
                         
                     }
                 </div>
+            </Bounce>
+
         </ExploreCov>
     </Section>
   )
