@@ -58,9 +58,9 @@ export default function Counter() {
                             //         </div>
                             // </div>
                             <table key={index}>
-                                            <Roll left cascade>
+                                 <Roll left cascade>
 
-                                    <tbody>
+                                    <tbody data-aos="fade-up">
                                         
                                         <tr> 
                                             <td>   <img src= {rte.icon}alt="" />   </td>
@@ -84,7 +84,7 @@ export default function Counter() {
         </div>
         <div className='photos'>
             <Roll left cascade>
-                <div className='check'>
+                <div className='check'data-aos="fade-up">
                         {Believe.map((bil,index) =>{
                         return(
                             <div className='evenst' key={index}>
