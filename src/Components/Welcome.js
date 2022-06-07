@@ -13,7 +13,8 @@ export default function Welcome() {
         {
             Heading :'Welcome to the Lagoon School',
             Paragraph1:"The Lagoon School aims at investing in the Nigerian girl child for the good of the society. W e have both  primary and secondary sections. O ur school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
-            Button:"READ MORE FROM MISS DOREEN ONYEKWELU| THE SCHOOL HEAD"
+            Button:"READ MORE FROM MISS DOREEN ONYEKWELU| THE SCHOOL HEAD",
+            link:'/about'
         }
     ];
 
@@ -61,7 +62,7 @@ export default function Welcome() {
                             <h4>{msg.Heading}</h4>
                             <p>{msg.Paragraph1}</p>
                             <div data-aos="fade-up"    data-aos-duration="3000">
-                        <button >{msg.Button}</button>
+                                <a href={msg.link} >{msg.Button}</a>
                             </div>
                             
                         </div>
@@ -169,7 +170,7 @@ const Section = styled.section`
                 
             }
 
-            button{
+            a{
                 padding:20px ;
                 width:70% ;
                 margin:0 auto ;
@@ -179,6 +180,7 @@ const Section = styled.section`
                 color:#fff ;
                 font-family:monseratSemi;
                 transition: all 1.5s ease linear ;
+                text-decoration:none ;
                 &:hover{
                     background-color:#f63a32;
                     cursor: pointer;

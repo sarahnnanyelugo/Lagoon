@@ -114,8 +114,8 @@ const Dropcover =styled.section`
 
             img{
                 width:100% ;
-                height:200px ;
-                object-fit:contain ;
+                height:13rem ;
+                object-fit:cover ;
             }
         }
     }
