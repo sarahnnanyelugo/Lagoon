@@ -23,22 +23,29 @@ export default function Join() {
   return (
     <JoinCov>
         <Bacdrop>
-            <div className='join-us'>
-                <h4>Join Us</h4>
+            <div className='drop'>
+                <img src={Backdrop} alt="" />
             </div>
-                <ul className=' apply-list'>
-                    {Apply.map((app, index) =>{
-                        return(
-                            <li key={index}>
-                                <Link to={app.link}>
-                                    {app.Join}
-                                </Link>
-                            </li>
-                        )
-                    })
+            <div className='keep'>
+                <div className='join-us'>
+                    <h4>Join Us</h4>
+                </div>
+                    <ul className=' apply-list'>
+                        {Apply.map((app, index) =>{
+                            return(
+                                <li key={index}>
+                                    <Link to={app.link}>
+                                        {app.Join}
+                                    </Link>
+                                </li>
+                            )
+                        })
 
-                    }
-                </ul>
+                        }
+                    </ul>
+
+            </div>
+            
         </Bacdrop>
     </JoinCov>
   )
@@ -54,14 +61,38 @@ const Bacdrop = styled.div`
     display:flex ;
     flex-direction:column ;
     align-items: center;
-    gap: 17rem;
-    background-image: url(${Backdrop});
+    gap: 10rem;
+    /* background-image: url(${Backdrop});
     background-repeat:no-repeat ;
     background-size:cover ;
     background-attachment: fixed;
-    background-color:rgba(0,0,0,0.7) ;
+    background-color:rgba(0,0,0,0.7) ; */
     /* filter: brightness(60%); */
     /* -webkit-filter: brightness(70%); */
+    .drop{
+        position:relative ;
+        height:100% ;
+        width:100% ;
+
+        img{
+            width:100% ;
+            height:100% ;
+            object-fit:cover ;
+        }
+    }
+
+    .keep{
+        position:absolute ;
+        background-color:rgba(0,0,0,0.7) ;
+        width:100% ;
+        height:100% ;
+        justify-content:center ;
+        left:0 ;
+        right:0 ;
+        display:flex ;
+        flex-direction:column ;
+        justify-content:space-around ;
+    }
     .join-us{
         width: 60% ;
         margin: 0 auto ;
@@ -83,6 +114,7 @@ const Bacdrop = styled.div`
         grid-template-columns: 300px 300px 300px;
         grid-gap: 10px 100px;
         transition: all 7s  linear ;
+        justify-content:center ;
 
         li{
             border:2px solid #fff;
