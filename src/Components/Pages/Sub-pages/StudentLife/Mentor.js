@@ -43,8 +43,32 @@ export default function Mentor() {
                 </h4>
           </div>
           <div className='conimages'>
+              <div className='individual'>
+                <span>
+                    <h2>INDIVIDUALIZED MENTORING</h2>
+                </span>
+                <ul>
+                  <li>Goes far beyond traditional academic advising</li>
+                  <li>Provides every student with a mentor and a coach</li>
+                  <li>A mentor serves as captain of each girl's success management team</li>
+                  <li>Formal meetings occur 6-8 times a semester</li>
+                  <li>Informal meetings are frequent</li>
+                  <li>Mentors meet with parents at least twice a year</li>
+                </ul>
+              </div>
+
+              <div className='quotes'>
+                  <hr />
+                <h4>
+                “ My Montrose advisors challenged me to grow in confidence by
+                  encouraging me to push myself, which prompted me to take the chance
+                  to apply for the White House internship. Lagoon encourages students
+                  not only to think but also reflect, a skill that is absolutely necessary in
+                  college. This type of preparation at the high school level is rare. “
+                </h4>
+                <h4>- Nweze Isabella</h4>
+              </div>
               <img src={Holder} alt="" />
-              
 
           </div>
          
@@ -150,13 +174,59 @@ const Container = styled.section`
 
   .conimages{
     display:grid ;
-    grid-template-columns:repeat(3,20rem) ;
+    grid-template-columns:repeat(1, 1fr) ;
     gap:5rem;
     justify-content: center;
 
+    .individual{
+      background-color:#ababab96 ;
+      width:80% ;
+      height:20rem ;
+      border-radius:20px ;
+      span{
+          h2{
+            position:relative ;
+            font-size:1.6rem ;
+            margin-left:20px ;
+            
+            &::before{
+              content: '';
+              border-bottom: 5px solid red;
+              width: 5rem;
+              position: absolute;
+              bottom: 0;
+              top: 30px;
+            }
+}
+}
+
+      ul{
+        margin-top:20px ;
+
+        li{
+          font-size:1.4rem ;
+        }
+      }
+    }
+
+    .quotes{
+      width:80% ;
+      margin:0 auto ;
+
+      hr{
+        border-top:4px solid red ;
+        width:7rem ;
+      }
+
+      h4{
+        font-size:1.6rem ;
+        text-align:center ;
+      }
+    }
+
     img{
       width:100% ;
-      height:100% ;
+      height:30rem ;
       object-fit:cover ;
     }
   }

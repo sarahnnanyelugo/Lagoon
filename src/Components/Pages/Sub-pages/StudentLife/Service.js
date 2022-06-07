@@ -43,7 +43,9 @@ export default function Service() {
           </div>
           <div className='conimages'>
               <img src={Holder} alt="" />
-              
+              <img src={Holder} alt="" />
+              <img src={Holder} alt="" />
+              <img src={Holder} alt="" />
 
           </div>
          
@@ -157,6 +159,10 @@ const Container = styled.section`
       width:100% ;
       height:100% ;
       object-fit:cover ;
+
+      &:first-child{
+        grid-column:1/4;
+      }
     }
   }
 

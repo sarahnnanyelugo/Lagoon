@@ -42,8 +42,22 @@ export default function Traditions() {
                 </h4>
           </div>
           <div className='conimages'>
-              <img src={Holder} alt="" />
-              
+            {Trad.map(()=>{
+              return(
+                    <div className='service'>
+                        <span>
+                            <h2>ALL-SCHOOL SERVICEDAY</h2>
+                        </span>
+                        <div  className='holinds'>
+                            <img src={Holder} alt="" />
+                        </div>
+                    </div>
+              )
+            })}
+                
+              <div className='alumni'>
+                  <button>Meet an Alumni</button>
+              </div>
 
           </div>
          
@@ -52,6 +66,25 @@ export default function Traditions() {
   )
 }
 
+
+const Trad =[
+  {
+    head:'ALL-SCHOOL SERVICEDAY',
+    placeHolder: Holder,
+  },
+  {
+    head:'ALL-SCHOOL SERVICEDAY',
+    placeHolder: Holder,
+  },
+  {
+    head:'ALL-SCHOOL SERVICEDAY',
+    placeHolder: Holder,
+  },
+  {
+    head:'ALL-SCHOOL SERVICEDAY',
+    placeHolder: Holder,
+  }
+]
 
 
 
@@ -149,15 +182,67 @@ const Container = styled.section`
 
   .conimages{
     display:grid ;
-    grid-template-columns:repeat(3,20rem) ;
+    grid-template-columns:repeat(1 1fr) ;
     gap:5rem;
     justify-content: center;
 
-    img{
-      width:100% ;
-      height:100% ;
-      object-fit:cover ;
+    .service{
+      border:2px solid black ;
+      padding:10px ;
+      border-radius:20px ;
+
+        &:nth-child(n+2){
+          margin-top:20px
+        }
+      span{
+
+        h2{
+          font-weight:500;
+          position:relative ;
+              font-size:1.6rem ;
+
+          &::before{
+                content: '';
+                border-bottom: 5px solid red;
+                width: 5rem;
+                position: absolute;
+                bottom: 0;
+                top: 30px;
+              }
+        }
+      }
+
+      .holinds{
+        width:80% ;
+        margin:0 auto ;
+
+        img{
+          width:100% ;
+          height:100% ;
+          object-fit:cover ;
+          }
+      }
     }
+    .alumni{
+        justify-content:center ;
+        display:flex ;
+
+        button{
+          color:#fff ;
+          background-color:red;
+          border:2px solid red ;
+          padding:15px ;
+          font-size:1.4rem ;
+          transition:all .5s linear ;
+          cursor: pointer;
+          &:hover{
+            color:red ;
+            background-color:#fff ;
+            border:2px solid red ;
+          }
+        }
+    }
+    
   }
 
    
