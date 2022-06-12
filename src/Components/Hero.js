@@ -26,7 +26,7 @@ export default function Hero() {
              if (
                !firstTime &&
                (referrer === "http://localhost:3000/" ||
-                 referrer === "")
+                 referrer === "https://lagoon-alpha.vercel.app/")
              ) {
                handleShow();
                setFirstTime(true);
