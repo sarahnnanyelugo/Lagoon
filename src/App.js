@@ -14,7 +14,6 @@ import PuffLoader from "react-spinners/PuffLoader";
 import { css } from "@emotion/react";
 import StudentLife from './Components/Pages/StudentLife';
 // import stuLife from './Components/Pages/Sub-pages/StudentLife/stuLife';
-
 // import Loader from './Components/Loader';
 const About = React.lazy(() => import('./Components/Pages/About'))
 const Home = React.lazy(() => import('./Components/Container'))
@@ -38,33 +37,36 @@ const override = css`
 
 function App() {
   const [loading, setLoading] = useState(false)
+  
 
   useEffect(() =>{
     setLoading(true)
     setTimeout(()=>{
       setLoading(false)
-    },2000)
+    },2000);
   },[])
+
+  
   return (
     <>
-            {loading?       <PuffLoader color={'red'} loading={loading} css={override}  size={150} />
-              :
-                   <Suspense > 
-                    <NavBar />                                                                 
-                            <Switch>
-                                <Route exact path={"/" }component={Home}/>
-                                <Route  path={"/about"} component={About} />
-                                <Route  path={"/academics"} component={Academics} />
-                                <Route  path={"/admission" } component={Admission} />
-                                <Route  path={'/student_life'} component={StudentLife} />
+      {loading ? (
+        <PuffLoader color={"red"} loading={loading} css={override} size={150} />
+      ) : (
+        <Suspense>
+          <NavBar />
+          <Switch>
+            <Route exact path={"/"} component={Home} />
+            <Route path={"/about"} component={About} />
+            <Route path={"/academics"} component={Academics} />
+            <Route path={"/admission"} component={Admission} />
+            <Route path={"/student_life"} component={StudentLife} />
 
-                                <Route  to="*"   component={NotFound}/>
-                            </Switch>
-                  <Footer/>
-               </Suspense> 
-            }
-              
-
+            <Route to="*" component={NotFound} />
+          </Switch>
+          
+          <Footer />
+        </Suspense>
+      )}
     </>
   );
 }

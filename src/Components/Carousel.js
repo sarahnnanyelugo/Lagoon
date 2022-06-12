@@ -25,7 +25,7 @@ function Carousel() {
                 label:'ONLY AT LAGOON SCHOOL',
                 paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
                 image:Confrence,
-                commentor:'sabella Nweze'
+                commentor:'Isabella Nweze'
             },
             {
                 label:'ONLY AT LAGOON SCHOOL',
@@ -88,121 +88,111 @@ const Container = styled.section`
 
 
 
-const SlickContent  = styled.div`
+const SlickContent = styled.div`
+  height: 40rem;
+  display: flex !important ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-        height: 40rem;
-        display:flex !important ;
-        flex-direction:column ;
-        align-items:center ;
-        justify-content:center ;
+  .cont {
+    display: grid;
+    grid-template-columns: 1fr 800px;
+    width: 90%;
+    margin: 0 auto;
 
-    .cont{
-        display:grid ;
-        grid-template-columns: 1fr 800px;
-        width:90% ;
-        margin:0 auto ;
-
-        .stories{
-
-
-            label{
-                color:red;
-                font-size:clamp(1.3rem, 6vw, 1.5rem) ;
-                position: relative;
-                &::before{
-                    content: '';
-                    border-bottom: 5px solid red;
-                    width: 9rem;
-                    position: absolute;
-                    bottom: 0;
-                    top:30px ;
-                }
-            }
-
-            p{
-                font-size:clamp(1.3rem, 6vw, 1.7rem) ;
-            }
+    .stories {
+      label {
+        color: red;
+        font-size: clamp(1.3rem, 6vw, 1.5rem);
+        position: relative;
+        &::before {
+          content: "";
+          border-bottom: 5px solid red;
+          width: 9rem;
+          position: absolute;
+          bottom: 0;
+          top: 30px;
+          
+          font-weight: 900;
         }
+      }
 
-       
+      p {
+        font-size: clamp(2.2rem, 6vw, 1.7rem);
+        font-weight: 900;
+      }
     }
-    .imagen{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+  }
+  .imagen {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
-
-        img{
-            position: relative;
-            object-fit: cover;
-            width: 500px !important;
-            height: 300px !important;
-            border-radius: 20px;
-        }
-
-        h4{
-            font-size:clamp(1.3rem, 6vw, 1.7rem) ;
-
-        }
+    img {
+      position: relative;
+      object-fit: cover;
+      width: 400px !important;
+      height: 300px !important;
+      border-radius: 30px;
     }
 
-    @media screen and (min-width: 280px) and (max-width: 1080px) {
-        height: 60rem;
-        align-items:center ;
-        .cont{
-        display:grid ;
-        grid-template-columns: repeat(1, 1fr);
-        gap:5rem;
-        width:100% ;
-        margin:0 auto ;
+    h4 {
+      font-size: clamp(1.3rem, 6vw, 1.7rem);
+      font-weight:light;
+    }
+  }
 
-        .stories{
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    height: 60rem;
+    align-items: center;
+    .cont {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 5rem;
+      width: 100%;
+      margin: 0 auto;
 
-
-            label{
-                color:red;
-                font-size:clamp(1.3rem, 6vw, 1.5rem) ;
-                position: relative;
-                &::before{
-                    content: '';
-                    border-bottom: 5px solid red;
-                    width: 9rem;
-                    position: absolute;
-                    bottom: 0;
-                    top:30px ;
-                }
-            }
-
-            p{
-                font-size:clamp(1.3rem, 6vw, 1.7rem) ;
-            }
+      .stories {
+        label {
+          color: red;
+          font-size: clamp(1.3rem, 6vw, 1.5rem);
+          position: relative;
+          &::before {
+            content: "";
+            border-bottom: 5px solid red;
+            width: 9rem;
+            position: absolute;
+            bottom: 0;
+            top: 30px;
+          }
         }
 
-       
+        p {
+          font-size: clamp(1.3rem, 6vw, 1.7rem);
+      }
     }
-    .imagen{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
+    .imagen {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
 
+      img {
+        position: relative;
+        object-fit: cover;
+        width: 500px !important;
+        height: 300px !important;
+        border-radius: 20px;
+      }
 
-        img{
-            position: relative;
-            object-fit: cover;
-            width: 500px !important;
-            height: 300px !important;
-            border-radius: 20px;
-        }
-
-        h4{
-            font-size:clamp(1.3rem, 6vw, 1.7rem) ;
-
-        }
+      h4 {
+        font-size: clamp(1.3rem, 6vw, 1.7rem);
+        
+      }
     }
-    }
-    
-`
+  }
+`;

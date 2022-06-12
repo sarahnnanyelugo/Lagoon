@@ -20,7 +20,7 @@ export default function Welcome() {
 
   return (
     <Container>
-      <div className='placeholder'>
+      <div className='placeholder2'>
           <img src={Backdrop} alt="placeholder" />
         <div className='overlay'>
           <ul>
@@ -164,9 +164,10 @@ articulately and respectfully</li>
 const Container = styled.section`
 
 
-  .placeholder{
-    height:25rem ;
+  .placeholder2{
+    height:37rem ;
     position:relative ;
+    
 
     img{
       width:100% ;

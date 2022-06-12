@@ -15,7 +15,7 @@ export default function VirtualTour(props) {
 
   return (
     <Container>
-      <div className='placeholder'>
+      <div className='placeholder2'>
           <img src={Backdrop} alt="placeholder" />
         <div className='overlay'>
           <ul>
@@ -39,7 +39,7 @@ export default function VirtualTour(props) {
       <div className='content'>
         <header>Virtual Tour</header>
           <div>
-            <h4>he Lagoon School is the first project of the Nigerian
+            <h4>The Lagoon School is the first project of the Nigerian
                 Association for Women`s Advancement (NAWA), a not-
                 for-profit and non-governmental educational and social
                 trust dedicated to investing in the girl child for the
@@ -62,68 +62,65 @@ export default function VirtualTour(props) {
 
 
 const Container = styled.section`
+  .placeholder2 {
+    height: 37rem;
+    position: relative;
 
-  .placeholder{
-    height:25rem ;
-    position:relative ;
-
-    img{
-      width:100% ;
-      height:100% ;
-      object-fit:cover ;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .overlay{
-      position:absolute ;
-      top:0 ;
-      background-color:rgba(0,0,0,0.5) ;
-      width:100% ;
-      height:100% ;
+    .overlay {
+      position: absolute;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
 
-
-      ul{
-        padding:0 ;
-        list-style:none ;
-        display:flex ;
-        justify-content:center ;
-        flex-wrap:wrap ;
-        gap:2rem;
+      ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
         /* height:100% ; */
-        align-items:baseline ;
+        align-items: baseline;
         position: absolute;
         bottom: 30%;
 
-        li{
-          display:flex ;
-          flex-direction:column ;
+        li {
+          display: flex;
+          flex-direction: column;
           /* height:70% ; */
-          align-items:baseline ;
-          justify-content:flex-end ;
+          align-items: baseline;
+          justify-content: flex-end;
 
-          a{
-            text-decoration:none ;
-            font-size:1.5rem;
-            color:#fff ;
+          a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #fff;
+            &:hover {
+              color: red;
+            }
           }
         }
       }
     }
   }
 
-  .content{
-    display:grid ;
-    grid-template-columns:repeat(2,1fr)
-
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-
-  header{
-    grid-column:1/3 ;
-    text-align:center;
-    color:red ;
-    font-size:2rem;
-    margin-top:30px;
-
+  header {
+    grid-column: 1/3;
+    text-align: center;
+    color: red;
+    font-size: 2rem;
+    margin-top: 30px;
   }
-
-`
+`;

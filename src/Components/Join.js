@@ -2,23 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Backdrop from '../Assets/Backdrop.png'
+
 export default function Join() {
 
     const Apply = [
-        {
-            Join:'Inquire',
-            link:'/'
-        },
-        {
-            Join:'Apply',
-            link:'/'
-
-        },
-        {
-            Join:'Visit us',
-            link:'/'
-        }
-    ]
+      {
+        Join: "Inquire",
+        link: "/about",
+      },
+      {
+        Join: "Apply",
+        link: "/https://lagoonweb.eschoolng.net/primary/application/start_application.php",
+      },
+      {
+        Join: "Visit us",
+        link: "/",
+      },
+    ];
 
   return (
     <JoinCov>
@@ -117,14 +117,15 @@ const Bacdrop = styled.div`
         justify-content:center ;
 
         li{
-            border:2px solid #fff;
+            border:4px solid #fff;
             padding:20px ;
             text-align:center ;
 
             a{
                 color:#fff ;
                 text-decoration:none ;
-                font-size:clamp(1.3rem, 6vw, 1.5rem) ;
+                font-size:clamp(2.2rem, 6vw, 1.5rem) ;
+                font-weight:900
             };
             &:hover{
                 transform:scale(1.2)

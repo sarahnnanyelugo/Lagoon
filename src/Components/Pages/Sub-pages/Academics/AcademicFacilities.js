@@ -9,54 +9,76 @@ export default function AcademicFacilities() {
 
   return (
     <Container>
-      <div className='placeholder'>
-          <img src={Backdrop} alt="placeholder" />
-        <div className='overlay'>
-            <ul>
-                {subRoute?.map((sub, idx)=>{
-                  return(
-                      <li key={idx}>
-                          <a className={sub.cName} href={sub.path}  
-                          style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}>
-                            {sub.title}
-                          </a>
-                      </li>
-                  )
-                  
-                })
-                }
-              </ul>
+      <div className="placeholder2">
+        <img src={Backdrop} alt="placeholder" />
+        <div className="overlay">
+          <ul>
+            {subRoute?.map((sub, idx) => {
+              return (
+                <li key={idx}>
+                  <a
+                    className={sub.cName}
+                    href={sub.path}
+                    style={{
+                      color:
+                        sub.path.toString() === currentPath.toString()
+                          ? "red"
+                          : "",
+                      backgroundColor:
+                        sub.path.toString() === currentPath.toString()
+                          ? "#fff"
+                          : "",
+                      padding:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                      border:
+                        sub.path.toString() === currentPath.toString()
+                          ? "2px solid red"
+                          : "",
+                      borderRadius:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                    }}
+                  >
+                    {sub.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
-      <div className='content'>
-          <div className='first'>
-              <span>
-                  <h2>Academic Facility</h2>
-              </span>
-             
-                <h4>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </h4>
-          </div>
-          <div className='conimages'>
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
-              <img src={Holder} alt="" />
+      <div className="content">
+        <div className="first">
+          <span>
+            <h2>Academic Facility</h2>
+          </span>
 
-          </div>
-         
+          <h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </h4>
+        </div>
+        <div className="conimages">
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" /> <img src={Holder} alt="" />
+        </div>
       </div>
     </Container>
-  )
+  );
 }
 
 
@@ -64,8 +86,8 @@ export default function AcademicFacilities() {
 
 const Container = styled.section`
 
-  .placeholder{
-    height:25rem ;
+  .placeholder2{
+    height:37rem ;
     position:relative ;
 
     img{

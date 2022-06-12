@@ -1,46 +1,97 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useState} from 'react';
 import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
 import Background from '../Assets/Background.png'
 // import Video from '../Assets/video-1.mp4'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-
+import { Link } from "react-router-dom";
+import { Modal,Button as Btn } from "react-bootstrap";
 
 export default function Hero() {
+  const [show, setShow] = useState(false);
+  const [firstTime, setFirstTime] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
     useEffect(() => {
         Aos.init({  offset: 200,
           duration: 600,
           easing: 'ease-in-sine',
           delay: 120,});
     }, []);
+    useEffect(() => {
+             var referrer = document.referrer;
+             console.log("referrer url", referrer);
+             if (
+               !firstTime &&
+               (referrer === "http://localhost:3000/" ||
+                 referrer === "")
+             ) {
+               handleShow();
+               setFirstTime(true);
+             }
+    }, [firstTime]);
   return (
-   <Section>
-       <BackgroundCover>
-           <img src={Background} alt="" />
-            {/* <video src={Video} autoPlay loop muted /> */}
-       </BackgroundCover>
-       <BackgroundContent>
-            <div  className='ContentCover'>
-                <div  data-aos="fade-left" data-aos-easing="ease-in-sine" className='Info'>
-                    <label htmlFor="/">The Lagoon school</label>
-                    <div className='comment'>A SCHOOL WHERE <br /> <mark>ALL - ROUND </mark> <br /> FORMATION IS <br /> PROVIDED </div>
-                </div>
-                <div  data-aos="fade-right" data-aos-easing="ease-in-sine" className='play'>
-                    <div className='cover'>
-                        <Button>
-                            <div className='mask'></div>
-                            <div className='video-play'>
-                                <span className='icon'></span>
-                            </div>
-                        </Button>
-                        <label htmlFor="/">WATCH VIDEO <br /> TOUR</label>
-                    </div>
-                </div>
+    <Section>
+      <BackgroundCover>
+        <img src={Background} alt="" />
+        {/* <video src={Video} autoPlay loop muted /> */}
+      </BackgroundCover>
+      <BackgroundContent>
+        <div className="ContentCover">
+          <div
+            data-aos="fade-left"
+            data-aos-easing="ease-in-sine"
+            className="Info"
+          >
+            <label htmlFor="/">The Lagoon school</label>
+            <div className="comment">
+              A SCHOOL WHERE <br /> <mark>ALL - ROUND </mark> <br />
+              FORMATION IS <br /> PROVIDED{" "}
             </div>
-       </BackgroundContent>
-   </Section>
-  )
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-sine"
+            className="play"
+          >
+            <div className="cover">
+              <Link to="Video">
+                <Button>
+                  <div className="mask"></div>
+                  <div className="video-play">
+                    <span className="icon"></span>
+                  </div>
+                </Button>
+              </Link>
+              <label htmlFor="/">
+                WATCH VIDEO <br /> TOUR
+              </label>
+            </div>
+          </div>
+        </div>
+      </BackgroundContent>
+      {/* <Button variant="primary" onClick={handleShow}>
+            Launch demo modal
+          </Button> */}
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Btn variant="secondary" onClick={handleClose}>
+            Close
+          </Btn>
+          <Btn variant="primary" onClick={handleClose}>
+            Save Changes
+          </Btn>
+        </Modal.Footer>
+      </Modal>
+    </Section>
+  );
 }
 
 
@@ -49,7 +100,7 @@ position:relative ;
 `
 
 const BackgroundCover = styled.div`
-    height: 70vh;
+    height: 90vh;
     z-index:1;
 
     img{

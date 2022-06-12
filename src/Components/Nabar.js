@@ -62,49 +62,114 @@ export default function Nabar() {
 
   return (
     <NavbarContainer>
-        <ContactNavbar>
-            <ul className="navcont">
-                <li className='list1'>  (+234) 01 3426109 &nbsp; 
-                (+234) 704 442 7923</li>
-                <li className='list2'>info@lagoonschool.com.ng</li>
-            </ul>
-            <ul className="navcont2">
-                <li className='list1'>  (+234) 01 3426109 <br />
-                (+234) 704 442 7923</li>
-                <li className='list2'>info@lagoonschool.com.ng</li>
-            </ul>
-        </ContactNavbar>
-        <DetailsNavbar>
-            <a href={'/'} className='home'>
-                <img src={Logo} alt="logo" />
-            </a>
-            <div className="menu-item">
-                {navbarState ? (
-                  <VscChromeClose   onClick={() => setNavbarState(false)} />
-                ) : (
-                  <GiHamburgerMenu onClick={() => setNavbarState(true)} />
-                )}
-          </div>
-            <div className={navbarState ? "list-container active" : "list-container "} >
-                <ul className='link-up'>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/about'}> About </a>      {activeMenu.menu1 && <Dropdown menuArray={navMenus.about} label={navLabels['about']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/academics'}> Academics </a>      {activeMenu.menu2 && <Dropdown menuArray={navMenus.academics} label={navLabels['academics']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/admission'}> Admission </a>      {activeMenu.menu3 && <Dropdown menuArray={navMenus.admission} label={navLabels['admission']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/student_life'}> Student Life </a>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.studentlife} label={navLabels['studentlife']}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <a href={'/parents'}> Parents </a> {activeMenu.menu5 && <Dropdown menuArray={navMenus.parents} label={navLabels['parents']}/>}</li>
-                {/* <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.studentlife}/>}</li>
-                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li> */}
-                </ul>
-                <Button>
-                    <a href={'https://lagoon.eschoolng.net'} target='_blank'rel="noopener noreferrer">
-                      PORTAL
-                    </a>
-                </Button>
-            </div>
+      <ContactNavbar>
+        <ul className="navcont">
+          <li className="list1">
+            {" "}
+            (+234) 01 3426109 &nbsp; (+234) 704 442 7923
+          </li>
+          <li className="list2">info@lagoonschool.com.ng</li>
+        </ul>
+        <ul className="navcont2">
+          <li className="list1">
+            {" "}
+            (+234) 01 3426109 <br />
+            (+234) 704 442 7923
+          </li>
+          <li className="list2">info@lagoonschool.com.ng</li>
+        </ul>
+      </ContactNavbar>
+      <DetailsNavbar>
+        <a href={"/"} className="home">
+          <img src={Logo} alt="logo" />
+        </a>
+        <div className="menu-item">
+          {navbarState ? (
+            <VscChromeClose onClick={() => setNavbarState(false)} />
+          ) : (
+            <GiHamburgerMenu onClick={() => setNavbarState(true)} />
+          )}
+        </div>
+        <div
+          className={navbarState ? "list-container active" : "list-container "}
+        >
+          <ul className="link-up">
+            <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+              {" "}
+              <a href={"/about"}> About </a>{" "}
+              {activeMenu.menu1 && (
+                <Dropdown
+                  menuArray={navMenus.about}
+                  label={navLabels["about"]}
+                />
+              )}
+            </li>
+            <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+              {" "}
+              <a href={"/academics"}> Academics </a>{" "}
+              {activeMenu.menu2 && (
+                <Dropdown
+                  menuArray={navMenus.academics}
+                  label={navLabels["academics"]}
+                />
+              )}
+            </li>
             
-        </DetailsNavbar>
+            <li>
+              <a
+                href={"/about/opus-dei"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Faith
+              </a>
+            </li>
+            <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+              {" "}
+              <a href={"/admission"}> Admission </a>{" "}
+              {activeMenu.menu3 && (
+                <Dropdown
+                  menuArray={navMenus.admission}
+                  label={navLabels["admission"]}
+                />
+              )}
+            </li>
+            <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+              {" "}
+              <a href={"/student_life"}> Student Life </a>{" "}
+              {activeMenu.menu6 && (
+                <Dropdown
+                  menuArray={navMenus.studentlife}
+                  label={navLabels["studentlife"]}
+                />
+              )}
+            </li>
+            <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+              {" "}
+              <a href={"/parents"}> Parents </a>{" "}
+              {activeMenu.menu5 && (
+                <Dropdown
+                  menuArray={navMenus.parents}
+                  label={navLabels["parents"]}
+                />
+              )}
+            </li>
+            {/* <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.studentlife}/>}</li>
+                <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li> */}
+          </ul>
+          <Button>
+            <a
+              href={"https://lagoon.eschoolng.net"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              PORTAL
+            </a>
+          </Button>
+        </div>
+      </DetailsNavbar>
     </NavbarContainer>
-  )
+  );
 }
 
 
@@ -256,7 +321,7 @@ const DetailsNavbar = styled.div`
 
   .link-up{
         display:flex ;
-        gap:3rem;
+        gap:1.5rem;
         list-style:none ;
         margin: 0;
         padding: 0 2rem;

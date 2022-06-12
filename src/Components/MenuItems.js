@@ -1,45 +1,113 @@
 export const navMenus = {
-    about: [
-        {title: 'Welcome to the Lagoon school', path: '/about/welcome-to-the-lagoon-school', cName: 'dropdown-link'},
-        {title: 'meet the head', path: '/about/message-from-the-principal', cName: 'dropdown-link'},
-        {title: 'Educational phylosophy and model', path: '/about/education', cName: 'dropdown-link'},
-        {title: 'Virtual tour', path: '/about/virtual-tour', cName: 'dropdown-link'},
-        {title: 'faith', path: '/about/opus-dei', cName: 'dropdown-link'},
-        {title: 'patnership with parents', path: '/about/partnership-with-parents', cName: 'dropdown-link'},
-
-    ],
-    academics: [
-       
-        {title: 'Academic facilities', path: '/academics/academic-facilities', cName: 'dropdown-link', description: '', },
-        {title: 'Primary school ', path: '/academics/primary-school', cName: 'dropdown-link'},
-        {title: 'seconday school', path: '/academics/secondary-school', cName: 'dropdown-link'},
-        {title: 'courses', path: '/academics/courses', cName: 'dropdown-link'},
-        {title: 'academic calendar', path: '/academics/calendar', cName: 'dropdown-link'},
-    ],
-    admission: [
-        {title: 'Admission Proceedure', path: '/admission/admission-proceedure', cName: 'dropdown-link'},
-        {title: 'school tuition fees', path: '/admission/tuition', cName: 'dropdown-link'},
-        {title: 'scholarships', path: '/admission/scholarship', cName: 'dropdown-link'},
-        {title: 'FAQs', path: '/admission/f-a-q', cName: 'dropdown-link'},
-        {title: 'Apply to lagoon school', path: '/admission/apply-to-lagoon', cName: 'dropdown-link'},
-
-    ],
-    studentlife: [
-        {title: 'Life in lagoon', path: '/student_life/life_in_lagoon', cName: 'dropdown-link',  },
-        {title: 'lagoon traditions', path: '/student_life/lagoon_traditions', cName: 'dropdown-link'},
-        {title: 'service', path: '/student_life/service', cName: 'dropdown-link'},
-        {title: 'club & activities', path: '/student_life/activities', cName: 'dropdown-link'},
-        {title: 'Mentoring & tutorials', path: '/student_life/mentorship', cName: 'dropdown-link'},
-    ],
-    parents: [
-        {title: 'N.F.A.D', path: 'https://nafad.org.ng/', cName: 'dropdown-link'},
-        {title: 'digital safety', path: '/parents/lunch', cName: 'dropdown-link'},
-        {title: 'lunch menu', path: '/parents/safety', cName: 'dropdown-link'},
-    ],
-    
-   
-   
-}
+  about: [
+    {
+      title: "Welcome to the Lagoon school",
+      path: "/about/welcome-to-the-lagoon-school",
+      cName: "dropdown-link",
+    },
+    {
+      title: "meet the head",
+      path: "/about/message-from-the-principal",
+      cName: "dropdown-link",
+    },
+    {
+      title: "Educational phylosophy and model",
+      path: "/about/education",
+      cName: "dropdown-link",
+    },
+    {
+      title: "Virtual tour",
+      path: "/about/virtual-tour",
+      cName: "dropdown-link",
+    },
+    { title: "faith", path: "/about/opus-dei", cName: "dropdown-link" },
+    {
+      title: "patnership with parents",
+      path: "/about/partnership-with-parents",
+      cName: "dropdown-link",
+    },
+  ],
+  academics: [
+    {
+      title: "Academic facilities",
+      path: "/academics/academic-facilities",
+      cName: "dropdown-link",
+      description: "",
+    },
+    {
+      title: "Primary school ",
+      path: "/academics/primary-school",
+      cName: "dropdown-link",
+    },
+    {
+      title: "seconday school",
+      path: "/academics/secondary-school",
+      cName: "dropdown-link",
+    },
+    { title: "courses", path: "/academics/courses", cName: "dropdown-link" },
+    {
+      title: "academic calendar",
+      path: "/academics/full_calendar",
+      cName: "dropdown-link",
+    },
+  ],
+  admission: [
+    {
+      title: "Admission Proceedure",
+      path: "/admission/admission-proceedure",
+      cName: "dropdown-link",
+    },
+    {
+      title: "school tuition fees",
+      path: "/admission/tuition",
+      cName: "dropdown-link",
+    },
+    {
+      title: "scholarships",
+      path: "/admission/scholarship",
+      cName: "dropdown-link",
+    },
+    { title: "FAQs", path: "/admission/f-a-q", cName: "dropdown-link" },
+    {
+      title: "Apply to lagoon school",
+      path: "/admission/apply-to-lagoon",
+      cName: "dropdown-link",
+    },
+  ],
+  studentlife: [
+    {
+      title: "Life in lagoon",
+      path: "/student_life/life_in_lagoon",
+      cName: "dropdown-link",
+    },
+    {
+      title: "lagoon traditions",
+      path: "/student_life/lagoon_traditions",
+      cName: "dropdown-link",
+    },
+    { title: "service", path: "/student_life/service", cName: "dropdown-link" },
+    {
+      title: "club & activities",
+      path: "/student_life/activities",
+      cName: "dropdown-link",
+    },
+    {
+      title: "Mentoring & tutorials",
+      path: "/student_life/mentorship",
+      cName: "dropdown-link",
+    },
+  ],
+  parents: [
+    {
+      title: "NFAD",
+      path: "https://nafad.org.ng/",
+      cName: "dropdown-link",
+      target: "_blank",
+    },
+    { title: "digital safety", path: "/parents/lunch", cName: "dropdown-link" },
+    { title: "lunch menu", path: "/parents/safety", cName: "dropdown-link" },
+  ],
+};
 
 
 export const navLabels = {

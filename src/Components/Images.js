@@ -106,10 +106,13 @@ const Header = styled.div`
                     color:#f63a32 ;
                     margin: 10px auto;
                     width: 80%;
-                    border-top:3px solid #f63a32;
+                    border-top:2px solid #f63a32;
                     padding-top:1rem ;
-                    border-bottom:3px solid #f63a32;
+                    border-bottom:2px solid #f63a32;
                     padding-bottom:1rem ;
+                    margin-top:250px;
+                    font-weight:900;
+                    font-style:italic;
             }
         }
 `

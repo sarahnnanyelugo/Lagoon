@@ -12,8 +12,8 @@ export default function Welcome() {
     const Message = [
         {
             Heading :'Welcome to the Lagoon School',
-            Paragraph1:"The Lagoon School aims at investing in the Nigerian girl child for the good of the society. W e have both  primary and secondary sections. O ur school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
-            Button:"READ MORE FROM MISS DOREEN ONYEKWELU| THE SCHOOL HEAD",
+            Paragraph1:"The Lagoon School aims at investing in the Nigerian girl child for the good of the society. We have both  primary and secondary sections. Our school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
+            Button:"READ MORE FROM MISS DOREEN ONYEKWELU|  THE SCHOOL HEAD",
             link:'/about'
         }
     ];
@@ -44,7 +44,7 @@ export default function Welcome() {
         },
         {
             Image:ExploreTwo,
-            Section:'Senior School  ',
+            Section:'Secondary Section  ',
             Reciept:'JS1 - SS3'
         }
     ]
@@ -120,29 +120,27 @@ export default function Welcome() {
 
 
 const Section = styled.section`
+  .school {
+    margin-top: 5rem;
 
+    .intro {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      width: 80%;
+      margin: 0 auto;
 
-    .school{
-        margin-top:5rem ;
-
-        .intro{
-            display:flex ;
-            flex-direction:column;
-            text-align:center ;
-            justify-content:center ;
-            width:80% ;
-            margin:0 auto ;
-
-            h4{
-                font-size:clamp(2rem, 10vw, 2.5rem) ;
-                color:#f63a32 ;
-                margin: 10px auto;
-                width: 80%;
-                border-top:3px solid #f63a32;
-                padding-top:1rem ;
-                border-bottom:3px solid #f63a32;
-                padding-bottom:1rem ;
-                /* &::before{
+      h4 {
+        font-size: clamp(2rem, 10vw, 2.5rem);
+        color: #f63a32;
+        margin: 10px auto;
+        width: 80%;
+        border-top: 2px solid #f63a32;
+        padding-top: 1rem;
+        border-bottom: 2px solid #f63a32;
+        padding-bottom: 1rem;
+        /* &::before{
                     content: '';
                     border-top: 3px solid #f63a32;
                     width: 60rem;
@@ -160,158 +158,153 @@ const Section = styled.section`
                     position: absolute;
                     margin-top: 63px;
                 } */
-            }
+      }
 
-            p{
-                font-size:clamp(1.3rem, 6vw, 1.5rem ) ;
-                line-height:40px;
-                font-weight:900;
+      p {
+        font-size: clamp(1.3rem, 6vw, 1.5rem);
+        line-height: 40px;
+        font-weight: 900;
+        font-size: 24px;
+      }
 
-                
-            }
+      a {
+        padding: 20px;
+        width: 70%;
+        margin: 0 auto;
+        font-size: clamp(1.3rem, 6vw, 1.5rem);
+        border: 0;
+        background-color: #f63a32;
+        box-shadow: 0px 3px 3px 3px #d3d3d3;
 
-            a{
-                padding:20px ;
-                width:70% ;
-                margin:0 auto ;
-                font-size:clamp(1.3rem, 6vw, 1.5rem ) ;
-                border:0;
-                background-color:#f63a327d;
-                color:#fff ;
-                font-family:monseratSemi;
-                transition: all 1.5s ease linear ;
-                text-decoration:none ;
-                &:hover{
-                    background-color:#f63a32;
-                    cursor: pointer;
-                }
-                @media screen and (min-width: 280px) and (max-width: 1080px) {
-                    width:100% ;
-                }
-            }
-           
+        color: #fff;
+        font-family: monseratSemi;
+        transition: all 1.5s ease linear;
+        text-decoration: none;
+        &:hover {
+          background-color: #f63a327d;
+
+          cursor: pointer;
         }
-    }
-
-    @media screen and (min-width: 280px) and (max-width: 1080px) {
-
-        .school{
-        margin-top:5rem ;
-
-        .intro{
-            display:flex ;
-            flex-direction:column;
-            text-align:center ;
-            justify-content:center ;
-            width:90% ;
-            margin:0 auto ;
-
-            h4{
-                font-size: 7vw ;
-                color:#f63a32 ;
-                margin: 10px auto;
-                width: 80%;
-                border-top:3px solid #f63a32;
-                padding-top:1rem ;
-                border-bottom:3px solid #f63a32;
-                padding-bottom:1rem ;
-            }
-
-            p{
-                font-size:5vw;
-                line-height:40px;
-                text-align:left ;
-                padding-left: 10px;
-                
-            }
-
-            button{
-                padding:20px ;
-                width:100% ;
-                margin:0 auto ;
-                font-size:clamp(1.5rem, 6vw, 1.7rem ) ;
-                border:0;
-                background-color:#f63a327d;
-                color:#fff ;
-                font-family:monseratSemi;
-                transition: all 1.5s ease linear ;
-                &:hover{
-                    background-color:#f63a32;
-                    cursor: pointer;
-                }
-             
-            }
-           
+        @media screen and (min-width: 280px) and (max-width: 1080px) {
+          width: 100%;
         }
+      }
     }
+  }
+
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .school {
+      margin-top: 5rem;
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+        margin: 0 auto;
+
+        h4 {
+          font-size: 7vw;
+          color: #f63a32;
+          margin: 10px auto;
+          width: 80%;
+          border-top: 3px solid #f63a32;
+          padding-top: 1rem;
+          border-bottom: 3px solid #f63a32;
+          padding-bottom: 1rem;
+        }
+
+        p {
+          font-size: 5vw;
+          line-height: 40px;
+          text-align: left;
+          padding-left: 10px;
+        }
+
+        button {
+          padding: 20px;
+          width: 100%;
+          margin: 0 auto;
+          font-size: clamp(1.5rem, 6vw, 1.7rem);
+          border: 0;
+          background-color: #f63a32;
+
+          color: #fff;
+          font-family: monseratSemi;
+          transition: all 1.5s ease linear;
+          &:hover {
+            background-color: #f63a327d;
+
+            cursor: pointer;
+          }
+        }
+      }
     }
-`
+  }
+`;
 
 const Vision = styled.div`
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 8rem auto;
+    .box {
+      border: 2px solid rgb(244, 185, 190);
+      box-shadow: 1px 1px 1px 1px #D3D3D3;
+      border-radius: 5px;
+      width: 30%;
+      max-width: 400px;
+      text-align: center;
+      padding: 10px;
+      h4 {
+        font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+      }
 
-
-    .box-container{
-        display:flex ;
-        justify-content:space-between;
-        width:80%;
-        margin:8rem auto;
-        .box{
-            border:2px solid #f63a32;
-            border-radius:5px;
-            width:30% ;
-            max-width:400px ;
-            text-align:center ;
-            padding:10px ;
-            h4{
-                font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
-            }
-
-            p{
-                text-align:center ;
-                font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
-
-                ol{
-                    text-align:left  ;
-                }
-            }
+      p {
+        text-align: center;
+        font-size: clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
+font-weight:900;
+        ol {
+          text-align: left;
         }
+      }
     }
+  }
 
-    @media screen and (min-width: 280px) and (max-width: 1080px) {
-       
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
 
-    .box-container{
-        display:grid ;
-        grid-template-columns:repeat(1, 1fr) ;
-
-        gap:1rem;
-        width:80%;
-        margin:8rem auto;
-        .box{
-            border:2px solid #f63a32;
-            border-radius:5px;
-            width:100% ;
-            max-width:700px ;
-            min-height: 350px;
-            text-align:center ;
-            padding:10px ;
-            h4{
-                font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
-            }
-
-            p{
-                text-align:center ;
-                font-size:clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
-
-                ol{
-                    text-align:left  ;
-                }
-            }
+      gap: 1rem;
+      width: 80%;
+      margin: 8rem auto;
+      .box {
+        border: 2px solid #f63a32;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 700px;
+        min-height: 350px;
+        text-align: center;
+        padding: 10px;
+        h4 {
+          font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
         }
-    }
-    }
 
-`
+        p {
+          text-align: center;
+          font-size: clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
+
+          ol {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+`;
 
 const ExploreCov = styled.div`
     width:80% ;
@@ -323,10 +316,11 @@ const ExploreCov = styled.div`
                 color:#f63a32 ;
                 margin: 10px auto;
                 width: 80%;
-                border-top:3px solid #f63a32;
-                padding-top:1rem ;
-                border-bottom:3px solid #f63a32;
-                padding-bottom:1rem ;
+                border-top:1px solid #f63a32;
+                padding-top:1.5rem ;
+                border-bottom:1px solid #f63a32;
+                padding-bottom:1.5rem ;
+                font-weight:900;
         }
     }
 
@@ -352,10 +346,12 @@ const ExploreCov = styled.div`
                 margin:0 ;
                 font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
                 color:red ;
+                font-size:24px
             }
             p{
                 font-size: clamp(.9rem, -0.875rem + 8.333vw, 1.9rem);
                 margin:10px 0 0 0  ;
+                font-weight:900
             }
         }
        

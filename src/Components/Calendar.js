@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Cover from '../Assets/Cover.png';
 import Inter from '../Assets/Interhouse.png'
 import Roll from 'react-reveal/Roll';
+import { Link } from "react-router-dom";
 
 
 export default function Calendar() {
@@ -34,52 +35,55 @@ export default function Calendar() {
             header:'Primary section Interhouse Sports',
             date:'3/10/2022',
             ceremony:'lore dolore magna aliqua. Ut enim ad minim consectetur adipiscing elit, sed do Lorem ipsum dolor sit amet, veniam,'
+         
         }
     ]
 
   return (
     <CalendarSection>
-        <Events>
-            <Roll left cascade>
-                <div className='upcoming' data-aos="zoom-in-right">
-                    <h4>Recent Posts</h4>
-                </div>
-                        {EventContent.map((ent, index)=>{
-                            return(
-                            <div className='content' key={index} data-aos="zoom-in-left">
-                                <div className='holder-img'>
-                                    <img src={ent.holder} alt="holder" />
-                                </div>
-                                <div className='pesp'>
-                                    <h4>{ent.header}</h4>
-                                    <label >{ent.date}</label>
-                                    <p>{ent.ceremony}</p>
-                                </div>
-                            </div>
-                        )
-                    })}
-            </Roll>
 
-        </Events>
-        <Dates>
-            <Roll right cascade>
-
-                <div className='upcoming'>
-                    <h4>UPCOMING EVENTS</h4>
+      
+      <Events>
+        <Roll left cascade>
+          <div className="upcoming" data-aos="zoom-in-right">
+            <h4>Recent Posts</h4>
+          </div>
+          {EventContent.map((ent, index) => {
+            return (
+              <div className="content" key={index} data-aos="zoom-in-left">
+                <div className="holder-img">
+                  <img src={ent.holder} alt="holder" />
                 </div>
-                    {EventDates.map((duty, index)=>{
-                        return(
-                        <div className='arrange' key={index}>
-                            <div className='date'>{duty.date}</div>
-                            <div className='comment'>{duty.ceremony}</div>
-                        </div>
-                        )
-                    })}
-                <button>View Calendar</button>
-            </Roll>
-        </Dates>
+                <div className="pesp">
+                  <h4>{ent.header}</h4>
+                  <label>{ent.date}</label>
+                  <p>{ent.ceremony}</p>
+                </div>
+              </div>
+            );
+          })}
+        </Roll>
+      </Events>
+      <Dates>
+        <Roll right cascade>
+          <div className="upcoming">
+            <h4>UPCOMING EVENTS</h4>
+          </div>
+          {EventDates.map((duty, index) => {
+            return (
+              <div className="arrange" key={index}>
+                <div className="date">{duty.date}</div>
+                <div className="comment">{duty.ceremony}</div>
+              </div>
+            );
+          })}
+          <Link to="/about">
+            <button>View Calendar</button>
+          </Link>
+        </Roll>
+      </Dates>
     </CalendarSection>
-  )
+  );
 }
 
 
@@ -95,198 +99,193 @@ const CalendarSection = styled.section`
 `
 
 const Events = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    .upcoming{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .upcoming {
+    h4 {
+      color: #ff000070;
+      font-size: clamp(1.3rem, 6vw, 1.5rem);
+      position: relative;
 
-h4{
-    color: #ff000070;
-    font-size: clamp(1.3rem,6vw,1.5rem);
-    position: relative;
-
-    &::before{
-        content: '';
+      &::before {
+        content: "";
         border-bottom: 5px solid red;
         width: 9rem;
         position: absolute;
         bottom: 0;
         top: 30px;
+      }
     }
-}
-}
-    .content{
-        display:grid ;
-        grid-template-columns: 400px 1fr ;
-        grid-gap:2rem;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 2rem;
+    border-top: solid 1px grey;
+    padding-top:50px;
 
-        .holder-img{
-            height:300px ;
+    .holder-img {
+      height: 300px;
 
-            img{
-                height:100% ;
-                width:100% ;
-                object-fit:cover ;
-                border-radius:20px ;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+    }
 
-            }
+    .pesp {
+      h4 {
+        color: red;
+        font-size: 1.3vw;
+        margin: 0 0 10px 0;
+      }
 
+      label {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: clamp(1.3rem, 6vw, 1.3rem);
+        font-weight: 900;
+      }
+    }
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .content {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 2rem;
+
+      .holder-img {
+        height: 300px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+      }
+
+      .pesp {
+        h4 {
+          color: red;
+          font-size: 4.5vw;
+          margin: 0 0 10px 0;
         }
 
-        .pesp{
-
-            h4{
-                color:red ;
-                font-size:1.3vw;
-                margin:0 0 10px 0 ;
-            }
-
-            label{
-                color:rgba(0, 0, 0,0.5) ;
-            }
-
-            p{
-                font-size:clamp(1.3rem, 6vw,1.3rem);
-            }
-        }
-        
-    }
-    @media screen and (min-width: 280px) and (max-width: 1080px) {
-        .content{
-        display:grid ;
-        grid-template-columns: repeat(1,1fr) ;
-        grid-gap:2rem;
-
-        .holder-img{
-            height:300px ;
-
-            img{
-                height:100% ;
-                width:100% ;
-                object-fit:cover ;
-                border-radius:20px ;
-
-            }
-
+        label {
+          color: rgba(0, 0, 0, 0.5);
+          font-weight: 900;
         }
 
-        .pesp{
-
-            h4{
-                color:red ;
-                font-size:4.5vw;
-                margin:0 0 10px 0 ;
-            }
-
-            label{
-                color:rgba(0, 0, 0,0.5) ;
-            }
-
-            p{
-                font-size:clamp(1.3rem, 6vw,1.3rem);
-            }
+        p {
+          font-size: clamp(1.3rem, 6vw, 1.3rem);
         }
-        
+      }
     }
-    }
-`
+  }
+`;
 
 const Dates = styled.div`
-    padding-left: 20%;
-    position:relative ;
-    .upcoming{
+  padding-left: 20%;
+  position: relative;
+  .upcoming {
+    h4 {
+      color: #ff000070;
+      font-size: clamp(1.3rem, 6vw, 1.5rem);
+      position: relative;
 
-        h4{
-            color: #ff000070;
-            font-size: clamp(1.3rem,6vw,1.5rem);
-            position: relative;
+      &::before {
+        content: "";
+        border-bottom: 5px solid red;
+        width: 9rem;
+        position: absolute;
+        bottom: 0;
+        top: 30px;
+      }
+    }
+  }
 
-            &::before{
-                content: '';
-                border-bottom: 5px solid red;
-                width: 9rem;
-                position: absolute;
-                bottom: 0;
-                top: 30px;
-            }
-        }
+  .arrange {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-gap: 40px;
+    margin-top: 40px;
+    padding-left: 30px;
+    z-index: 10;
+    &::before {
+      content: "";
+      height: 27%;
+      border-left: 2px solid #000;
+      position: absolute;
+      margin-top: -31px;
+      left: 11rem;
+      z-index: -10;
     }
 
-    .arrange{
-        display:grid;
-        grid-template-columns: 80px 1fr;
-        grid-gap: 40px;
-        margin-top:40px;
-        padding-left: 30px;
-        z-index:10 ;
-        &::before{
-            content: '';
-            height: 27%;
-            border-left: 2px solid #000;
-            position: absolute;
-            margin-top: -31px;
-            left: 11rem;
-            z-index: -10;
-        }
-
-        .date{
-            height:100px ;
-            display:flex ;
-            width:100% ;
-            flex-direction:column ;
-            justify-content:center ;
-            align-items:center ;
-            border:3px solid #000 ;
-            font-size: 23px;
-            text-align: center;
-            background-color:#fff ;
-        }
-
-        .comment{
-            height:100px ;
-            display:flex ;
-            width:100% ;
-            flex-direction:column ;
-            justify-content:center ;
-            align-items:flex-start ;
-            font-size:clamp(1.3rem, 6vw,1.5rem);
-
-        }
+    .date {
+      height: 100px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #000;
+      font-size: 23px;
+      text-align: center;
+      background-color: #fff;
+      font-weight: 900;
     }
 
-    button{
-        width:10rem ;
-        font-size:20px;
-        height:40px ;
-        background-color:red;
-        border:none ;
-        font-weight:900;
-        padding:10px ;
-        color:#fff ;
-        margin-top:5rem;
-
-        &:hover{
-            cursor: pointer;
-        }
+    .comment {
+      height: 100px;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      font-size: clamp(1.3rem, 6vw, 1.5rem);
+      font-weight: 900;
     }
-    @media screen and (min-width: 280px) and (max-width: 1080px) {
+  }
 
-        padding-left: 2%;
-        .arrange{
-        display:grid;
-        grid-template-columns: 80px 1fr;
-        grid-gap: 40px;
-        margin-top:40px;
-        padding-left: 30px;
-        z-index:10 ;
-        &::before{
-            content: '';
-            height: 27%;
-            border-left: 2px solid #000;
-            position: absolute;
-            margin-top: -31px;
-            left: 22%;
-            z-index: -10;
-        }}
+  button {
+    width: 10rem;
+    font-size: 20px;
+    height: 40px;
+    background-color: red;
+    border: none;
+    font-weight: 900;
+    padding: 10px;
+    color: #fff;
+    margin-top: 5rem;
+
+    &:hover {
+      cursor: pointer;
     }
-`
+  }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    padding-left: 2%;
+    .arrange {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      grid-gap: 40px;
+      margin-top: 40px;
+      padding-left: 30px;
+      z-index: 10;
+      &::before {
+        content: "";
+        height: 27%;
+        border-left: 2px solid #000;
+        position: absolute;
+        margin-top: -31px;
+        left: 22%;
+        z-index: -10;
+      }
+    }
+  }
+`;

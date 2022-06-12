@@ -9,7 +9,7 @@ export default function PrimarySchool() {
 
   return (
     <Container>
-      <div className='placeholder'>
+      <div className='placeholder2'>
           <img src={Backdrop} alt="placeholder" />
         <div className='overlay'>
             <ul>
@@ -160,8 +160,8 @@ export default function PrimarySchool() {
 
 const Container = styled.section`
 
-  .placeholder{
-    height:25rem ;
+  .placeholder2{
+    height:37rem ;
     position:relative ;
 
     img{

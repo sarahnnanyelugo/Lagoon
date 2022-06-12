@@ -1,0 +1,16 @@
+
+@media(min-width:600px) {
+           .flexy{
+               display:flex;
+           }  
+        }
+.calendar{padding:40px;}
+
+.calendar h1{color:red}
+
+.accord{
+   border:none;
+   background-color:white
+}
+
+.accordbutton{background-color:white;} 
