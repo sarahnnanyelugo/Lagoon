@@ -125,6 +125,7 @@ export default function Welcome() {
 
 
 const Section = styled.section`
+
   .school {
     margin-top: 5rem;
 
@@ -313,72 +314,71 @@ font-weight:1000;
 `;
 
 const ExploreCov = styled.div`
-    width:80% ;
-    margin:0 auto ;
-    text-align:center ;
-    .heading{
-        h4{
-            font-size:clamp(2rem, 10vw, 2.5rem) ;
-                color:#f63a32 ;
-                margin: 10px auto;
-                width: 80%;
-                border-top:1px solid #f63a32;
-                padding-top:1.5rem ;
-                border-bottom:1px solid #f63a32;
-                padding-bottom:1.5rem ;
-                font-weight:1000;
-                
-        }
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  .heading {
+    h4 {
+      font-size: clamp(2rem, 10vw, 2.5rem);
+      color: #f63a32;
+      margin: 10px auto;
+      width: 80%;
+      border-top: 1px solid #f63a32;
+      padding-top: 1.5rem;
+      border-bottom: 1px solid #f63a32;
+      padding-bottom: 1.5rem;
+      font-weight: 1000;
     }
+  }
 
-.expcov{
+  .expcov {
     display: flex;
-    justify-content:space-between ;
-    margin-top:60px;
+    justify-content: space-between;
+    margin-top: 60px;
 
-    div{
-        display:flex ;
-        flex-direction:column ;
-        text-align:center ;
-        justify-content:center ;
-        img{
-            width:100% ;
-            height:auto ;
-            max-height:500px;
-        }
-        div{
-            margin-top:30px;
+    div {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+      }
+      div {
+        margin-top: 30px;
 
-            h6{
-                margin:0 ;
-                font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
-                color:red ;
-                font-size:24px
-            }
-            p{
-                font-size: clamp(.9rem, -0.875rem + 8.333vw, 1.9rem);
-                margin:10px 0 0 0  ;
-                font-weight:1000;
-                
-            }
+        h6 {
+          margin: 0;
+          font-size: clamp(1rem, -0.875rem + 8.333vw, 2rem);
+          color: red;
+          font-size: 24px;
         }
+        p {
+          font-size: clamp(0.9rem, -0.875rem + 8.333vw, 1.9rem);
+          margin: 10px 0 0 0;
+          font-weight: 1000;
+          color: black;
+        }
+
        
+      }
     }
-}
+  }
 
-@media screen and (min-width: 280px) and (max-width: 1080px) {
-
-    .heading{
-        h4{
-            font-size:clamp(2rem, 10vw, 2.5rem) ;
-                color:#f63a32 ;
-                margin: 10px auto;
-                width: 100%;
-                border-top:3px solid #f63a32;
-                padding-top:1rem ;
-                border-bottom:3px solid #f63a32;
-                padding-bottom:1rem ;
-        }
+  @media screen and (min-width: 280px) and (max-width: 1080px) {
+    .heading {
+      h4 {
+        font-size: clamp(2rem, 10vw, 2.5rem);
+        color: #f63a32;
+        margin: 10px auto;
+        width: 100%;
+        border-top: 3px solid #f63a32;
+        padding-top: 1rem;
+        border-bottom: 3px solid #f63a32;
+        padding-bottom: 1rem;
+      }
     }
-}
-`
+  }
+`;

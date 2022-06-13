@@ -12,7 +12,8 @@ export default function Join() {
       },
       {
         Join: "Apply",
-        link: "/https://lagoonweb.eschoolng.net/primary/application/start_application.php",
+        link: "https://lagoonweb.eschoolng.net/primary/application/start_application.php",
+        target: "_blank",
       },
       {
         Join: "Visit us",
@@ -34,9 +35,9 @@ export default function Join() {
                         {Apply.map((app, index) =>{
                             return(
                                 <li key={index}>
-                                    <Link to={app.link}>
+                                    <a href={app.link} target={app.target?app.target:"_parent"}>
                                         {app.Join}
-                                    </Link>
+                                    </a>
                                 </li>
                             )
                         })

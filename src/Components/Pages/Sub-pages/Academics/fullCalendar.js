@@ -212,6 +212,7 @@ const Container = styled.section`
       background-color: rgba(0, 0, 0, 0.5);
       width: 100%;
       height: 100%;
+
       ul {
         padding: 0;
         list-style: none;
@@ -222,8 +223,9 @@ const Container = styled.section`
         /* height:100% ; */
         align-items: baseline;
         position: absolute;
-        bottom: 30%;
+              margin-left:160px;
 
+        bottom: 30%;
         li {
           display: flex;
           flex-direction: column;
@@ -235,9 +237,9 @@ const Container = styled.section`
             text-decoration: none;
             font-size: 1.5rem;
             color: #fff;
+
             &:hover {
               color: red;
-              
             }
           }
         }
@@ -248,7 +250,6 @@ const Container = styled.section`
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
   }
 
   header {
@@ -257,6 +258,5 @@ const Container = styled.section`
     color: red;
     font-size: 2rem;
     margin-top: 30px;
-    
   }
 `;

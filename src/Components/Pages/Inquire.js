@@ -10,7 +10,8 @@ export default function Inquire() {
       },
       {
         title: "Apply",
-        link: "/https://lagoonweb.eschoolng.net/primary/application/start_application.php",
+        link: "https://lagoonweb.eschoolng.net/primary/application/start_application.php",
+        target: "_blank",
       },
       {
         title: "Visit Us",
@@ -23,7 +24,7 @@ export default function Inquire() {
         {Check.map((check, idx)=>{
             return(
                 <li key={idx}>
-                    <a href={check.link}>{check.title}</a>
+                    <a href={check.link} target={check.target?check.target:"_parent"}>{check.title}</a>
                 </li>
             )
         })

@@ -22,7 +22,7 @@ export const subRoute = [
     {
       title:'Academic calendar',
       cName:'linked',
-      path:'/academics/calendar'
+      path:'/academics/full_Calendar'
     }
     
 
