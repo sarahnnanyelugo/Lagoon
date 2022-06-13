@@ -3,123 +3,133 @@ import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import { subRoute } from './Acaitems';
 import Holder from '../../../../Assets/ExplaoreTwo.png'
+import "./fullCalendar.css";
 
 export default function SecSchool() {
   const currentPath = window.location.pathname;
 
   return (
     <Container>
-      <div className='placeholder2'>
-          <img src={Backdrop} alt="placeholder" />
-        <div className='overlay'>
-            <ul>
-                {subRoute?.map((sub, idx)=>{
-                  return(
-                      <li key={idx}>
-                          <a className={sub.cName} href={sub.path}                                             style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}>
-                                                    
-                            {sub.title}
-                          </a>
-                      </li>
-                  )
-                  
-                })
-                }
-              </ul>
+      <div className="placeholder2">
+        <img src={Backdrop} alt="placeholder" />
+        <div className="overlay">
+          <ul>
+            {subRoute?.map((sub, idx) => {
+              return (
+                <li key={idx}>
+                  <a
+                    className={sub.cName}
+                    href={sub.path}
+                    style={{
+                      color:
+                        sub.path.toString() === currentPath.toString()
+                          ? "red"
+                          : "",
+                      backgroundColor:
+                        sub.path.toString() === currentPath.toString()
+                          ? "#fff"
+                          : "",
+                      padding:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                      border:
+                        sub.path.toString() === currentPath.toString()
+                          ? "2px solid red"
+                          : "",
+                      borderRadius:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                    }}
+                  >
+                    {sub.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
-      <div className='content'>
-          <div className='first'>
-              <span>
-                  <h2>Secondary Section</h2>
-              </span>
-             
-                <h4>
-                    <mark>Laying the Groundwork. Strengthening the Foundation. Building the Bridge.</mark>
-                          In the primary school,
-                          girls develop curiosity, tenacity and intellectual carefulness. They research problems, brainstorm
-                          solutions, create prototypes, test and revise.
-                </h4>
+      <div className="tent">
+        <div className="first">
+          <span>
+            <h2>Secondary Section</h2>
+          </span>
+
+          <h4>
+            <mark>
+              Laying the Groundwork. Strengthening the Foundation. Building the
+              Bridge.
+            </mark>
+            In the primary school, girls develop curiosity, tenacity and
+            intellectual carefulness. They research problems, brainstorm
+            solutions, create prototypes, test and revise.
+          </h4>
+        </div>
+      </div>
+
+      <div className="con col-md-12 flexy">
+        <div classname="col-md-4">
+          <div className="col-md-9">
+            <img src={Holder} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
           </div>
-          <div className='conimages'>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div className='full'>
-                      <span>
-                        <h2>Here what our Alumni has to say</h2>
-                      </span>
-                    <div>
-                        <img src={Holder} alt="" />
-                       
-                    </div>
-                    
-                </div>
-               <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                       
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        
-                    </div>
-                    
-                </div> 
+        </div>
+        <div className="col-md-4">
+          <div className="col-md-9">
+            <img src={Holder} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
           </div>
+        </div>
+        <div className="col-md-4">
+          <div className="col-md-9">
+            <img src={Holder} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-12 flexy">
+        <div className="col-md-1">&nbsp;</div>
+
+        <div className="fll col-md-10">
+          <h4>
+            <span className="bod"> Hear wh</span>at our Alumni has to say
+          </h4>
+          <img src={Holder} alt="" className=" col-md-12" />
          
+        </div>
+      </div>
+
+      <div className="col-md-12 flexy alum">
+        <div classname="col-md-4">
+          <img src={Holder} alt="" className=" col-md-9" />
+        </div>
+        <div classname="col-md-4">
+          <img src={Holder} alt="" className=" col-md-9" />
+        </div>{" "}
+        <div classname="col-md-4">
+          <img src={Holder} alt="" className=" col-md-9" />
+        </div>
       </div>
     </Container>
-  )
+  );
 }
 
 

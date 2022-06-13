@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ExploreOne from '../Assets/ExploreOne.png'
 import ExploreTwo from '../Assets/ExplaoreTwo.png'
 import Roll from 'react-reveal/Roll';
+import { Link } from "react-router-dom";
 
 import {
     // Rotate,Zoom,
@@ -36,18 +37,21 @@ export default function Welcome() {
     ];
 
 
-    const Explore =[
-        {
-            Image:ExploreOne,
-            Section:'Primary Section',
-            Reciept:'Reception to Year 6'
-        },
-        {
-            Image:ExploreTwo,
-            Section:'Secondary Section  ',
-            Reciept:'JS1 - SS3'
-        }
-    ]
+    const Explore = [
+      {
+        Image: ExploreOne,
+        Section: "Primary Section",
+        Reciept: "Reception to Year 6",
+        link: "/academics/primary-school",
+      },
+
+      {
+        Image: ExploreTwo,
+        Section: "Secondary Section  ",
+        Reciept: "JS1 - SS3",
+        link: "/academics/secondary-school",
+      },
+    ];
 
 
 
@@ -97,16 +101,17 @@ export default function Welcome() {
             <Bounce  bottom cascade>
                 <div className='expcov' data-aos="zoom-in-right">
                     {Explore.map((exp, index)=>{
-                        return(
+                        return (
+                          <Link to={exp.link}>
                             <div key={index}>
-                                <img src={exp.Image} alt="" />
-                                <div>
-                                    <h6>{exp.Section}</h6>
-                                    <p>{exp.Reciept}</p>
-                                </div>
-                                    
+                              <img src={exp.Image} alt="" />
+                              <div>
+                                <h6>{exp.Section}</h6>
+                                <p>{exp.Reciept}</p>
+                              </div>
                             </div>
-                        )
+                          </Link>
+                        );
                     })
                         
                     }

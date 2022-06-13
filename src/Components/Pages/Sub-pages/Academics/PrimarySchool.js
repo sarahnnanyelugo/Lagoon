@@ -3,156 +3,135 @@ import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import { subRoute } from './Acaitems';
 import Holder from '../../../../Assets/ExplaoreTwo.png'
+import "./fullCalendar.css";
 
 export default function PrimarySchool() {
   const currentPath = window.location.pathname;
 
   return (
     <Container>
-      <div className='placeholder2'>
-          <img src={Backdrop} alt="placeholder" />
-        <div className='overlay'>
-            <ul>
-                {subRoute?.map((sub, idx)=>{
-                  return(
-                      <li key={idx}>
-                          <a className={sub.cName} href={sub.path}   style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}>
-
-                          
-                            {sub.title}
-                          </a>
-                      </li>
-                  )
-                  
-                })
-                }
-              </ul>
+      <div className="placeholder2">
+        <img src={Backdrop} alt="placeholder" />
+        <div className="overlay">
+          <ul>
+            {subRoute?.map((sub, idx) => {
+              return (
+                <li key={idx}>
+                  <a
+                    className={sub.cName}
+                    href={sub.path}
+                    style={{
+                      color:
+                        sub.path.toString() === currentPath.toString()
+                          ? "red"
+                          : "",
+                      backgroundColor:
+                        sub.path.toString() === currentPath.toString()
+                          ? "#fff"
+                          : "",
+                      padding:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                      border:
+                        sub.path.toString() === currentPath.toString()
+                          ? "2px solid red"
+                          : "",
+                      borderRadius:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                    }}
+                  >
+                    {sub.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
-      <div className='content'>
-          <div className='first'>
-              <span>
-                  <h2>Primary Section</h2>
-              </span>
-             
-                <h4>
-                    <mark>Laying the Groundwork. Strengthening the Foundation. Building the Bridge.</mark>
-                          In the primary school,
-                          girls develop curiosity, tenacity and intellectual carefulness. They research problems, brainstorm
-                          solutions, create prototypes, test and revise.
-                </h4>
-          </div>
-          <div className='conimages'>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div className='full'>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                          Small classes averaging 15 encourage a high level of rapport between students and teachers. Our
-                          middle school faculty know how to tap and channel the intellectual energy and passion of middle
-                          school girls.
-                        </p>
-                        <p>
-                            During the primary school years, students gradually take ownership of their learning. They grow
-                            in self-knowledge, build and value friendships, and come to understand their responsibility to
-                            each other as well as to the wider community.
-                        </p>
-                        <p>
-                            Our primary school curriculum sets girls up for success in our rigorous upper school college
-                            preparatory, honors lists, while a wide variety of <a href="/academics/club_&_activities">curricular activities</a> allows them to explore and
-                            develop interests.
-                        </p>
-                    </div>
-                    
-                </div>
-                {/* <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div>
-                <div>
-                    <div>
-                        <img src={Holder} alt="" />
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat.
-                        </p>
-                    </div>
-                    
-                </div> */}
-          </div>
-         
+      <div className="tent">
+        <div className="first">
+          <span>
+            <h2>Primary Section</h2>
+          </span>
+
+          <h4>
+            <mark>
+              Laying the Groundwork. Strengthening the Foundation. Building the
+              Bridge.
+            </mark>
+            In the primary school, girls develop curiosity, tenacity and
+            intellectual carefulness. They research problems, brainstorm
+            solutions, create prototypes, test and revise.
+          </h4>
+        </div>
       </div>
+      <div className="con col-md-12 flexy">
+        <div classname="col-md-4">
+          <div className="col-md-9">
+            <img src={Holder} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="col-md-9">
+            <img src={Holder} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+        <div className="col-md-4">
+          <div className="col-md-9">
+            <img src={Holder} alt="" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-12 flexy">
+        <div className="col-md-1">&nbsp;</div>
+
+        <div className="fll col-md-10">
+            <img src={Holder} alt="" className=" col-md-12"/>
+            <p>
+              Small classes averaging 15 encourage a high level of rapport
+              between students and teachers. Our middle school faculty know how
+              to tap and channel the intellectual energy and passion of middle
+              school girls.
+            </p>
+            <p>
+              During the primary school years, students gradually take ownership
+              of their learning. They grow in self-knowledge, build and value
+              friendships, and come to understand their responsibility to each
+              other as well as to the wider community.
+            </p>
+            <p>
+              Our primary school curriculum sets girls up for success in our
+              rigorous upper school college preparatory, honors lists, while a
+              wide variety of{" "}
+              <a href="/academics/club_&_activities">curricular activities</a>{" "}
+              allows them to explore and develop interests.
+            </p>
+          </div>
+        </div>
     </Container>
-  )
+  );
 }
 
 
@@ -274,7 +253,7 @@ const Container = styled.section`
       }
     }
 
-    .full{
+    .fll{
       grid-column:1/4;
       margin-top:5rem ;
       img{

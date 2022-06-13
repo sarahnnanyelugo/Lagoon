@@ -1,4 +1,4 @@
-import React from 'react';
+import {React,useState} from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import { subRoute } from './Acaitems';
@@ -8,89 +8,143 @@ import { subRoute } from './Acaitems';
 export default function Courses() {
 
   const currentPath = window.location.pathname;
-
-
+  const [sublink, setSublink]=useState(undefined)
   function handleChange(e) {
     let link = e.target.value;
-    console.log(link)
-    window.location = link;
+       console.log(link);      
+    if(link==="primary"|| link==="secondary") {
+      setSublink(link)
+    }
+    else
+    {
+      setSublink(undefined);
+      window.location = link;
+    }
   }
 
   return (
     <Container>
-      <div className='placeholder2'>
-          <img src={Backdrop} alt="placeholder" />
-        <div className='overlay'>
-            <ul>
-                {subRoute?.map((sub, idx)=>{
-                  return(
-                      <li key={idx}>
-                          <a className={sub.cName} href={sub.path}   style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}>
-
-                            {sub.title}
-                          </a>
-                      </li>
-                  )
-                  
-                })
-                }
-              </ul>
+      <div className="placeholder2">
+        <img src={Backdrop} alt="placeholder" />
+        <div className="overlay">
+          <ul>
+            {subRoute?.map((sub, idx) => {
+              return (
+                <li key={idx}>
+                  <a
+                    className={sub.cName}
+                    href={sub.path}
+                    style={{
+                      color:
+                        sub.path.toString() === currentPath.toString()
+                          ? "red"
+                          : "",
+                      backgroundColor:
+                        sub.path.toString() === currentPath.toString()
+                          ? "#fff"
+                          : "",
+                      padding:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                      border:
+                        sub.path.toString() === currentPath.toString()
+                          ? "2px solid red"
+                          : "",
+                      borderRadius:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                    }}
+                  >
+                    {sub.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
-      <div className='content'>
-          <div className='first'>
-              <span>
-                  <h2>Courses</h2>
-              </span>
+      <div className="content">
+        <div className="first">
+          <span>
+            <h2>Courses</h2>
+          </span>
 
-              <div className='lists'>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h2>SELECT A SCHOOL LEVEL</h2>
-                            </td>
-                        </tr>
-                          <tr>
-                            <td>
-                                  <label>
-                                        <p>SCHOOL LEVEL</p>
-                                        {/* <input list="classes" placeholder='choose' />   */}
-                                  </label>   
-                              {/* <select  onChange={event => handleChange(event.target.value)}>
+          <div className="lists">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <h2>SELECT A SCHOOL LEVEL</h2>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <p>SCHOOL LEVEL</p>
+                      {/* <input list="classes" placeholder='choose' />   */}
+                    </label>
+                    {/* <select  onChange={event => handleChange(event.target.value)}>
                                   <option value="Primary"   />
                                   <option value="Secondary" />
                               </select> */}
-                              <select id="lang" onChange={handleChange}>
-                                  <option value="" disabled selected>Select School Level</option>
-                                  <option value="/about/welcome-to-the-lagoon-school">Primary</option>
-                                  <option value="/academics/primary-school">Secondary</option>
-                              </select>
-                            </td>
-                          </tr>
-                    </tbody>
-                </table>
-                
-                
-              </div>
-              
-                
-                
-                  <div>
-                      <h4>
-                        “ Lagoon encourages students not only to think but also reflect, a skill
-                          that is absolutely necessary in college. This type of preparation at the
-                          high school level is rare. “
-                      </h4>
-                    <label >- Nweze Isabella</label>
-                  </div>  
-               
+                    <select id="lang" onChange={handleChange}>
+                      <option disabled selected>
+                        Select School Level
+                      </option>
+                      <option value="primary">Primary</option>
+                      <option value="secondary">Secondary</option>
+                    </select>
+
+                    {sublink === "primary" ? (
+                      <select id="lang" onChange={handleChange}>
+                        <option value="" disabled selected>
+                          Select School Level
+                        </option>
+                        <option value="/academics/primary-school">
+                          Junior Primary
+                        </option>
+                        <option value="/academics/primary-school">
+                          Senior Primary
+                        </option>
+                      </select>
+                    ) : (
+                      ""
+                    )}
+                    {sublink === "secondary" ? (
+                      <select id="lang" onChange={handleChange}>
+                        <option value="" disabled selected>
+                          Select School Level
+                        </option>
+                        <option value="/academics/primary-school">
+                          Junior Secondary
+                        </option>
+                        <option value="/academics/primary-school">
+                          Senior Secondary
+                        </option>
+                      </select>
+                    ) : (
+                      ""
+                    )}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-         
-         
+
+          <div>
+            <h4>
+              “ Lagoon encourages students not only to think but also reflect, a
+              skill that is absolutely necessary in college. This type of
+              preparation at the high school level is rare. “
+            </h4>
+            <label>- Nweze Isabella</label>
+          </div>
+        </div>
       </div>
     </Container>
-  )
+  );
 }
 
 

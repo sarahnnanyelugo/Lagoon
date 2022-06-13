@@ -14,6 +14,7 @@ export default function Nabar() {
     // const [setClick] = useState(false);
     const [navbarState, setNavbarState] = useState(false);
   
+
     const [activeMenu, setActiveMenu] = useState({
         menu1: false,
         menu2: false,
@@ -58,7 +59,10 @@ export default function Nabar() {
   
     // const closeMobileMenu = () => setClick(false)
 
-
+    const openPortal = () => {
+      console.log("Clicked");
+      window.open("https://lagoon.eschoolng.net");
+    };
 
   return (
     <NavbarContainer>
@@ -157,14 +161,8 @@ export default function Nabar() {
             {/* <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Student Life </Link>      {activeMenu.menu5 && <Dropdown menuArray={navMenus.studentlife}/>}</li>
                 <li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}> <Link to={'/'} onClick={closeMobileMenu}> Parents </Link>      {activeMenu.menu6 && <Dropdown menuArray={navMenus.parents}/>}</li> */}
           </ul>
-          <Button>
-            <a
-              href={"https://lagoon.eschoolng.net"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <Button onClick={openPortal}>
               PORTAL
-            </a>
           </Button>
         </div>
       </DetailsNavbar>

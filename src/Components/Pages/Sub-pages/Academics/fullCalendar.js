@@ -7,7 +7,6 @@ import Calendar1 from "../../../../Assets/calendarimg.png";
 
 import Calendar2 from "../../../../Assets/calendarimg2.png";
 
-import { Link } from "react-router-dom";
 
 import {
   Accordion,
@@ -25,7 +24,7 @@ import { Modal, Button as Btn } from "react-bootstrap";
 import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import "./fullCalendar.css";
-
+import Pdf from "../../../../Assets/bigCalendar.pdf";
 // import "react-accessible-accordion/dist/fancy-example.css";
 
 
@@ -163,13 +162,13 @@ export default function fullCalendar() {
         <div className="col-md-4 cal">
           <h4>2021-22 T.L.S. Key Dates</h4>
 
-          <Link to={"../../../../Assets/bigCalendar.pdf"}>
+          <a href={Pdf} without rel="noopener noreferrer" target="_blank">
             <img src={Calendar1} alt="calendar" />
-          </Link>
+          </a>
         </div>
         <div className="col-md-4 cal">
           <h4>2021-22 T.L.S. Key Dates</h4>
-          <a href={"../../../../Assets/bigCalendar.pdf"}>
+          <a href={Pdf} without rel="noopener noreferrer" target="_blank">
             <img src={Calendar2} alt="calendar" />
           </a>
         </div>

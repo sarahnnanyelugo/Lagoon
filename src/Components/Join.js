@@ -16,7 +16,7 @@ export default function Join() {
       },
       {
         Join: "Visit us",
-        link: "/",
+        link: "/contact",
       },
     ];
 
@@ -42,6 +42,8 @@ export default function Join() {
                         })
 
                         }
+
+                        
                     </ul>
 
             </div>

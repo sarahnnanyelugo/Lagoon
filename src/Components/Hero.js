@@ -23,14 +23,15 @@ export default function Hero() {
     useEffect(() => {
              var referrer = document.referrer;
              console.log("referrer url", referrer);
-             if (
-               !firstTime &&
-               (referrer === "http://localhost:3000/" ||
-                 referrer === "https://lagoon-alpha.vercel.app/")
-             ) {
+            //  if (
+            //    !firstTime &&
+            //    (referrer == "http://localhost:3000/" ||
+            //      referrer == "https://lagoon-alpha.vercel.app/")
+            //  ) 
+            // {
                handleShow();
-               setFirstTime(true);
-             }
+              //  setFirstTime(true);
+            //  }
     }, [firstTime]);
   return (
     <Section>
@@ -78,15 +79,17 @@ export default function Hero() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>WELCOME TO LAGOON SCHOOL</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <ModalImg>
+            <img src={Background} alt="" />
+            {/* <video src={Video} autoPlay loop muted /> */}
+          </ModalImg>
+        </Modal.Body>
         <Modal.Footer>
-          <Btn variant="secondary" onClick={handleClose}>
+          <Btn variant="danger" onClick={handleClose}>
             Close
-          </Btn>
-          <Btn variant="primary" onClick={handleClose}>
-            Save Changes
           </Btn>
         </Modal.Footer>
       </Modal>
@@ -98,7 +101,15 @@ export default function Hero() {
 const Section = styled.section`
 position:relative ;
 `
+const ModalImg = styled.section`
+  width: 100%;
+  background-color: rgba(227, 64, 43,1);
 
+  img{
+    width: 100%;
+    position:relative
+  }
+`;
 const BackgroundCover = styled.div`
     height: 90vh;
     z-index:1;

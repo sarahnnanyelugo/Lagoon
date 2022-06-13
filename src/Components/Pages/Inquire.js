@@ -3,20 +3,20 @@ import styled from 'styled-components';
 
 export default function Inquire() {
 
-    const Check =[
-        {
-            title:'Inquire',
-            link:'/admission/admission-proceedure',
-        },
-        {
-            title:'Apply',
-            link:'/admission/apply-to-lagoon',
-        },
-        {
-            title:'Visit Us',
-            link:'/about/virtual-tour',
-        }
-    ]
+    const Check = [
+      {
+        title: "Inquire",
+        link: "/admission/admission-proceedure",
+      },
+      {
+        title: "Apply",
+        link: "/https://lagoonweb.eschoolng.net/primary/application/start_application.php",
+      },
+      {
+        title: "Visit Us",
+        link: "/about/virtual-tour",
+      },
+    ];
 
   return (
     <List>

@@ -99,13 +99,22 @@ export const navMenus = {
   ],
   parents: [
     {
-      title: "NFAD",
+      title: "NAFAD",
       path: "https://nafad.org.ng/",
       cName: "dropdown-link",
       target: "_blank",
+      description: "Association",
     },
-    { title: "digital safety", path: "/parents/lunch", cName: "dropdown-link" },
-    { title: "lunch menu", path: "/parents/safety", cName: "dropdown-link" },
+    {
+      title: "digital safety",
+      path: "/student_life/Safety",
+      cName: "dropdown-link",
+    },
+    {
+      title: "lunch menu",
+      path: "/student_life/Lunch",
+      cName: "dropdown-link",
+    },
   ],
 };
 

@@ -4,6 +4,7 @@ import Cover from '../Assets/Cover.png';
 import Inter from '../Assets/Interhouse.png'
 import Roll from 'react-reveal/Roll';
 import { Link } from "react-router-dom";
+// import fullCalendar  from "fullCalendar";
 
 
 export default function Calendar() {
@@ -41,8 +42,6 @@ export default function Calendar() {
 
   return (
     <CalendarSection>
-
-      
       <Events>
         <Roll left cascade>
           <div className="upcoming" data-aos="zoom-in-right">
@@ -77,7 +76,7 @@ export default function Calendar() {
               </div>
             );
           })}
-          <Link to="/about">
+          <Link to="/academics/full_calendar">
             <button>View Calendar</button>
           </Link>
         </Roll>

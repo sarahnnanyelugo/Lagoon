@@ -44,15 +44,19 @@ function Dropdown(props) {
                     <ul className='list-menu'  >
                         {menuArray?.map((item, index) => {
                             return (
-                                <li key={index}>
-                                    <a
-                                        className={item.cName}
-                                        href={item.path}
-                                        onClick={() => setClick(false)}
-                                    >
-                                        {item.title}
-                                    </a>
-                                </li>
+                              <li key={index}>
+                                <a
+                                  className={item.cName}
+                                  href={item.path}
+                                  onClick={() => setClick(false)}
+                                  title={
+                                    item.description ? item.description : ""
+                                  }
+                                  target={item.target ? item.target : "_parent"}
+                                >
+                                  {item.title}
+                                </a>
+                              </li>
                             );
                         })}
 
