@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import { subRoute } from './Acaitems';
 import Holder from '../../../../Assets/ExplaoreTwo.png'
+import "./fullCalendar.css";
 
 export default function AcademicFacilities() {
   const currentPath = window.location.pathname;
@@ -64,17 +65,42 @@ export default function AcademicFacilities() {
           </h4>
         </div>
         <div className="conimages">
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" />
-          <img src={Holder} alt="" /> <img src={Holder} alt="" />
+          <div className="fac1">
+            <h4>Computer lab</h4>
+          </div>
+          <div className="fac2">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac12">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac3">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac4">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac5">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac6">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac7">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac8">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac9">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac10">
+            <h4>Facility</h4>
+          </div>{" "}
+          <div className="fac11">
+            <h4>Facility</h4>
+          </div>{" "}
         </div>
       </div>
     </Container>

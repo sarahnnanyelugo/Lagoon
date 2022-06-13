@@ -145,7 +145,7 @@ const CounterCov = styled.section`
               text-align: center;
               vertical-align: text-top;
               height: 100px;
-              font-weight: 900;
+              font-weight: 1000;
 
               img {
                 height: 150px;
@@ -153,11 +153,11 @@ const CounterCov = styled.section`
               }
               p {
                 font-size: 3rem;
-                font-weight: 900;
+                font-weight: 1000;
               }
               label {
                 font-size: 2rem;
-                font-weight: 900;
+                font-weight: 1000;
               }
             }
           }
@@ -207,7 +207,7 @@ const CounterCov = styled.section`
             color: #fff;
             font-size: 20px;
             animation-delay: 0.5s;
-            font-weight: 900;
+            font-weight: 1000;
           }
 
           h6 {
@@ -220,7 +220,7 @@ const CounterCov = styled.section`
             justify-content: center;
             font-size: 1.1rem;
             color: #fff;
-            font-weight: 900;
+            font-weight: 1000;
           }
         }
 
@@ -236,7 +236,7 @@ const CounterCov = styled.section`
 
             h6 {
               display: flex;
-              font-weight: 900;
+              font-weight: 1000;
             }
           }
         }

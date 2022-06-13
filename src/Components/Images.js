@@ -111,7 +111,7 @@ const Header = styled.div`
                     border-bottom:2px solid #f63a32;
                     padding-bottom:1rem ;
                     margin-top:250px;
-                    font-weight:900;
+                    font-weight:1000;
                     font-style:italic;
             }
         }

@@ -12,7 +12,7 @@ export default function Welcome() {
     const Message = [
         {
             Heading :'Welcome to the Lagoon School',
-            Paragraph1:"The Lagoon School aims at investing in the Nigerian girl child for the good of the society. We have both  primary and secondary sections. Our school has a reputation of high moral and academic standards. W e have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
+            Paragraph1:"The Lagoon School aims at investing in the Nigerian girl child for the good of the society. We have both  primary and secondary sections. Our school has a reputation of high moral and academic standards. We have  been able to achieve these through our mission : ‘ partnership with the parents to give an all-round education to the students, based on the dignity of the human person, integrity, leadership qualities and academic excellence ’ and our vision : ‘ Christian I dentity ’ ",
             Button:"READ MORE FROM MISS DOREEN ONYEKWELU|  THE SCHOOL HEAD",
             link:'/about'
         }
@@ -162,8 +162,8 @@ const Section = styled.section`
 
       p {
         font-size: clamp(1.3rem, 6vw, 1.5rem);
-        line-height: 40px;
-        font-weight: 900;
+        line-height: 32px;
+        font-weight: 1000;
         font-size: 24px;
       }
 
@@ -265,7 +265,8 @@ const Vision = styled.div`
       p {
         text-align: center;
         font-size: clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
-font-weight:900;
+font-weight:1000;
+
         ol {
           text-align: left;
         }
@@ -320,7 +321,8 @@ const ExploreCov = styled.div`
                 padding-top:1.5rem ;
                 border-bottom:1px solid #f63a32;
                 padding-bottom:1.5rem ;
-                font-weight:900;
+                font-weight:1000;
+                
         }
     }
 
@@ -351,7 +353,8 @@ const ExploreCov = styled.div`
             p{
                 font-size: clamp(.9rem, -0.875rem + 8.333vw, 1.9rem);
                 margin:10px 0 0 0  ;
-                font-weight:900
+                font-weight:1000;
+                
             }
         }
        

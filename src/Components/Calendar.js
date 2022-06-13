@@ -149,7 +149,7 @@ const Events = styled.div`
 
       p {
         font-size: clamp(1.3rem, 6vw, 1.3rem);
-        font-weight: 900;
+        font-weight: 1000;
       }
     }
   }
@@ -179,7 +179,7 @@ const Events = styled.div`
 
         label {
           color: rgba(0, 0, 0, 0.5);
-          font-weight: 900;
+          font-weight: 1000;
         }
 
         p {
@@ -238,7 +238,7 @@ const Dates = styled.div`
       font-size: 23px;
       text-align: center;
       background-color: #fff;
-      font-weight: 900;
+      font-weight: 1000;
     }
 
     .comment {
@@ -249,7 +249,7 @@ const Dates = styled.div`
       justify-content: center;
       align-items: flex-start;
       font-size: clamp(1.3rem, 6vw, 1.5rem);
-      font-weight: 900;
+      font-weight: 1000;
     }
   }
 
@@ -259,7 +259,7 @@ const Dates = styled.div`
     height: 40px;
     background-color: red;
     border: none;
-    font-weight: 900;
+    font-weight: 1000;
     padding: 10px;
     color: #fff;
     margin-top: 5rem;

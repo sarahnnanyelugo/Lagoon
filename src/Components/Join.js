@@ -125,7 +125,7 @@ const Bacdrop = styled.div`
                 color:#fff ;
                 text-decoration:none ;
                 font-size:clamp(2.2rem, 6vw, 1.5rem) ;
-                font-weight:900
+                font-weight:1000
             };
             &:hover{
                 transform:scale(1.2)

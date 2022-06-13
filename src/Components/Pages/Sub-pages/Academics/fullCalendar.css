@@ -6,11 +6,212 @@
         }
 .calendar{padding:40px;}
 
-.calendar h1{color:red}
+.calendar h1{color:rgb(227,64,43)}
 
-.accord{
-   border:none;
-   background-color:white
+
+
+
+.calendar h4{color:rgb(227,64,43);
+   margin-top:50px;   font-weight:1000
 }
 
-.accordbutton{background-color:white;} 
+.dott{
+   background-color:red;
+   padding:2px !important;
+   height:0.5px;border-radius: 50%!important;
+}
+.Bton{
+   border:solid 1px red;
+   color:red;
+   /* padding:15px 30px 15px 15px; */
+   margin-bottom:40px;
+   height:40px;
+   width:140px;
+   text-decoration:none;
+   font-weight:1000;
+   padding:10px;
+   text-align:center;
+}
+
+.Bton2{
+   border:solid 1px red;
+   color:red;
+   /* padding:15px 30px 15px 15px; */
+   margin-bottom:100px;
+   height:60px;
+   width:300px;
+   text-decoration:none;
+   font-weight:1000;
+   padding:20px;
+   text-align:center;
+   border-radius:5px;
+}
+
+.Bton:hover{
+   background-color:Red;color:white;
+}
+
+.Bton2:hover{
+   background-color:Red;color:white;
+}
+
+.conimages div{
+   height:250px;
+   width:300px;
+   border-radius:5px;
+/* text-align:center !important;  */
+padding-top:100px
+}
+
+
+
+.conimages div h4{
+  color:black;
+/* padding:15px 20px 15px 20px; */
+background-color:rgba(255,255,255,0.5)	;
+font-weight:500;
+width:fit-content;
+padding-top:10px ;
+padding-left:20px ;
+padding-bottom:10px ;
+padding-right:20px !important;
+
+margin-left:70px;
+/* text-align:center; */
+
+}
+
+
+.fac1{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+.fac2{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+
+.fac3{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+.fac4{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+
+.fac5{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+
+.fac6{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+
+.fac7{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+
+.fac8{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+.fac9{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+.fac10{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+.fac11{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
+
+
+
+
+
+.fac12{
+
+background-image:url('../../../../Assets/ExplaoreTwo.png');
+       background-size:cover;
+       background-repeat: no-repeat;
+       background-position: center;
+      }
