@@ -200,19 +200,19 @@ function Footer() {
 
             <ul className="list-unstyled">
               <li>
-                <a href="#">Wavecrest Study Center</a>
+                <a href="/WSC">Wavecrest Study Center</a>
               </li>
               <li>
-                <a href="#">Elara Study Center</a>
+                <a href="/ESC">Elara Study Center</a>
               </li>{" "}
               <li>
-                <a href="#">Whitesand School</a>
+                <a href="/Whitesand">Whitesand School</a>
               </li>{" "}
               <li>
-                <a href="#">Rosevile School</a>
+                <a href="/ROseville">Rosevile School</a>
               </li>{" "}
               <li>
-                <a href="#">Opus Dei</a>
+                <a href="/OpusDei">Opus Dei</a>
               </li>{" "}
               <li>
                 <a href="#">NAWA</a>
