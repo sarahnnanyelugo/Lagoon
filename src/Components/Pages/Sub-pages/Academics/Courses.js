@@ -133,8 +133,8 @@ export default function Courses() {
             </table>
           </div>
 
-          <div>
-            <h4>
+          <div >
+            <h4 className="col-md-9">
               “ Lagoon encourages students not only to think but also reflect, a
               skill that is absolutely necessary in college. This type of
               preparation at the high school level is rare. “
@@ -232,6 +232,9 @@ const Container = styled.section`
                 letter-spacing:1px ;
                 font-weight:500 ;
                 font-weight:900 ;
+                text-align:center;
+                margin-top:40px;
+                padding-left:250px;
               }
 
               .lists{

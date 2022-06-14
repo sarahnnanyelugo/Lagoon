@@ -20,48 +20,52 @@ function Carousel() {
         autoplay:false,
         };
 
-        const Slideing =[
-            {
-                label:'ONLY AT LAGOON SCHOOL',
-                paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
-                image:Confrence,
-                commentor:'Isabella Nweze'
-            },
-            {
-                label:'ONLY AT LAGOON SCHOOL',
-                paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
-                image:ExploreOne,
-                commentor:'Amanda Eze'
-            },
-            {
-                label:'ONLY AT LAGOON SCHOOL',
-                paragraph:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.',
-                image:ExploreTwo,
-                commentor:'Bella Ugwu'
-            },
-        ]
+        const Slideing = [
+          {
+            label: "ONLY AT LAGOON SCHOOL",
+            image: Confrence,
+
+            paragraph:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.",
+            commentor: "Isabella Nweze",
+          },
+          {
+            label: "ONLY AT LAGOON SCHOOL",
+            image: ExploreOne,
+
+            paragraph:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.",
+            commentor: "Amanda Eze",
+          },
+          {
+            label: "ONLY AT LAGOON SCHOOL",
+            image: ExploreTwo,
+
+            paragraph:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore etdolore magna aliqua. Ut enim ad minimx veniam, quis nostrud e ercitation  x ea ullamco laboris nisi ut aliquip ecommodo consequat.",
+            commentor: "Bella Ugwu",
+          },
+        ];
 
   return (
     <Container>
         <Slider {...settings}>
 
           {Slideing.map((slide, index) =>{
-              return(
-
-                    <SlickContent key={index}>
-                        <div className='cont'>
-                            <div className='stories'>
-                                <label>{slide.label}</label>
-                                <p>{slide.paragraph}   </p>
-                            </div>
-                            <div  className='imagen'>
-                                <img src={slide.image} alt="" />
-                                <h4>{slide.commentor}</h4>
-                            </div>
-                        </div>
-                    </SlickContent>
-
-              )
+              return (
+                <SlickContent key={index}>
+                  <div className="cont">
+                    <div className="imagen">
+                      <img src={slide.image} alt="" />
+                      <h4>{slide.commentor}</h4>
+                    </div>
+                    <div className="stories">
+                      <label>{slide.label}</label>
+                      <p>{slide.paragraph} </p>
+                    </div>
+                  </div>
+                </SlickContent>
+              );
 
           })
 
@@ -104,7 +108,9 @@ const SlickContent = styled.div`
     .stories {
       label {
         color: red;
-        font-size: clamp(1.3rem, 6vw, 1.5rem);
+        font-weight:1000;
+        font-size:28px;
+        // font-size: clamp(1.3rem, 6vw, 1.5rem);
         position: relative;
         &::before {
           content: "";
@@ -114,13 +120,12 @@ const SlickContent = styled.div`
           bottom: 0;
           top: 30px;
           
-          font-weight: 1000;
         }
       }
 
       p {
         font-size: clamp(2.2rem, 6vw, 1.7rem);
-        font-weight: 1000;
+        font-weight: 300;
       }
     }
   }

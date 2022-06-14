@@ -185,7 +185,11 @@ const Container = styled.section`
         
       }
     }
-
+.writings{
+  h4{
+   padding-top:80px;
+  }
+}
     .hold{
       justify-content:center ;
       display:grid ;

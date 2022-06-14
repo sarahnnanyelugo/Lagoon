@@ -125,7 +125,6 @@ export default function Welcome() {
 
 
 const Section = styled.section`
-
   .school {
     margin-top: 5rem;
 
@@ -171,21 +170,22 @@ const Section = styled.section`
         line-height: 32px;
         font-weight: 1000;
         font-size: 24px;
+        margin-bottom: 50px;
       }
 
       a {
         padding: 20px;
         width: 70%;
-        margin: 0 auto;
+        // margin: 0 auto;
         font-size: clamp(1.3rem, 6vw, 1.5rem);
         border: 0;
         background-color: #f63a32;
         box-shadow: 0px 3px 3px 3px #d3d3d3;
-
         color: #fff;
         font-family: monseratSemi;
         transition: all 1.5s ease linear;
         text-decoration: none;
+
         &:hover {
           background-color: #f63a327d;
 
