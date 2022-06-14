@@ -116,6 +116,17 @@ export const navMenus = {
       path: "/student_life/Lunch",
       cName: "dropdown-link",
     },
+    {
+      title: "Mentoring & tutorials",
+      path: "/student_life/mentorship",
+      cName: "dropdown-link",
+    },
+
+    {
+      title: "Uniform",
+      path: "/student_life/uniform",
+      cName: "dropdown-link",
+    },
   ],
 };
 
