@@ -140,6 +140,29 @@ export default function Mentor() {
           </div>
         </div>
       </div>
+
+      <div className="col-md-12 flexy">
+        <div className="col-md-4 ">
+          <div className="col-md-11 ">
+            {" "}
+            <img src={Holder} alt="" />
+          </div>
+        </div>
+        <div className="col-md-4 ">
+          <div className="col-md-11 ">
+            {" "}
+            <img src={Holder} alt="" />
+          </div>
+        </div>
+        <div className="col-md-4 ">
+          <div className="col-md-11 ">
+            {" "}
+            <img src={Holder} alt="" />
+          </div>
+        </div>
+      </div>
+
+      
     </Container>
   );
 }
