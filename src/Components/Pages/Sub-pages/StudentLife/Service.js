@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
-// import { subRoute } from './Acaitems';
+import { subRoute } from "./LifeItems";
 import Holder from '../../../../Assets/ExplaoreTwo.png'
 
 export default function Service() {
-  // const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname;
 
   return (
     <Container>
       <div className='placeholder2'>
           <img src={Backdrop} alt="placeholder" />
         <div className='overlay'>
-            {/* <ul>
+            <ul>
                 {subRoute?.map((sub, idx)=>{
                   return(
                       <li key={idx}>
@@ -25,7 +25,7 @@ export default function Service() {
                   
                 })
                 }
-              </ul> */}
+              </ul>
         </div>
       </div>
       <div className='content'>

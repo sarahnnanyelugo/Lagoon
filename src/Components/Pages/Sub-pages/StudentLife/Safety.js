@@ -1,17 +1,56 @@
 import React from "react";
 import styled from "styled-components";
 import Backdrop from "../../../../Assets/Backdrop.png";
-// import { subRoute } from './Acaitems';
+import { subRoute } from "./ParentsItems";
 import Holder from "../../../../Assets/ExplaoreTwo.png";
 import Pdf from "../../../../Assets/safety.pdf";
 
 export default function lunchMenu() {
-  // const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname;
 
   return (
     <Container>
       <div className="placeholder2">
         <img src={Backdrop} alt="placeholder" />
+
+        <div className="overlay">
+          <ul>
+            {subRoute?.map((sub, idx) => {
+              return (
+                <li key={idx}>
+                  <a
+                    className={sub.cName}
+                    href={sub.path}
+                    style={{
+                      color:
+                        sub.path.toString() === currentPath.toString()
+                          ? "red"
+                          : "",
+                      backgroundColor:
+                        sub.path.toString() === currentPath.toString()
+                          ? "#fff"
+                          : "",
+                      padding:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                      border:
+                        sub.path.toString() === currentPath.toString()
+                          ? "2px solid red"
+                          : "",
+                      borderRadius:
+                        sub.path.toString() === currentPath.toString()
+                          ? "20px"
+                          : "",
+                    }}
+                  >
+                    {sub.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
       <div className="content">
         <div className="first">

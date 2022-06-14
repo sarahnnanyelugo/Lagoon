@@ -256,3 +256,35 @@ background-image:url('../../../../Assets/ExplaoreTwo.png');
              margin-top:180px;
           }
 
+.box{
+   background-color:rgb(217,217,217);
+   height:400px;
+   margin-left:27px;
+   margin-top:40px;
+
+}
+.reg{
+   height:80px;
+   /* width:220px; */
+   border:solid 3px red;
+   color:red;
+   background-color:inherit;
+   font-size:35px;
+   margin-top:30px;
+   font-weight:300;
+}
+
+.reg:hover{
+   background-color:red;
+   color:white;
+}
+
+
+@media(max-width:620px) {
+           .box{
+   margin-left:0px !important;
+           }  
+           .reg{margin-left:15px !important;
+         
+         }
+        }

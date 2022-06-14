@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
-// import { subRoute } from './Acaitems';
+import { subRoute } from './LifeItems';
 import Holder from '../../../../Assets/ExplaoreTwo.png'
 
 export default function stuLife() {
-  // const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname;
 
   return (
     <Container>
       <div className='placeholder2'>
           <img src={Backdrop} alt="placeholder" />
         <div className='overlay'>
-            {/* <ul>
+            <ul>
                 {subRoute?.map((sub, idx)=>{
                   return(
                       <li key={idx}>
@@ -25,7 +25,7 @@ export default function stuLife() {
                   
                 })
                 }
-              </ul> */}
+              </ul>
         </div>
       </div>
       <div className='content'>
@@ -41,12 +41,12 @@ export default function stuLife() {
                       their gifts and personal circumstance
                 </h4>
           </div>
-          <div className='conimages'>
+          <div className='images'>
                 <div>
                     <span>
                         <h2>ALL-SCHOOL SERVICEDAY</h2>
                     </span>
-                    <div>
+                    <div classame="col-md-12">
                         <img src={Holder} alt="" />
                     </div>
                 </div>
@@ -111,7 +111,11 @@ const Container = styled.section`
       }
     }
   }
+.images {
+  
+    margin-top:80px;
 
+}
   .content{
     width:90% ;
     margin:5rem auto 0 auto ;

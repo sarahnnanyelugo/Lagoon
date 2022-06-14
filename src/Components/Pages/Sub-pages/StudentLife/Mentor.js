@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
-// import { subRoute } from './Acaitems';
+import { subRoute } from "./LifeItems";
 import Holder from '../../../../Assets/ExplaoreTwo.png'
 
 export default function Mentor() {
-  // const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname;
 
   return (
     <Container>
-      <div className='placeholder2'>
-          <img src={Backdrop} alt="placeholder" />
-        <div className='overlay'>
-            {/* <ul>
+      <div className="placeholder2">
+        <img src={Backdrop} alt="placeholder" />
+        <div className="overlay">
+          <ul>
                 {subRoute?.map((sub, idx)=>{
                   return(
                       <li key={idx}>
@@ -25,56 +25,61 @@ export default function Mentor() {
                   
                 })
                 }
-              </ul> */}
+              </ul>
         </div>
       </div>
-      <div className='content'>
-          <div className='first'>
-              <span>
-                  <h2>Mentoring</h2>
-              </span>
-             
-                <h4>
-                    The cornerstone of a Lagoon education is our mentoring program. Mentors meet regularly one-on-one
-                    with students, and girls can seek them out for encouragement in academics, friendships, and service to
-                    others. Acting in partnership with the parents, the mentor guides each student as she works on her own
-                    personal growth. At Lagoon, students develop the lifelong habit of seeking good advice from the wisdom
-                    of others and working on personal goals for growth.
-                </h4>
-          </div>
-          <div className='conimages'>
-              <div className='individual'>
-                <span>
-                    <h2>INDIVIDUALIZED MENTORING</h2>
-                </span>
-                <ul>
-                  <li>Goes far beyond traditional academic advising</li>
-                  <li>Provides every student with a mentor and a coach</li>
-                  <li>A mentor serves as captain of each girl's success management team</li>
-                  <li>Formal meetings occur 6-8 times a semester</li>
-                  <li>Informal meetings are frequent</li>
-                  <li>Mentors meet with parents at least twice a year</li>
-                </ul>
-              </div>
+      <div className="content">
+        <div className="first">
+          <span>
+            <h2>Mentoring</h2>
+          </span>
 
-              <div className='quotes'>
-                  <hr />
-                <h4>
-                “ My Montrose advisors challenged me to grow in confidence by
-                  encouraging me to push myself, which prompted me to take the chance
-                  to apply for the White House internship. Lagoon encourages students
-                  not only to think but also reflect, a skill that is absolutely necessary in
-                  college. This type of preparation at the high school level is rare. “
-                </h4>
-                <h4>- Nweze Isabella</h4>
-              </div>
-              <img src={Holder} alt="" />
-
+          <h4>
+            The cornerstone of a Lagoon education is our mentoring program.
+            Mentors meet regularly one-on-one with students, and girls can seek
+            them out for encouragement in academics, friendships, and service to
+            others. Acting in partnership with the parents, the mentor guides
+            each student as she works on her own personal growth. At Lagoon,
+            students develop the lifelong habit of seeking good advice from the
+            wisdom of others and working on personal goals for growth.
+          </h4>
+        </div>
+        <div className="conimages">
+          <div className="individual">
+            <span>
+              <h2>INDIVIDUALIZED MENTORING</h2>
+            </span>
+            <ul>
+              <li>Goes far beyond traditional academic advising</li>
+              <li>Provides every student with a mentor and a coach</li>
+              <li>
+                A mentor serves as captain of each girl's success management
+                team
+              </li>
+              <li>Formal meetings occur 6-8 times a semester</li>
+              <li>Informal meetings are frequent</li>
+              <li>Mentors meet with parents at least twice a year</li>
+            </ul>
           </div>
-         
+          <div className="quotes">
+            <hr />
+            <h4>
+              “ My Montrose advisors challenged me to grow in confidence by
+              encouraging me to push myself, which prompted me to take the
+              chance to apply for the White House internship. Lagoon encourages
+              students not only to think but also reflect, a skill that is
+              absolutely necessary in college. This type of preparation at the
+              high school level is rare. “
+            </h4>
+            <h4>- Nweze Isabella</h4>
+          </div>
+          <img src={Holder} alt="" />
+          <img src={Holder} alt="" /> <img src={Holder} alt="" />{" "}
+          <img src={Holder} alt="" />
+        </div>
       </div>
     </Container>
-  )
+  );
 }
 
 
@@ -181,7 +186,7 @@ const Container = styled.section`
     .individual{
       background-color:#ababab96 ;
       width:80% ;
-      height:20rem ;
+      height:30rem ;
       border-radius:20px ;
       span{
           h2{

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
 import { subRoute } from './Acaitems';
 import Accordion,{accordionData2} from '../About/Accordion';
+import "./fullCalendar.css";
 
 export default function Club() {
 
@@ -13,52 +14,75 @@ export default function Club() {
 
   return (
     <Container>
-      <div className='placeholder'>
-          <img src={Backdrop} alt="placeholder" />
-        <div className='overlay'>
-            <ul>
-                {subRoute?.map((sub, idx)=>{
-                  return(
-                      <li key={idx}>
-                          <a className={sub.cName} href={sub.path}   
-                        //   style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}
-                          >
-
-                            {sub.title}
-                          </a>
-                      </li>
-                  )
-                  
-                })
-                }
-              </ul>
+      <div className="placeholder2">
+        <img src={Backdrop} alt="placeholder" />
+        <div className="overlay">
+          <ul>
+            {subRoute?.map((sub, idx) => {
+              return (
+                <li key={idx}>
+                  <a
+                    className={sub.cName}
+                    href={sub.path}
+                    //   style={{color:sub.path.toString() === currentPath.toString()?'red':'',backgroundColor:sub.path.toString() === currentPath.toString()?'#fff':'',padding:sub.path.toString() === currentPath.toString()?'20px':'',border:sub.path.toString() === currentPath.toString()?'2px solid red':'',borderRadius:sub.path.toString() === currentPath.toString()?'20px':''}}
+                  >
+                    {sub.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
-      <div className='content'>
-          <div className='first'>
-              <span>
-                  <h2>Clubs and Activies</h2>
-              </span>
-                  <div>
-                      <h4>
-                            We encourage students to participate in extracurricular events, pursue their personal interests, and create
-                            new clubs each school year. Lagoon is currently home to many Primary and Secondary School clubs, many
-                            of them initiated by students. These clubs and activities encourage students to take initiative and
-                            responsibility in leading activities that allow them to explore their talents and passions outside the
-                            classroom.
-                      </h4>
-                  </div>  
-               <div className="accordion">
-                    {accordionData2.map(({ title, content }) => (
-                        <Accordion title={title} content={content} />
-                              ))}
-               </div>
+      <div className="content">
+        <div className="first">
+          <span>
+            <h2>Clubs and Activies</h2>
+          </span>
+          <div>
+            <h4>
+              We encourage students to participate in extracurricular events,
+              pursue their personal interests, and create new clubs each school
+              year. Lagoon is currently home to many Primary and Secondary
+              School clubs, many of them initiated by students. These clubs and
+              activities encourage students to take initiative and
+              responsibility in leading activities that allow them to explore
+              their talents and passions outside the classroom.
+            </h4>
           </div>
-         
-         
+          <div className="accordion">
+            {accordionData2.map(({ title, content }) => (
+              <Accordion title={title} content={content} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="col-md-12 flexy">
+        <div className="col-md-4 ">
+          <div className="col-md-11 box"></div>
+        </div>
+        <div className="col-md-4 ">
+          <div className="col-md-11 box"></div>
+        </div>
+        <div className="col-md-4 ">
+          <div className="col-md-11 box"></div>
+        </div>
+      </div>
+      <div className="col-md-12 flexy">
+        <div className="col-md-4 ">
+          <div className="col-md-11 ">&nbsp;</div>
+        </div>
+        <div className="col-md-4 ">
+          <div className="col-md-11 box"></div>
+          <button className="reg col-md-12">REGISTER FOR A CLUB</button>
+        </div>
+        <div className="col-md-4 ">
+          <div className="col-md-11 ">&nbsp;</div>
+        </div>
       </div>
     </Container>
-  )
+  );
 }
 
 
@@ -66,8 +90,8 @@ export default function Club() {
 
 const Container = styled.section`
 
-  .placeholder{
-    height:25rem ;
+  .placeholder2{
+    height:37rem ;
     position:relative ;
 
     img{

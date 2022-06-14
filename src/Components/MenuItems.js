@@ -70,7 +70,7 @@ export const navMenus = {
     { title: "FAQs", path: "./admission/f-a-q", cName: "dropdown-link" },
     {
       title: "Apply to lagoon school",
-      path: "https://lagoonweb.eschoolng.net/primary/application/start_application.php", 
+      path: "https://lagoonweb.eschoolng.net/primary/application/start_application.php",
       target: "_blank",
       cName: "dropdown-link",
     },
@@ -89,7 +89,7 @@ export const navMenus = {
     { title: "service", path: "/student_life/service", cName: "dropdown-link" },
     {
       title: "club & activities",
-      path: "/student_life/activities",
+      path: "/academics/club_&_activities",
       cName: "dropdown-link",
     },
     {

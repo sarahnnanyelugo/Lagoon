@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import Backdrop from '../../../../Assets/Backdrop.png'
-// import { subRoute } from './Acaitems';
+import { subRoute } from "./LifeItems";
 import Holder from '../../../../Assets/ExplaoreTwo.png'
 import { Link } from "react-router-dom";
 
 export default function Traditions() {
-  // const currentPath = window.location.pathname;
+  const currentPath = window.location.pathname;
 
   return (
     <Container>
       <div className="placeholder2">
         <img src={Backdrop} alt="placeholder" />
         <div className="overlay">
-          {/* <ul>
+          <ul>
                 {subRoute?.map((sub, idx)=>{
                   return(
                       <li key={idx}>
@@ -26,7 +26,7 @@ export default function Traditions() {
                   
                 })
                 }
-              </ul> */}
+              </ul>
         </div>
       </div>
       <div className="content">
